@@ -2,9 +2,7 @@ import pandas as pd
 import spacy
 import pycld2 as cld2
 import re
-import en_core_web_sm
-import en_core_web_sm
-import ca_fasttext_wiki_md
+import multiprocessing
 
 from linking_entity_linking import *
 
@@ -17,7 +15,8 @@ from nltk.corpus import stopwords
 from stop_words import get_stop_words  # will be used for catalan
 from nltk.corpus import wordnet
 from nltk.stem import SnowballStemmer
-
+import nltk
+# nltk.download('wordnet')
 
 # from nltk.stem import WordNetLemmatizer
 
@@ -122,7 +121,7 @@ def es_lemmatizer(keyword):
 
 
 def ca_lemmatizer(keyword):
-    nlp = spacy.load('ca', disable=["parser", "ner"])
+    nlp = spacy.load('ca_fasttext_wiki_md', disable=["parser", "ner"])
     doc = nlp(keyword)
 
     w = " ".join([word.lemma_ for word in doc])
@@ -163,77 +162,94 @@ def DBpediaLinker(keyword):
     return entity
 
 
+def process(clave):
+    print('Processing {}'.format(clave))
+    result = {'lang': language_keyword(clave)}
+    output = {'keyword': clave, 'result': result}
+
+    if result['lang'] == 'en':
+        # result['stop-word'] = en_stopWords(clave)
+        result['synonym'] = synonyms(clave)
+        result['stemmer'] = en_stemmer(clave)
+        result['lemmatizer'] = en_lemmatizer(clave)
+        result['Wikidata'] = en_WikidataLinker(clave)
+        # result['DBpedia'] = DBpediaLinker(clave)
+
+    elif result['lang'] == 'es':
+        # result['stop-word'] = es_stopWords(clave)
+        result['synonym'] = synonyms(clave)
+        result['stemmer'] = es_stemmer(clave)
+        result['lemmatizer'] = es_lemmatizer(clave)
+        result['Wikidata'] = es_WikidataLinker(clave)
+
+    elif result['lang'] == 'ca':
+        # result['stop-word'] = ca_stopWords(clave)
+        result['synonym'] = synonyms(clave)
+        # result['stemmer'] = ca_stemmer(clave)
+        result['lemmatizer'] = ca_lemmatizer(clave)
+        result['Wikidata'] = ca_WikidataLinker(clave)
+
+    return output
+
 # ------------------------------------------
 # -------------- MAIN PROGRAM --------------
 # ------------------------------------------
 
-# Generate a new file with same data but this time without quote marks
-entrada = "../files/samples_researchers_publications-keywords.csv"
-salida = "../files/fichero_bien.csv"
 
-with open(entrada, "r") as f_in, open(salida, "w") as f_out:
-    for linea in f_in:
-        trozos = linea.rstrip().split(",")  # Split elements by coma
-        nombre = trozos[0]  # Get the first element
-        palabra = ",".join(trozos[1:]).replace('"', '')  # Put the other elements together
-        # Write into the other file but now the second element have question marks
-        f_out.write('{},"{}"\n'.format(nombre, palabra))
+if __name__ == '__main__':
 
-# Get the data from the file
-df = pd.read_csv('../files/fichero_bien.csv', delimiter=',')
+    # Generate a new file with same data but this time without quote marks
+    # entrada = "../files/samples_researchers_publications-keywords.csv"
+    entrada = "../files/Researcher-06000001-keywords.csv"
+    salida = "../files/fichero_bien.csv"
 
-# Delete duplicates rows
-df.drop_duplicates(subset=None, keep="first", inplace=True)
+    with open(entrada, "r") as f_in, open(salida, "w") as f_out:
+        for linea in f_in:
+            trozos = linea.rstrip().split(",")  # Split elements by coma
+            nombre = trozos[0]  # Get the first element
+            palabra = ",".join(trozos[1:]).replace('"', '')  # Put the other elements together
+            # Write into the other file but now the second element have question marks
+            f_out.write('{},"{}"\n'.format(nombre, palabra))
 
-# -------------- used to delete multiple keywords in one line --------------
-# Convert column keyword into lists
-df.keyword = df.keyword.str.split(",")
-# Convert lists to columns duplicating the resourcer but with only one keyword which had more than one ','
-df = df.explode("keyword")
+    # Get the data from the file
+    df = pd.read_csv('../files/fichero_bien.csv', delimiter=',')
 
-df_dict = df.to_dict('records')
-keywords = [d.get('keyword') for d in df_dict]
-# Delete duplicates from keywords list
-kw_list = list(dict.fromkeys(keywords))
+    start = time.time()
 
-# Deletes all punctuation marks and create new columns with the resource and the keyword
-kw_clean = splitter(kw_list)
+    # Delete duplicates rows
+    df.drop_duplicates(subset=None, keep="first", inplace=True)
 
-# Deletes empty strings in case they exist
-kw_clean = list(filter(None, kw_clean))
+    # -------------- used to delete multiple keywords in one line --------------
+    # Convert column keyword into lists
+    df.keyword = df.keyword.str.split(",")
+    # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
+    df = df.explode("keyword")
 
-# Dictionary structure
-d_key = {}
-for k in kw_clean:
-    k_norm = normalize(k)
-    d_key[k_norm] = {}
+    df_dict = df.to_dict('records')
+    keywords = [d.get('keyword') for d in df_dict]
+    # Delete duplicates from keywords list
+    kw_list = list(dict.fromkeys(keywords))
 
-# Dictionary data
-for clave in d_key.keys():
+    # Deletes all punctuation marks and create new columns with the resource and the keyword
+    kw_clean = splitter(kw_list)
 
-    d_key[clave]['lang'] = language_keyword(clave)
+    # Deletes empty strings in case they exist
+    kw_clean = list(filter(None, kw_clean))
 
-    if d_key[clave]['lang'] == 'en':
-        # d_key[clave]['stop-word'] = en_stopWords(clave)
-        d_key[clave]['synonym'] = synonyms(clave)
-        d_key[clave]['stemmer'] = en_stemmer(clave)
-        d_key[clave]['lemmatizer'] = en_lemmatizer(clave)
-        d_key[clave]['Wikidata'] = en_WikidataLinker(clave)
-        # d_key[clave]['DBpedia'] = DBpediaLinker(clave)
+    # Dictionary structure
+    d_key = {}
+    for k in kw_clean:
+        k_norm = normalize(k)
+        d_key[k_norm] = {}
 
-    elif d_key[clave]['lang'] == 'es':
-        # d_key[clave]['stop-word'] = es_stopWords(clave)
-        d_key[clave]['synonym'] = synonyms(clave)
-        d_key[clave]['stemmer'] = es_stemmer(clave)
-        d_key[clave]['lemmatizer'] = es_lemmatizer(clave)
-        d_key[clave]['Wikidata'] = es_WikidataLinker(clave)
-
-    elif d_key[clave]['lang'] == 'ca':
-        # d_key[clave]['stop-word'] = ca_stopWords(clave)
-        d_key[clave]['synonym'] = synonyms(clave)
-        # d_key[clave]['stemmer'] = ca_stemmer(clave)
-        d_key[clave]['lemmatizer'] = ca_lemmatizer(clave)
-        d_key[clave]['Wikidata'] = ca_WikidataLinker(clave)
-
-
-print(d_key)
+    pool = multiprocessing.Pool()
+    try:
+        result_async = [pool.apply_async(process, args=(keyword,)) for keyword in d_key.keys()]
+        for o in result_async:
+            output = o.get()
+            d_key[output['keyword']] = output['result']
+        print(json.dumps(d_key, indent=1))
+    finally:
+        end = time.time()
+        print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end - start))))
+        pool.close()
