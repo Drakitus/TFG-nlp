@@ -1,6 +1,6 @@
 jupyter
 pandas
-spacy == 2.2.2
+spacy == 2.3.4
 snowballstemmer
 langdetect
 nltk
@@ -8,7 +8,6 @@ pycld2
 rake-nltk
 stop-words
 sklearn
-https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-2.2.0/es_core_news_sm-2.2.0.tar.gz
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz
-https://github.com/ccoreilly/spacy-catala/releases/download/ca_fasttext_wiki_md-1.0.0/ca_fasttext_wiki_md-1.0.0-py3-none-any.whl
-
+https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-2.3.1/es_core_news_sm-2.3.1.tar.gz
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+https://github.com/ccoreilly/spacy-catala/releases/download/ca_fasttext_wiki_md-1.0.0/ca_fasttext_wiki_md-1.0.0.tar.gz
