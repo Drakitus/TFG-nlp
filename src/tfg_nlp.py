@@ -16,6 +16,8 @@ from stop_words import get_stop_words  # will be used for catalan
 from nltk.corpus import wordnet
 from nltk.stem import SnowballStemmer
 import nltk
+
+
 # nltk.download('wordnet')
 
 # from nltk.stem import WordNetLemmatizer
@@ -23,14 +25,27 @@ import nltk
 
 # -------------- Normalize keywords --------------
 def normalize(clave):
-    # Convert all words to lowercase
-    l = clave.lower()
+    word = to_lower(clave)
     # Remove white spaces
-    s = l.strip()
+    word = remove_white_spaces(word)
     # Remove utf-8 words
     # e = s.encode("utf-8")
 
-    return s
+    return word
+
+
+# Convert all words to lowercase
+def to_lower(clave):
+    return clave.lower()
+
+
+# Remove white spaces
+def remove_white_spaces(clave):
+    return clave.strip()
+
+
+def remove_multiple_white_spaces(clave):
+    return re.sub(' +', ' ', clave)
 
 
 # -------------- Split multiple keywords with punctuation signs --------------
@@ -105,7 +120,7 @@ def es_stemmer(keyword):
 
 # -------------- spaCy lemmatizer --------------
 def en_lemmatizer(keyword):
-    nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
+    nlp = spacy.load('en_core_web_sm', disable=["parser", "ner"])
     doc = nlp(keyword)
 
     w = " ".join([word.lemma_ for word in doc])
@@ -154,6 +169,26 @@ def ca_WikidataLinker(keyword):
     return entity
 
 
+def en_dbpedia_spacy_linker(keyword):
+    nlp = spacy.load('en_core_web_sm')
+
+    doc = nlp(keyword)
+
+    ents = [(e.text, e.label_, e.kb_id_) for e in doc.ents]
+
+    return ents
+
+
+def es_dbpedia_spacy_linker(keyword):
+    nlp = spacy.load('es_core_news_sm')
+
+    doc = nlp(keyword)
+
+    ents = [(e.text, e.label_, e.kb_id_) for e in doc.ents]
+
+    return ents
+
+
 def DBpediaLinker(keyword):
     linker = DBPediaEntityLinker()
 
@@ -181,6 +216,7 @@ def process(clave):
         result['stemmer'] = es_stemmer(clave)
         result['lemmatizer'] = es_lemmatizer(clave)
         result['Wikidata'] = es_WikidataLinker(clave)
+        result['DBpedia'] = es_dbpedia_spacy_linker(clave)
 
     elif result['lang'] == 'ca':
         # result['stop-word'] = ca_stopWords(clave)
@@ -191,6 +227,7 @@ def process(clave):
 
     return output
 
+
 # ------------------------------------------
 # -------------- MAIN PROGRAM --------------
 # ------------------------------------------
@@ -199,8 +236,8 @@ def process(clave):
 if __name__ == '__main__':
 
     # Generate a new file with same data but this time without quote marks
-    # entrada = "../files/samples_researchers_publications-keywords.csv"
-    entrada = "../files/Researcher-06000001-keywords.csv"
+    entrada = "../files/samples_researchers_publications-keywords.csv"
+    # entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/fichero_bien.csv"
 
     with open(entrada, "r") as f_in, open(salida, "w") as f_out:
