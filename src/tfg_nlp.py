@@ -45,7 +45,7 @@ def remove_white_spaces(clave):
 
 
 def remove_multiple_white_spaces(clave):
-    return re.sub(' +', ' ', clave)
+    return re.sub("\s\s+", " ", clave)
 
 
 # -------------- Split multiple keywords with punctuation signs --------------
@@ -169,26 +169,6 @@ def ca_WikidataLinker(keyword):
     return entity
 
 
-def en_dbpedia_spacy_linker(keyword):
-    nlp = spacy.load('en_core_web_sm')
-
-    doc = nlp(keyword)
-
-    ents = [(e.text, e.label_, e.kb_id_) for e in doc.ents]
-
-    return ents
-
-
-def es_dbpedia_spacy_linker(keyword):
-    nlp = spacy.load('es_core_news_sm')
-
-    doc = nlp(keyword)
-
-    ents = [(e.text, e.label_, e.kb_id_) for e in doc.ents]
-
-    return ents
-
-
 def DBpediaLinker(keyword):
     linker = DBPediaEntityLinker()
 
@@ -197,10 +177,44 @@ def DBpediaLinker(keyword):
     return entity
 
 
+# -------------- group words by root --------------
+
+def group(keyword, lang):
+    kw_list = [keyword]
+    group = ''
+
+    for k in range(0, len(kw_list)):
+        if lang == 'en':
+            if k == 0:
+                group = en_stemmer(kw_list[k])
+            elif en_stemmer(kw_list[k]) == en_stemmer(kw_list[k - 1]):
+                group = kw_list[k - 1]
+            else:
+                group = en_stemmer(kw_list[k])
+        elif lang == 'es':
+            if k == 0:
+                group = en_stemmer(kw_list[k])
+            elif es_stemmer(kw_list[k]) == es_stemmer(kw_list[k - 1]):
+                group = kw_list[k - 1]
+            else:
+                group = en_stemmer(kw_list[k])
+        else:
+            if k == 0:
+                group = ca_lemmatizer(kw_list[k])
+            elif ca_lemmatizer(kw_list[k]) == ca_lemmatizer(kw_list[k - 1]):
+                group = kw_list[k - 1]
+            else:
+                group = ca_lemmatizer(kw_list[k])
+
+    return group
+
+
 def process(clave):
     print('Processing {}'.format(clave))
     result = {'lang': language_keyword(clave)}
     output = {'keyword': clave, 'result': result}
+
+    result['Group'] = group(clave, result['lang'])
 
     if result['lang'] == 'en':
         # result['stop-word'] = en_stopWords(clave)
@@ -216,14 +230,14 @@ def process(clave):
         result['stemmer'] = es_stemmer(clave)
         result['lemmatizer'] = es_lemmatizer(clave)
         result['Wikidata'] = es_WikidataLinker(clave)
-        result['DBpedia'] = es_dbpedia_spacy_linker(clave)
+        # result['DBpedia'] = DBpediaLinker(clave)
 
     elif result['lang'] == 'ca':
         # result['stop-word'] = ca_stopWords(clave)
         result['synonym'] = synonyms(clave)
         # result['stemmer'] = ca_stemmer(clave)
         result['lemmatizer'] = ca_lemmatizer(clave)
-        result['Wikidata'] = ca_WikidataLinker(clave)
+        # result['Wikidata'] = DBpediaLinker(clave)
 
     return output
 
@@ -236,8 +250,8 @@ def process(clave):
 if __name__ == '__main__':
 
     # Generate a new file with same data but this time without quote marks
-    entrada = "../files/samples_researchers_publications-keywords.csv"
-    # entrada = "../files/Researcher-06000001-keywords.csv"
+    #entrada = "../files/samples_researchers_publications-keywords.csv"
+    entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/fichero_bien.csv"
 
     with open(entrada, "r") as f_in, open(salida, "w") as f_out:

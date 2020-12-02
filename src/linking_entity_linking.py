@@ -51,7 +51,7 @@ class DBPediaEntityLinker(BaseEstimator, TransformerMixin):
         if 'Resources' not in res_dict:
             return []
         
-        return [(resource['@surfaceForm'], resource['@URI'])
+        return [(resource['@URI'])
                 for resource in res_dict['Resources']]
 
 

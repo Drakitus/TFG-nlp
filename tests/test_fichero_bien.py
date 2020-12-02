@@ -30,11 +30,11 @@ class TestFicheroBien(unittest.TestCase):
 
         self.assertEqual(tfg_nlp.remove_white_spaces(actual), expected)
 
-    #def test_remove_multiple_white_spaces(self):
-    #    actual = "Aixo  es   un test   "
-    #    expected = "Aixo es un test"
+    def test_remove_multiple_white_spaces(self):
+        actual = "Aixo  es   un     test"
+        expected = "Aixo es un test"
 
-    #    self.assertEqual(tfg_nlp.remove_multiple_white_spaces(actual), expected)
+        self.assertEqual(tfg_nlp.remove_multiple_white_spaces(actual), expected)
 
     def test_splitter_punctuation_marks(self):
         actual = ["hola - como - estas / que haces; aqui"]
@@ -59,9 +59,6 @@ class TestFicheroBien(unittest.TestCase):
         expected = 'ca'
 
         self.assertEqual(tfg_nlp.language_keyword(actual), expected)
-
-
-
 
 
 if __name__ == '__main__':
