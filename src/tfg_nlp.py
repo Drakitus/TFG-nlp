@@ -28,8 +28,6 @@ def normalize(clave):
     word = to_lower(clave)
     # Remove white spaces
     word = remove_white_spaces(word)
-    # Remove utf-8 words
-    # e = s.encode("utf-8")
 
     return word
 
@@ -222,7 +220,7 @@ def process(clave):
         result['stemmer'] = en_stemmer(clave)
         result['lemmatizer'] = en_lemmatizer(clave)
         result['Wikidata'] = en_WikidataLinker(clave)
-        # result['DBpedia'] = DBpediaLinker(clave)
+        result['DBpedia'] = DBpediaLinker(clave)
 
     elif result['lang'] == 'es':
         # result['stop-word'] = es_stopWords(clave)
@@ -230,14 +228,15 @@ def process(clave):
         result['stemmer'] = es_stemmer(clave)
         result['lemmatizer'] = es_lemmatizer(clave)
         result['Wikidata'] = es_WikidataLinker(clave)
-        # result['DBpedia'] = DBpediaLinker(clave)
+        result['DBpedia'] = DBpediaLinker(clave)
 
     elif result['lang'] == 'ca':
         # result['stop-word'] = ca_stopWords(clave)
         result['synonym'] = synonyms(clave)
         # result['stemmer'] = ca_stemmer(clave)
         result['lemmatizer'] = ca_lemmatizer(clave)
-        # result['Wikidata'] = DBpediaLinker(clave)
+        result['Wikidata'] = ca_WikidataLinker(clave)
+        result['DBpedia'] = DBpediaLinker(clave)
 
     return output
 
@@ -254,7 +253,7 @@ if __name__ == '__main__':
     entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/fichero_bien.csv"
 
-    with open(entrada, "r") as f_in, open(salida, "w") as f_out:
+    with open(entrada, "r", encoding='utf-8') as f_in, open(salida, "w") as f_out:
         for linea in f_in:
             trozos = linea.rstrip().split(",")  # Split elements by coma
             nombre = trozos[0]  # Get the first element
