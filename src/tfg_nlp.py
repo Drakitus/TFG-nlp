@@ -3,6 +3,7 @@ import spacy
 import pycld2 as cld2
 import re
 import multiprocessing
+# import hunspell
 
 from linking_entity_linking import *
 
@@ -11,10 +12,13 @@ from string import punctuation
 from spacy.lang.en.stop_words import STOP_WORDS as ENGLISH_STOP_WORDS
 from spacy.lang.es.stop_words import STOP_WORDS as SPANISH_STOP_WORDS
 from spacy.lang.ca.stop_words import STOP_WORDS as CATALAN_STOP_WORDS
+from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from stop_words import get_stop_words  # will be used for catalan
 from nltk.corpus import wordnet
 from nltk.stem import SnowballStemmer
+from collections import defaultdict
+
 import nltk
 
 
@@ -28,6 +32,10 @@ def normalize(clave):
     word = to_lower(clave)
     # Remove white spaces
     word = remove_white_spaces(word)
+    # Remove multiple white spaces
+    word = remove_multiple_white_spaces(word)
+    # Correct words
+    # word = spelling_corrector(None, word)
 
     return word
 
@@ -71,23 +79,29 @@ def language_keyword(keyword):
     return lang
 
 
-# -------------- Check if words are stop words -------------- 
+# -------------- Delete stop words --------------
 def en_stopWords(keyword):
-    if keyword in stopwords.words('english'):
-        print('True')
-    else:
-        print('False')
+    text_tokens = word_tokenize(keyword)
+
+    tokens_without_sw = [word for word in text_tokens if word not in stopwords.words('english')]
+
+    return tokens_without_sw
 
 
 def es_stopWords(keyword):
-    if keyword in stopwords.words('spanish'):
-        return True
+    text_tokens = word_tokenize(keyword)
+
+    tokens_without_sw = [word for word in text_tokens if word not in stopwords.words('spanish')]
+
+    return tokens_without_sw
 
 
 def ca_stopWords(keyword):
-    stop_words = get_stop_words('ca')
-    if keyword in stop_words:
-        return True
+    text_tokens = word_tokenize(keyword)
+
+    tokens_without_sw = [word for word in text_tokens if word not in get_stop_words('ca')]
+
+    return tokens_without_sw
 
 
 # -------------- Word synonyms --------------
@@ -176,35 +190,47 @@ def DBpediaLinker(keyword):
 
 
 # -------------- group words by root --------------
-
 def group(keyword, lang):
-    kw_list = [keyword]
-    group = ''
+    kw_list = []
+    kw_list.append(keyword)
+    res = defaultdict(list)
 
-    for k in range(0, len(kw_list)):
+    for k in kw_list:
         if lang == 'en':
-            if k == 0:
-                group = en_stemmer(kw_list[k])
-            elif en_stemmer(kw_list[k]) == en_stemmer(kw_list[k - 1]):
-                group = kw_list[k - 1]
-            else:
-                group = en_stemmer(kw_list[k])
-        elif lang == 'es':
-            if k == 0:
-                group = en_stemmer(kw_list[k])
-            elif es_stemmer(kw_list[k]) == es_stemmer(kw_list[k - 1]):
-                group = kw_list[k - 1]
-            else:
-                group = en_stemmer(kw_list[k])
-        else:
-            if k == 0:
-                group = ca_lemmatizer(kw_list[k])
-            elif ca_lemmatizer(kw_list[k]) == ca_lemmatizer(kw_list[k - 1]):
-                group = kw_list[k - 1]
-            else:
-                group = ca_lemmatizer(kw_list[k])
+            res[en_stemmer(k)].append(k)
 
-    return group
+        elif lang == 'es':
+            res[en_stemmer(k)].append(k)
+
+        else:
+            res[ca_lemmatizer(k)].append(k)
+    return res
+
+
+# -------------- correct spelling --------------
+# Falta afegir el diccionari quan funcioni correctament la llibreria
+def spelling_corrector(corrector, keywords):
+    corrected = []
+    for k in keywords:
+        ok = corrector.spell(k)  # check spelling
+        if not ok:
+            suggestions = corrector.suggest(k)
+            if len(suggestions) > 0:  # hay suggestions
+                # take best suggestion
+                best_suggestions = suggestions[0]
+                corrected.append(best_suggestions)
+            else:
+                corrected.append(k)  # no suggestion for the word
+        else:
+            corrected.append(k)  # corrected word
+    return corrected
+
+
+def hyponyms_a(clave):
+    word = wordnet.sysnet(clave)
+
+    hyponym = word.hiponyms()
+    return hyponym
 
 
 def process(clave):
@@ -233,7 +259,6 @@ def process(clave):
     elif result['lang'] == 'ca':
         # result['stop-word'] = ca_stopWords(clave)
         result['synonym'] = synonyms(clave)
-        # result['stemmer'] = ca_stemmer(clave)
         result['lemmatizer'] = ca_lemmatizer(clave)
         result['Wikidata'] = ca_WikidataLinker(clave)
         result['DBpedia'] = DBpediaLinker(clave)
@@ -249,16 +274,16 @@ def process(clave):
 if __name__ == '__main__':
 
     # Generate a new file with same data but this time without quote marks
-    #entrada = "../files/samples_researchers_publications-keywords.csv"
+    # entrada = "../files/samples_researchers_publications-keywords.csv"
     entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/fichero_bien.csv"
 
-    with open(entrada, "r", encoding='utf-8') as f_in, open(salida, "w") as f_out:
+    with open(entrada, "r", encoding='utf-8') as f_in, open(salida, "w", encoding='utf-8') as f_out:
         for linea in f_in:
             trozos = linea.rstrip().split(",")  # Split elements by coma
             nombre = trozos[0]  # Get the first element
             palabra = ",".join(trozos[1:]).replace('"', '')  # Put the other elements together
-            # Write into the other file but now the second element have question marks
+            # Write into the other file but now the second element have quote marks
             f_out.write('{},"{}"\n'.format(nombre, palabra))
 
     # Get the data from the file
