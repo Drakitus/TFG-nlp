@@ -9,6 +9,7 @@ rake-nltk
 stop-words
 sklearn
 hunspell
+SPARQLWrapper
 https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-2.3.1/es_core_news_sm-2.3.1.tar.gz
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
 https://github.com/ccoreilly/spacy-catala/releases/download/ca_fasttext_wiki_md-1.0.0/ca_fasttext_wiki_md-1.0.0.tar.gz

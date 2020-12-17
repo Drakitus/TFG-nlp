@@ -52,10 +52,9 @@ class DBPediaEntityLinker(BaseEstimator, TransformerMixin):
 
         res_dict = json.loads(res.content)
         if 'Resources' not in res_dict:
-            return []
-
-        return [(resource['@URI'])
-                for resource in res_dict['Resources']]
+            return None
+        for resource in res_dict['Resources']:
+            return resource['@URI']
 
 
 class WikidataEntityLinker(BaseEstimator, TransformerMixin):

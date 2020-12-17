@@ -6,6 +6,7 @@ import multiprocessing
 # import hunspell
 
 from linking_entity_linking import *
+from compacting_keys import *
 
 from rake_nltk import Rake
 from string import punctuation
@@ -18,6 +19,7 @@ from stop_words import get_stop_words  # will be used for catalan
 from nltk.corpus import wordnet
 from nltk.stem import SnowballStemmer
 from collections import defaultdict
+from urllib.parse import urlparse
 
 import nltk
 
@@ -52,6 +54,31 @@ def remove_white_spaces(clave):
 
 def remove_multiple_white_spaces(clave):
     return re.sub("\s\s+", " ", clave)
+
+
+# Falta afegir el diccionari quan funcioni correctament la llibreria
+def spelling_corrector(corrector, keywords):
+    corrected = []
+    for k in keywords:
+        ok = corrector.spell(k)  # check spelling
+        if not ok:
+            suggestions = corrector.suggest(k)
+            if len(suggestions) > 0:  # hay suggestions
+                # take best suggestion
+                best_suggestions = suggestions[0]
+                corrected.append(best_suggestions)
+            else:
+                corrected.append(k)  # no suggestion for the word
+        else:
+            corrected.append(k)  # corrected word
+    return corrected
+
+
+def hyponyms_a(clave):
+    word = wordnet.sysnet(clave)
+
+    hyponym = word.hiponyms()
+    return hyponym
 
 
 # -------------- Split multiple keywords with punctuation signs --------------
@@ -189,6 +216,34 @@ def DBpediaLinker(keyword):
     return entity
 
 
+def Wikidata_lang(keyword):
+    lang = language_keyword(keyword)
+
+    if lang == 'en':
+        wiki_link = en_WikidataLinker(keyword)
+    elif lang == 'es':
+        wiki_link = es_WikidataLinker(keyword)
+    else:
+        wiki_link = ca_WikidataLinker(keyword)
+
+    return wiki_link
+
+
+def Wikidata_id(keyword):
+    url = Wikidata_lang(keyword)
+
+    part = urlparse(url)
+
+    id = part[2].rpartition('/')[2]
+
+    return id
+
+# -------------- linkers --------------
+
+def DBpedia_query(keyword):
+    query = DBpedia_wrapper(keyword)
+
+
 # -------------- group words by root --------------
 def group(keyword, lang):
     kw_list = []
@@ -205,32 +260,6 @@ def group(keyword, lang):
         else:
             res[ca_lemmatizer(k)].append(k)
     return res
-
-
-# -------------- correct spelling --------------
-# Falta afegir el diccionari quan funcioni correctament la llibreria
-def spelling_corrector(corrector, keywords):
-    corrected = []
-    for k in keywords:
-        ok = corrector.spell(k)  # check spelling
-        if not ok:
-            suggestions = corrector.suggest(k)
-            if len(suggestions) > 0:  # hay suggestions
-                # take best suggestion
-                best_suggestions = suggestions[0]
-                corrected.append(best_suggestions)
-            else:
-                corrected.append(k)  # no suggestion for the word
-        else:
-            corrected.append(k)  # corrected word
-    return corrected
-
-
-def hyponyms_a(clave):
-    word = wordnet.sysnet(clave)
-
-    hyponym = word.hiponyms()
-    return hyponym
 
 
 def process(clave):
@@ -316,6 +345,16 @@ if __name__ == '__main__':
     for k in kw_clean:
         k_norm = normalize(k)
         d_key[k_norm] = {}
+
+    # Compacting keys structure
+    comp_keys = {}
+    for k in kw_clean:
+        k_norm = normalize(k)
+        db = DBpediaLinker(k_norm)
+        if db is None:
+            db = Wikidata_lang(k_norm)
+        comp_keys[db] = {}
+    print(json.dumps(comp_keys, indent=1))
 
     pool = multiprocessing.Pool()
     try:
