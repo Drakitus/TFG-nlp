@@ -6,7 +6,7 @@ import multiprocessing
 # import hunspell
 
 from linking_entity_linking import *
-from compacting_keys import *
+#from compacting_keys import *
 
 from rake_nltk import Rake
 from string import punctuation
@@ -54,6 +54,15 @@ def remove_white_spaces(clave):
 
 def remove_multiple_white_spaces(clave):
     return re.sub("\s\s+", " ", clave)
+
+
+def utf8_format(clave):
+    if clave is not None:
+        e = clave.encode('utf-8')
+        d = e.decode('utf-8')
+    else:
+        d = clave
+    return d
 
 
 # Falta afegir el diccionari quan funcioni correctament la llibreria
@@ -229,21 +238,6 @@ def Wikidata_lang(keyword):
     return wiki_link
 
 
-def Wikidata_id(keyword):
-    url = Wikidata_lang(keyword)
-
-    part = urlparse(url)
-
-    id = part[2].rpartition('/')[2]
-
-    return id
-
-# -------------- linkers --------------
-
-def DBpedia_query(keyword):
-    query = DBpedia_wrapper(keyword)
-
-
 # -------------- group words by root --------------
 def group(keyword, lang):
     kw_list = []
@@ -295,30 +289,9 @@ def process(clave):
     return output
 
 
-# ------------------------------------------
-# -------------- MAIN PROGRAM --------------
-# ------------------------------------------
-
-
-if __name__ == '__main__':
-
-    # Generate a new file with same data but this time without quote marks
-    # entrada = "../files/samples_researchers_publications-keywords.csv"
-    entrada = "../files/Researcher-06000001-keywords.csv"
-    salida = "../files/fichero_bien.csv"
-
-    with open(entrada, "r", encoding='utf-8') as f_in, open(salida, "w", encoding='utf-8') as f_out:
-        for linea in f_in:
-            trozos = linea.rstrip().split(",")  # Split elements by coma
-            nombre = trozos[0]  # Get the first element
-            palabra = ",".join(trozos[1:]).replace('"', '')  # Put the other elements together
-            # Write into the other file but now the second element have quote marks
-            f_out.write('{},"{}"\n'.format(nombre, palabra))
-
+def keywords_cleaner(f_in):
     # Get the data from the file
-    df = pd.read_csv('../files/fichero_bien.csv', delimiter=',')
-
-    start = time.time()
+    df = pd.read_csv(f_in, delimiter=',')
 
     # Delete duplicates rows
     df.drop_duplicates(subset=None, keep="first", inplace=True)
@@ -340,29 +313,64 @@ if __name__ == '__main__':
     # Deletes empty strings in case they exist
     kw_clean = list(filter(None, kw_clean))
 
+    return kw_clean
+
+
+# ------------------------------------------
+# -------------- MAIN PROGRAM --------------
+# ------------------------------------------
+
+
+if __name__ == '__main__':
+
+    # Generate a new file with same data but this time without quote marks
+    # entrada = "../files/samples_researchers_publications-keywords.csv"
+    entrada = "../files/Researcher-06000001-keywords.csv"
+    salida = "../files/fichero_bien.csv"
+
+    with open(entrada, "r", encoding='utf-8') as f_in, open(salida, "w", encoding='utf-8') as f_out:
+        for linea in f_in:
+            trozos = linea.rstrip().split(",")  # Split elements by coma
+            nombre = trozos[0]  # Get the first element
+            palabra = ",".join(trozos[1:]).replace('"', '')  # Put the other elements together
+            # Write into the other file but now the second element have quote marks
+            f_out.write('{},"{}"\n'.format(nombre, palabra))
+
+    start = time.time()
+
+    kw_clean = keywords_cleaner(salida)
+
     # Dictionary structure
     d_key = {}
     for k in kw_clean:
         k_norm = normalize(k)
         d_key[k_norm] = {}
 
+    """
     # Compacting keys structure
     comp_keys = {}
     for k in kw_clean:
         k_norm = normalize(k)
         db = DBpediaLinker(k_norm)
+        if db:
+            xy = DBpedia_wrapper(db)
         if db is None:
             db = Wikidata_lang(k_norm)
+            if db:
+                xy = Wikidata_wrapper(db)
+        xyz = utf8_format(xy)
         comp_keys[db] = {}
-    print(json.dumps(comp_keys, indent=1))
-
+        comp_keys[db]['entity'] = xyz
+    json_string = json.dumps(comp_keys, indent=1, ensure_ascii=False).encode('utf-8')
+    print(json_string.decode())
+    """
     pool = multiprocessing.Pool()
     try:
         result_async = [pool.apply_async(process, args=(keyword,)) for keyword in d_key.keys()]
         for o in result_async:
             output = o.get()
             d_key[output['keyword']] = output['result']
-        print(json.dumps(d_key, indent=1))
+        print(json.dumps(d_key, indent=1, ensure_ascii=False).encode('utf-8').decode())
     finally:
         end = time.time()
         print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end - start))))
