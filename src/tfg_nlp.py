@@ -238,30 +238,30 @@ def process(clave):
     result = {'lang': language_keyword(clave)}
     output = {'keyword': clave, 'result': result}
 
-    result['Group'] = group(clave, result['lang'])
+    # result['Group'] = group(clave, result['lang'])
 
     if result['lang'] == 'en':
         # result['stop-word'] = en_stopWords(clave)
-        result['synonym'] = synonyms(clave)
-        result['stemmer'] = en_stemmer(clave)
+        # result['synonym'] = synonyms(clave)
+        # result['stemmer'] = en_stemmer(clave)
         result['lemmatizer'] = en_lemmatizer(clave)
-        result['Wikidata'] = en_WikidataLinker(clave)
-        result['DBpedia'] = DBpediaLinker(clave)
+        result['Wikidata'] = WikidataLinker(result['lemmatizer'], result['lang'])
+        result['DBpedia'] = DBpediaLinker(result['lemmatizer'])
 
     elif result['lang'] == 'es':
         # result['stop-word'] = es_stopWords(clave)
-        result['synonym'] = synonyms(clave)
-        result['stemmer'] = es_stemmer(clave)
+        # result['synonym'] = synonyms(clave)
+        # result['stemmer'] = es_stemmer(clave)
         result['lemmatizer'] = es_lemmatizer(clave)
-        result['Wikidata'] = es_WikidataLinker(clave)
-        result['DBpedia'] = DBpediaLinker(clave)
+        result['Wikidata'] = WikidataLinker(result['lemmatizer'], result['lang'])
+        result['DBpedia'] = DBpediaLinker(result['lemmatizer'])
 
     elif result['lang'] == 'ca':
         # result['stop-word'] = ca_stopWords(clave)
-        result['synonym'] = synonyms(clave)
+        # result['synonym'] = synonyms(clave)
         result['lemmatizer'] = ca_lemmatizer(clave)
-        result['Wikidata'] = ca_WikidataLinker(clave)
-        result['DBpedia'] = DBpediaLinker(clave)
+        result['Wikidata'] = WikidataLinker(result['lemmatizer'], result['lang'])
+        result['DBpedia'] = DBpediaLinker(result['lemmatizer'])
 
     return output
 
