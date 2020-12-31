@@ -193,26 +193,10 @@ def ca_lemmatizer(keyword):
 
 # -------------- linkers --------------
 
-def en_WikidataLinker(keyword):
+def WikidataLinker(keyword, language):
     linker = WikidataEntityLinker()
 
-    entity = linker.link_entity_en(keyword)
-
-    return entity
-
-
-def es_WikidataLinker(keyword):
-    linker = WikidataEntityLinker()
-
-    entity = linker.link_entity_en(keyword)
-
-    return entity
-
-
-def ca_WikidataLinker(keyword):
-    linker = WikidataEntityLinker()
-
-    entity = linker.link_entity_ca(keyword)
+    entity = linker.link_entity(keyword, language)
 
     return entity
 
@@ -228,14 +212,7 @@ def DBpediaLinker(keyword):
 def Wikidata_lang(keyword):
     lang = language_keyword(keyword)
 
-    if lang == 'en':
-        wiki_link = en_WikidataLinker(keyword)
-    elif lang == 'es':
-        wiki_link = es_WikidataLinker(keyword)
-    else:
-        wiki_link = ca_WikidataLinker(keyword)
-
-    return wiki_link
+    return WikidataLinker(keyword, lang)
 
 
 # -------------- group words by root --------------
