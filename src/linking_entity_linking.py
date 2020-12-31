@@ -1,5 +1,6 @@
 import json
 import logging
+from functools import reduce
 from webbrowser import Error
 
 import requests
@@ -71,25 +72,38 @@ class WikidataEntityLinker(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
 
-    def link_entity_en(self, entity_label):
+    def pick_preferred(self, x, y):
+        if len(x['label']) < len(y['label']):
+            return x
+        elif len(y['label']) < len(x['label']):
+            return y
+        elif len(x['concepturi']) < len(y['concepturi']):
+            return x
+        else:
+            return y
+
+    def link_entity(self, entity_label, language):
         """ Links a single entity to Wikidata.
 
         Parameters
         ----------
         entity_label : str
             Name of the entity to be linked.
+        language: str
+            Preferred language for linking (en, es,...)
         
         Returns
         -------
         (str, str)
             Tuple where the first element is the name of the entity,
             and the second one is its 'QID' from Wikidata after linking.
+            The result with the shortest label and smallest QID is selected.
         """
         if entity_label in self.linked_entities_cache:
-            return (self.linked_entities_cache[entity_label])
+            return self.linked_entities_cache[entity_label]
 
         url = f"{WIKIDATA_BASE}/api.php?action=wbsearchentities&search=" + \
-              f"{entity_label}&language=en&format=json"
+              f"{entity_label}&limit=15&language={language}&format=json"
         response = requests.get(url)
         if response.status_code != 200:
             raise Error()
@@ -99,88 +113,12 @@ class WikidataEntityLinker(BaseEstimator, TransformerMixin):
         except:
             # invalid entity
             self.linked_entities_cache[entity_label] = None
-            return self.link_entity_en(entity_label)
+            return self.link_entity(entity_label, language)
 
         search_results = content['search']
         if len(search_results) == 0:
             self.linked_entities_cache[entity_label] = None
-            return self.link_entity_en(entity_label)
-
-        self.linked_entities_cache[entity_label] = search_results[0]['concepturi']
-        return self.link_entity_en(entity_label)
-
-    def link_entity_es(self, entity_label):
-        """ Links a single entity to Wikidata.
-
-        Parameters
-        ----------
-        entity_label : str
-            Name of the entity to be linked.
-
-        Returns
-        -------
-        (str, str)
-            Tuple where the first element is the name of the entity,
-            and the second one is its 'QID' from Wikidata after linking.
-        """
-        if entity_label in self.linked_entities_cache:
-            return (self.linked_entities_cache[entity_label])
-
-        url = f"{WIKIDATA_BASE}/api.php?action=wbsearchentities&search=" + \
-              f"{entity_label}&language=es&format=json"
-        response = requests.get(url)
-        if response.status_code != 200:
-            raise Error()
-
-        try:
-            content = json.loads(response.text)
-        except:
-            # invalid entity
-            self.linked_entities_cache[entity_label] = None
-            return self.link_entity_es(entity_label)
-
-        search_results = content['search']
-        if len(search_results) == 0:
-            self.linked_entities_cache[entity_label] = None
-            return self.link_entity_es(entity_label)
-
-        self.linked_entities_cache[entity_label] = search_results[0]['concepturi']
-        return self.link_entity_es(entity_label)
-
-    def link_entity_ca(self, entity_label):
-        """ Links a single entity to Wikidata.
-
-        Parameters
-        ----------
-        entity_label : str
-            Name of the entity to be linked.
-
-        Returns
-        -------
-        (str, str)
-            Tuple where the first element is the name of the entity,
-            and the second one is its 'QID' from Wikidata after linking.
-        """
-        if entity_label in self.linked_entities_cache:
-            return (self.linked_entities_cache[entity_label])
-
-        url = f"{WIKIDATA_BASE}/api.php?action=wbsearchentities&search=" + \
-              f"{entity_label}&language=ca&format=json"
-        response = requests.get(url)
-        if response.status_code != 200:
-            raise Error()
-
-        try:
-            content = json.loads(response.text)
-        except:
-            # invalid entity
-            self.linked_entities_cache[entity_label] = None
-            return self.link_entity_ca(entity_label)
-
-        search_results = content['search']
-        if len(search_results) == 0:
-            self.linked_entities_cache[entity_label] = None
-            return self.link_entity_ca(entity_label)
-
-        self.linked_entities_cache[entity_label] = search_results[0]['concepturi']
-        return self.link_entity_ca(entity_label)
+            return self.link_entity(entity_label, language)
+        result = reduce(lambda x, y: self.pick_preferred(x, y), search_results)
+        self.linked_entities_cache[entity_label] = result['concepturi']
+        return self.link_entity(entity_label, language)
