@@ -23,8 +23,11 @@ def Wikidata_wrapper(url):
         sparql.setReturnFormat(JSON)
         results = sparql.query().convert()
 
+        ent_list = []
         for result in results["results"]["bindings"]:
-            return result["name"]["value"]
+            ent_list.append(result["name"]["value"])
+        return ent_list
+
     except Exception as e:
         traceback.print_exc(file=sys.stdout)
         raise e

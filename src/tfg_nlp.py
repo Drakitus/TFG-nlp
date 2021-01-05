@@ -6,7 +6,7 @@ import multiprocessing
 # import hunspell
 
 from linking_entity_linking import *
-#from compacting_keys import *
+# from compacting_keys import *
 
 from rake_nltk import Rake
 from string import punctuation
@@ -88,18 +88,6 @@ def hyponyms_a(clave):
 
     hyponym = word.hiponyms()
     return hyponym
-
-
-# -------------- Split multiple keywords with punctuation signs --------------
-def splitter(kw_list):
-    regex = '; | - | / '
-
-    kw_clean = []
-    for word in kw_list:
-        kw_clean.extend(re.split(regex, word))
-
-    return kw_clean
-
 
 # -------------- Language detector --------------
 def language_keyword(keyword):
@@ -274,21 +262,24 @@ def keywords_cleaner(f_in):
     df.drop_duplicates(subset=None, keep="first", inplace=True)
 
     # -------------- used to delete multiple keywords in one line --------------
+    regex = "; | /"
     # Convert column keyword into lists
     df.keyword = df.keyword.str.split(",")
     # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
     df = df.explode("keyword")
+    # We need to copy the same code because there're problems with punctuation marks.
+    df.keyword = df.keyword.str.split(regex)
+    df = df.explode("keyword")
+
+    df.to_csv(f_in, index=False)
 
     df_dict = df.to_dict('records')
     keywords = [d.get('keyword') for d in df_dict]
     # Delete duplicates from keywords list
     kw_list = list(dict.fromkeys(keywords))
 
-    # Deletes all punctuation marks and create new columns with the resource and the keyword
-    kw_clean = splitter(kw_list)
-
     # Deletes empty strings in case they exist
-    kw_clean = list(filter(None, kw_clean))
+    kw_clean = list(filter(None, kw_list))
 
     return kw_clean
 
@@ -301,7 +292,7 @@ def keywords_cleaner(f_in):
 if __name__ == '__main__':
 
     # Generate a new file with same data but this time without quote marks
-    # entrada = "../files/samples_researchers_publications-keywords.csv"
+    #entrada = "../files/samples_researchers_publications-keywords.csv"
     entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/fichero_bien.csv"
 
@@ -323,24 +314,6 @@ if __name__ == '__main__':
         k_norm = normalize(k)
         d_key[k_norm] = {}
 
-    """
-    # Compacting keys structure
-    comp_keys = {}
-    for k in kw_clean:
-        k_norm = normalize(k)
-        db = DBpediaLinker(k_norm)
-        if db:
-            xy = DBpedia_wrapper(db)
-        if db is None:
-            db = Wikidata_lang(k_norm)
-            if db:
-                xy = Wikidata_wrapper(db)
-        xyz = utf8_format(xy)
-        comp_keys[db] = {}
-        comp_keys[db]['entity'] = xyz
-    json_string = json.dumps(comp_keys, indent=1, ensure_ascii=False).encode('utf-8')
-    print(json_string.decode())
-    """
     pool = multiprocessing.Pool()
     try:
         result_async = [pool.apply_async(process, args=(keyword,)) for keyword in d_key.keys()]
