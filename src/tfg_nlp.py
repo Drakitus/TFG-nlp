@@ -89,6 +89,7 @@ def hyponyms_a(clave):
     hyponym = word.hiponyms()
     return hyponym
 
+
 # -------------- Language detector --------------
 def language_keyword(keyword):
     r = {
@@ -212,10 +213,8 @@ def group(keyword, lang):
     for k in kw_list:
         if lang == 'en':
             res[en_stemmer(k)].append(k)
-
         elif lang == 'es':
             res[en_stemmer(k)].append(k)
-
         else:
             res[ca_lemmatizer(k)].append(k)
     return res
@@ -254,6 +253,25 @@ def process(clave):
     return output
 
 
+def splitter(df):
+    # Convert column keyword into lists
+    df.keyword = df.keyword.str.split(",")
+    # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
+    df = df.explode("keyword")
+
+    df.keyword = df.keyword.str.split("- ")
+    df = df.explode("keyword")
+
+    df.keyword = df.keyword.str.split("\. ")  # Need the \ to specify the . if not it will accept any character
+    df = df.explode("keyword")
+
+    regex = "; | /"
+    df.keyword = df.keyword.str.split(regex)
+    df = df.explode("keyword")
+
+    return df
+
+
 def keywords_cleaner(f_in):
     # Get the data from the file
     df = pd.read_csv(f_in, delimiter=',')
@@ -261,19 +279,12 @@ def keywords_cleaner(f_in):
     # Delete duplicates rows
     df.drop_duplicates(subset=None, keep="first", inplace=True)
 
-    # -------------- used to delete multiple keywords in one line --------------
-    regex = "; | /"
-    # Convert column keyword into lists
-    df.keyword = df.keyword.str.split(",")
-    # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
-    df = df.explode("keyword")
-    # We need to copy the same code because there're problems with punctuation marks.
-    df.keyword = df.keyword.str.split(regex)
-    df = df.explode("keyword")
+    # Delete multiple keywords in one line separated by punctuation marks
+    df_split = splitter(df)
 
-    df.to_csv(f_in, index=False)
+    df_split.to_csv(f_in, index=False)
 
-    df_dict = df.to_dict('records')
+    df_dict = df_split.to_dict('records')
     keywords = [d.get('keyword') for d in df_dict]
     # Delete duplicates from keywords list
     kw_list = list(dict.fromkeys(keywords))
@@ -292,7 +303,7 @@ def keywords_cleaner(f_in):
 if __name__ == '__main__':
 
     # Generate a new file with same data but this time without quote marks
-    #entrada = "../files/samples_researchers_publications-keywords.csv"
+    # entrada = "../files/samples_researchers_publications-keywords.csv"
     entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/fichero_bien.csv"
 
@@ -306,6 +317,7 @@ if __name__ == '__main__':
 
     start = time.time()
 
+    # Clean file and organize keywords to be processed
     kw_clean = keywords_cleaner(salida)
 
     # Dictionary structure
