@@ -1,3 +1,4 @@
+import csv
 import pandas as pd
 import spacy
 import pycld2 as cld2
@@ -253,25 +254,7 @@ def process(clave):
     return output
 
 
-def splitter(df):
-    # Convert column keyword into lists
-    df.keyword = df.keyword.str.split(",")
-    # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
-    df = df.explode("keyword")
-
-    df.keyword = df.keyword.str.split("- ")
-    df = df.explode("keyword")
-
-    df.keyword = df.keyword.str.split("\. ")  # Need the \ to specify the . if not it will accept any character
-    df = df.explode("keyword")
-
-    regex = "; | /"
-    df.keyword = df.keyword.str.split(regex)
-    df = df.explode("keyword")
-
-    return df
-
-
+# -------------- Prepare the file to be processed --------------
 def keywords_cleaner(f_in):
     # Get the data from the file
     df = pd.read_csv(f_in, delimiter=',')
@@ -293,6 +276,26 @@ def keywords_cleaner(f_in):
     kw_clean = list(filter(None, kw_list))
 
     return kw_clean
+
+
+# -------------- Split multiple keywords in one row --------------
+def splitter(df):
+    # Convert column keyword into lists
+    df.keyword = df.keyword.str.split(",")
+    # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
+    df = df.explode("keyword")
+
+    df.keyword = df.keyword.str.split("- ")
+    df = df.explode("keyword")
+
+    df.keyword = df.keyword.str.split("\. ")  # Need the \ to specify the . if not it will accept any character
+    df = df.explode("keyword")
+
+    regex = "; | /"
+    df.keyword = df.keyword.str.split(regex)
+    df = df.explode("keyword")
+
+    return df
 
 
 # ------------------------------------------
@@ -337,3 +340,25 @@ if __name__ == '__main__':
         end = time.time()
         print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end - start))))
         pool.close()
+
+    # File modifier
+    file = "../files/fichero_bien.csv"
+    file2= "../files/fichero_bien2.csv"
+    with open(file, "r") as csv_file, open(file2, "w", encoding='utf-8') as csv_file_out:
+        headers = next(csv_file, None)  # Write header
+        if headers:
+            csv_file_out.write(headers)
+        for lane in csv_file:
+            part = lane.rstrip().split(",")  # Split elements by coma
+            resourcer = part[0]
+            key = part[1]  # Get the first element
+
+            if key in d_key.keys():
+                if d_key[key]['DBpedia'] is not None:
+                    f_key = key.replace(key, d_key[key]['DBpedia'])
+                else:
+                    if d_key[key]['Wikidata'] is not None:
+                        f_key = key.replace(key, d_key[key]['Wikidata'])
+                    else:
+                        f_key = key
+            csv_file_out.write('{},{}\n'.format(resourcer, f_key))
