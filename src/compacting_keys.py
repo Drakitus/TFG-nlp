@@ -7,7 +7,7 @@ from tfg_nlp import *
 
 
 def Wikidata_wrapper(url):
-    user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) '\
+    user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) ' \
                  'Chrome/50.0.2661.102 Safari/537.36'
     try:
         sparql = SPARQLWrapper("https://query.wikidata.org/sparql", agent=user_agent)
@@ -25,7 +25,9 @@ def Wikidata_wrapper(url):
 
         ent_list = []
         for result in results["results"]["bindings"]:
-            ent_list.append(result["name"]["value"])
+            keywords = utf8_format(result["name"]["value"])
+            dict = {'keyword': keywords, 'language': result["lang"]["value"]}
+            ent_list.append(dict)
         return ent_list
 
     except Exception as e:
@@ -46,10 +48,12 @@ def DBpedia_wrapper(url):
     """.format(url=url))
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-    x = []
+    ent_list = []
     for result in results["results"]["bindings"]:
-        x.append(utf8_format(result["label"]["value"]))
-    return x
+        kewords = utf8_format(result["label"]["value"])
+        dict = {'keyword': kewords, 'language': result["label"]["xml:lang"]}
+        ent_list.append(dict)
+    return ent_list
 
 
 if __name__ == '__main__':
@@ -69,6 +73,14 @@ if __name__ == '__main__':
             if db:
                 wrapper = Wikidata_wrapper(db)
         comp_keys[db] = {}
-        comp_keys[db]['keyword'] = k_norm
-        comp_keys[db]['entities'] = wrapper
+        comp_keys[db] = wrapper
     pprint.pprint(comp_keys, width=120)
+
+    # File with compacting structure
+    salida = "../files/compacting_keys.csv"
+    with open(salida, 'w') as f_out:
+        writer = csv.writer(f_out)
+        writer.writerow(['uri', 'labels'])
+        for key, value in comp_keys.items():
+            writer.writerow([key, value])
+
