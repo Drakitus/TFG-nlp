@@ -341,9 +341,9 @@ if __name__ == '__main__':
         print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end - start))))
         pool.close()
 
-    # File modifier
+    # File modifier to resource/uri
     file = "../files/fichero_bien.csv"
-    file2= "../files/fichero_bien2.csv"
+    file2 = "../files/fichero_bien2.csv"
     with open(file, "r") as csv_file, open(file2, "w", encoding='utf-8') as csv_file_out:
         headers = next(csv_file, None)  # Write header
         if headers:
@@ -351,7 +351,7 @@ if __name__ == '__main__':
         for lane in csv_file:
             part = lane.rstrip().split(",")  # Split elements by coma
             resourcer = part[0]
-            key = part[1]  # Get the first element
+            key = normalize(part[1])  # Get the first element
 
             if key in d_key.keys():
                 if d_key[key]['DBpedia'] is not None:
@@ -361,4 +361,6 @@ if __name__ == '__main__':
                         f_key = key.replace(key, d_key[key]['Wikidata'])
                     else:
                         f_key = key
+            else:
+                csv_file_out.write('{},{}\n'.format(resourcer, key))
             csv_file_out.write('{},{}\n'.format(resourcer, f_key))
