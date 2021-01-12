@@ -37,6 +37,8 @@ def normalize(clave):
     word = remove_white_spaces(word)
     # Remove multiple white spaces
     word = remove_multiple_white_spaces(word)
+
+    word = utf8_format(word)
     # Correct words
     # word = spelling_corrector(None, word)
 
@@ -308,7 +310,7 @@ if __name__ == '__main__':
     # Generate a new file with same data but this time without quote marks
     # entrada = "../files/samples_researchers_publications-keywords.csv"
     entrada = "../files/Researcher-06000001-keywords.csv"
-    salida = "../files/fichero_bien.csv"
+    salida = "../files/file-keywords-split.csv"
 
     with open(entrada, "r", encoding='utf-8') as f_in, open(salida, "w", encoding='utf-8') as f_out:
         for linea in f_in:
@@ -342,8 +344,8 @@ if __name__ == '__main__':
         pool.close()
 
     # File modifier to resource/uri
-    file = "../files/fichero_bien.csv"
-    file2 = "../files/fichero_bien2.csv"
+    file = "../files/file-keywords-split.csv"
+    file2 = "../files/replace-keywors-uri.csv"
     with open(file, "r") as csv_file, open(file2, "w", encoding='utf-8') as csv_file_out:
         headers = next(csv_file, None)  # Write header
         if headers:
@@ -353,6 +355,7 @@ if __name__ == '__main__':
             resourcer = part[0]
             key = normalize(part[1])  # Get the first element
 
+            # Replace keywords fro uris
             if key in d_key.keys():
                 if d_key[key]['DBpedia'] is not None:
                     f_key = key.replace(key, d_key[key]['DBpedia'])
