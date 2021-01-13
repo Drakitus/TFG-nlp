@@ -7,7 +7,7 @@ import multiprocessing
 # import hunspell
 
 from linking_entity_linking import *
-# from compacting_keys import *
+from compacting_keys import *
 
 from rake_nltk import Rake
 from string import punctuation
@@ -223,6 +223,51 @@ def group(keyword, lang):
     return res
 
 
+# -------------- Prepare the file to be processed --------------
+def keywords_cleaner(f_in):
+    # Get the data from the file
+    df = pd.read_csv(f_in, delimiter=',')
+
+    # Delete duplicates rows
+    df.drop_duplicates(subset=None, keep="first", inplace=True)
+
+    # Delete multiple keywords in one line separated by punctuation marks
+    df_split = splitter(df)
+
+    df_split.to_csv(f_in, index=False)
+
+    df_dict = df_split.to_dict('records')
+    keywords = [d.get('keyword') for d in df_dict]
+    # Delete duplicates from keywords list
+    kw_list = list(dict.fromkeys(keywords))
+
+    # Deletes empty strings in case they exist
+    kw_clean = list(filter(None, kw_list))
+
+    return kw_clean
+
+
+# -------------- Split multiple keywords in one row --------------
+def splitter(df):
+    # Convert column keyword into lists
+    df.keyword = df.keyword.str.split(",")
+    # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
+    df = df.explode("keyword")
+
+    df.keyword = df['keyword'].str.split("- ")
+    df = df.explode("keyword")
+
+    df.keyword = df.keyword.str.split("\. ")  # Need the \ to specify the . if not it will accept any character
+    df = df.explode("keyword")
+
+    regex = "; | /"
+    df.keyword = df.keyword.str.split(regex)
+    df = df.explode("keyword")
+
+    return df
+
+
+# -------------- build d_keys information --------------
 def process(clave):
     print('Processing {}'.format(clave))
     result = {'lang': language_keyword(clave)}
@@ -256,54 +301,47 @@ def process(clave):
     return output
 
 
-# -------------- Prepare the file to be processed --------------
-def keywords_cleaner(f_in):
-    # Get the data from the file
-    df = pd.read_csv(f_in, delimiter=',')
+# -------------- modify file replace-keywords-uri.csv --------------
+def modify_file_keywords_to_uri(dict):
+    file = "../files/file-keywords-split.csv"
+    file2 = "../files/replace-keywors-uri.csv"
+    with open(file, "r") as csv_file, open(file2, "w", encoding='utf-8') as csv_file_out:
+        headers = next(csv_file, None)  # Write header
+        if headers:
+            csv_file_out.write(headers)
+        for lane in csv_file:
+            part = lane.rstrip().split(",")  # Split elements by coma
+            resourcer = part[0]
+            key = normalize(part[1])  # Get the first element
 
-    # Delete duplicates rows
-    df.drop_duplicates(subset=None, keep="first", inplace=True)
-
-    # Delete multiple keywords in one line separated by punctuation marks
-    df_split = splitter(df)
-
-    df_split.to_csv(f_in, index=False)
-
-    df_dict = df_split.to_dict('records')
-    keywords = [d.get('keyword') for d in df_dict]
-    # Delete duplicates from keywords list
-    kw_list = list(dict.fromkeys(keywords))
-
-    # Deletes empty strings in case they exist
-    kw_clean = list(filter(None, kw_list))
-
-    return kw_clean
+            # Replace keywords for uris
+            if key in dict.keys():
+                if dict[key]['DBpedia'] is not None:
+                    f_key = key.replace(key, dict[key]['DBpedia'])
+                else:
+                    if dict[key]['Wikidata'] is not None:
+                        f_key = key.replace(key, dict[key]['Wikidata'])
+                    else:
+                        f_key = key
+            else:
+                csv_file_out.write('{},{}\n'.format(resourcer, key))
+            csv_file_out.write('{},{}\n'.format(resourcer, f_key))
 
 
-# -------------- Split multiple keywords in one row --------------
-def splitter(df):
-    # Convert column keyword into lists
-    df.keyword = df.keyword.str.split(",")
-    # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
-    df = df.explode("keyword")
-
-    df.keyword = df.keyword.str.split("- ")
-    df = df.explode("keyword")
-
-    df.keyword = df.keyword.str.split("\. ")  # Need the \ to specify the . if not it will accept any character
-    df = df.explode("keyword")
-
-    regex = "; | /"
-    df.keyword = df.keyword.str.split(regex)
-    df = df.explode("keyword")
-
-    return df
+# -------------- create compacting_keys_file_structure.csv --------------
+def create_compacting_keys_structure(dict):
+    # File with compacting structure
+    salida = "../files/compacting_keys.csv"
+    with open(salida, 'w') as f_out:
+        writer = csv.writer(f_out)
+        writer.writerow(['uri', 'labels'])
+        for key, value in dict.items():
+            writer.writerow([key, value])
 
 
 # ------------------------------------------
 # -------------- MAIN PROGRAM --------------
 # ------------------------------------------
-
 
 if __name__ == '__main__':
 
@@ -325,7 +363,7 @@ if __name__ == '__main__':
     # Clean file and organize keywords to be processed
     kw_clean = keywords_cleaner(salida)
 
-    # Dictionary structure
+    # Dictionary keyword information structure
     d_key = {}
     for k in kw_clean:
         k_norm = normalize(k)
@@ -337,6 +375,10 @@ if __name__ == '__main__':
         for o in result_async:
             output = o.get()
             d_key[output['keyword']] = output['result']
+
+        print("--------------------------------------------")
+        print("------ INFORMATION KEYWORDS STRUCTURE ------")
+        print("--------------------------------------------")
         print(json.dumps(d_key, indent=1, ensure_ascii=False).encode('utf-8').decode())
     finally:
         end = time.time()
@@ -344,26 +386,40 @@ if __name__ == '__main__':
         pool.close()
 
     # File modifier to resource/uri
-    file = "../files/file-keywords-split.csv"
-    file2 = "../files/replace-keywors-uri.csv"
-    with open(file, "r") as csv_file, open(file2, "w", encoding='utf-8') as csv_file_out:
-        headers = next(csv_file, None)  # Write header
-        if headers:
-            csv_file_out.write(headers)
-        for lane in csv_file:
-            part = lane.rstrip().split(",")  # Split elements by coma
-            resourcer = part[0]
-            key = normalize(part[1])  # Get the first element
+    modify_file_keywords_to_uri(d_key)
 
-            # Replace keywords fro uris
-            if key in d_key.keys():
-                if d_key[key]['DBpedia'] is not None:
-                    f_key = key.replace(key, d_key[key]['DBpedia'])
-                else:
-                    if d_key[key]['Wikidata'] is not None:
-                        f_key = key.replace(key, d_key[key]['Wikidata'])
-                    else:
-                        f_key = key
-            else:
-                csv_file_out.write('{},{}\n'.format(resourcer, key))
-            csv_file_out.write('{},{}\n'.format(resourcer, f_key))
+    print("-------------------------------------------")
+    print("------ COMPACTING KEYWORDS STRUCTURE ------")
+    print("-------------------------------------------")
+
+    # Compacting keyword dictionary
+    com_keys = {}
+    for k in kw_clean:
+        k_norm2 = normalize(k)
+
+        db = d_key[k_norm2]['DBpedia']
+
+        if db:
+            com_keys[db] = [{'keyword': k_norm2, 'language': d_key[k_norm2]['lang']}]
+            wrapper = DBpedia_wrapper(db)
+            com_keys[db].extend(wrapper)
+        else:
+            wd = d_key[k_norm2]['Wikidata']
+            com_keys[wd] = [{'keyword': k, 'language': d_key[k_norm2]['lang']}]
+            wrapper = Wikidata_wrapper(wd)
+            com_keys[wd].extend(wrapper)
+            if wd is None:
+                com_keys[k_norm2] = [{'keyword': k, 'language': d_key[k_norm2]['lang']}]
+
+        # Clean repeated labels
+        for key, value in com_keys.items():
+            labels_list = []
+            for item in value:
+                if item not in labels_list:
+                    labels_list.append(item)
+            com_keys[key] = labels_list
+
+    print(json.dumps(com_keys, indent=1, ensure_ascii=False).encode('utf-8').decode())
+
+    # Create file with keywords compacted
+    create_compacting_keys_structure(com_keys)
