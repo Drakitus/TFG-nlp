@@ -21,6 +21,13 @@ class TestProcessKeyword(unittest.TestCase):
         for result in results:
             self.assertEqual("http://www.wikidata.org/entity/Q54837", result["result"]["Wikidata"])
 
+    def test_Acronym(self):
+        keywords = ["artificial intelligence", "AI"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://dbpedia.org/resource/Artificial_intelligence", result["result"]["DBpedia"])
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -4,6 +4,7 @@ import traceback
 from SPARQLWrapper import SPARQLWrapper, JSON
 from tfg_nlp import normalize
 
+
 def utf8_format(clave):
     if clave is not None:
         e = clave.encode('utf-8')
@@ -64,4 +65,3 @@ def DBpedia_wrapper(url):
         dict = {'keyword': kewords, 'language': result["label"]["xml:lang"]}
         ent_list.append(dict)
     return ent_list
-

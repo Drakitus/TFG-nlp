@@ -224,6 +224,18 @@ def group(keyword, lang):
 
 
 # -------------- Prepare the file to be processed --------------
+def correct_keywords_file(file_in, file_out):
+
+    with open(file_in, "r", encoding='utf-8') as f_in, open(file_out, "w", encoding='utf-8') as f_out:
+        for linea in f_in:
+            trozos = linea.rstrip().split(",")  # Split elements by coma
+            nombre = trozos[0]  # Get the first element
+            palabra = ",".join(trozos[1:]).replace('"', '')  # Put the other elements together
+            # Write into the other file but now the second element have quote marks
+            f_out.write('{},"{}"\n'.format(nombre, palabra))
+
+
+# -------------- Prepare the file to be processed --------------
 def keywords_cleaner(f_in):
     # Get the data from the file
     df = pd.read_csv(f_in, delimiter=',')
@@ -250,7 +262,7 @@ def keywords_cleaner(f_in):
 # -------------- Split multiple keywords in one row --------------
 def splitter(df):
     # Convert column keyword into lists
-    df.keyword = df.keyword.str.split(",")
+    df.keyword = df.keyword.str.split(", ")
     # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
     df = df.explode("keyword")
 
@@ -260,8 +272,10 @@ def splitter(df):
     df.keyword = df.keyword.str.split("\. ")  # Need the \ to specify the . if not it will accept any character
     df = df.explode("keyword")
 
-    regex = "; | /"
-    df.keyword = df.keyword.str.split(regex)
+    df.keyword = df.keyword.str.split("; ")
+    df = df.explode("keyword")
+
+    df.keyword = df.keyword.str.split("/ ")
     df = df.explode("keyword")
 
     return df
@@ -350,13 +364,7 @@ if __name__ == '__main__':
     entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
-    with open(entrada, "r", encoding='utf-8') as f_in, open(salida, "w", encoding='utf-8') as f_out:
-        for linea in f_in:
-            trozos = linea.rstrip().split(",")  # Split elements by coma
-            nombre = trozos[0]  # Get the first element
-            palabra = ",".join(trozos[1:]).replace('"', '')  # Put the other elements together
-            # Write into the other file but now the second element have quote marks
-            f_out.write('{},"{}"\n'.format(nombre, palabra))
+    correct_keywords_file(entrada, salida)
 
     start = time.time()
 
