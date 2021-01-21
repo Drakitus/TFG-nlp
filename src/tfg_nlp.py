@@ -20,6 +20,7 @@ from stop_words import get_stop_words  # will be used for catalan
 from nltk.corpus import wordnet
 from nltk.stem import SnowballStemmer
 from collections import defaultdict
+from tqdm import tqdm
 from urllib.parse import urlparse
 
 import nltk
@@ -201,12 +202,6 @@ def DBpediaLinker(keyword):
     return entity
 
 
-def Wikidata_lang(keyword):
-    lang = language_keyword(keyword)
-
-    return WikidataLinker(keyword, lang)
-
-
 # -------------- group words by root --------------
 def group(keyword, lang):
     kw_list = []
@@ -225,7 +220,6 @@ def group(keyword, lang):
 
 # -------------- Prepare the file to be processed --------------
 def correct_keywords_file(file_in, file_out):
-
     with open(file_in, "r", encoding='utf-8') as f_in, open(file_out, "w", encoding='utf-8') as f_out:
         for linea in f_in:
             trozos = linea.rstrip().split(",")  # Split elements by coma
@@ -261,29 +255,21 @@ def keywords_cleaner(f_in):
 
 # -------------- Split multiple keywords in one row --------------
 def splitter(df):
-    # Convert column keyword into lists
-    df.keyword = df.keyword.str.split(", ")
-    # Convert lists to columns duplicating the resource but with only one keyword which had more than one ','
-    df = df.explode("keyword")
-
-    df.keyword = df['keyword'].str.split("- ")
-    df = df.explode("keyword")
-
-    df.keyword = df.keyword.str.split("\. ")  # Need the \ to specify the . if not it will accept any character
-    df = df.explode("keyword")
-
-    df.keyword = df.keyword.str.split("; ")
-    df = df.explode("keyword")
-
-    df.keyword = df.keyword.str.split("/ ")
-    df = df.explode("keyword")
+    df['keyword'] = df['keyword'].str.split('[;,/]|\. |- | -')
+    df = df.explode('keyword')
+    df['keyword'] = df['keyword'].str.strip()
 
     return df
 
 
 # -------------- build d_keys information --------------
 def process(clave):
-    print('Processing {}'.format(clave))
+    # Atributes for stadistics
+    multi_cont = 0
+    one_cont = 0
+    none_cont = 0
+
+    # print('Processing {}'.format(clave))
     result = {'lang': language_keyword(clave)}
     output = {'keyword': clave, 'result': result}
 
@@ -295,7 +281,12 @@ def process(clave):
         # result['stemmer'] = en_stemmer(clave)
         result['lemmatizer'] = en_lemmatizer(clave)
         result['Wikidata'] = WikidataLinker(result['lemmatizer'], result['lang'])
+        if result['Wikidata'] is None:
+            result['Wikidata'] = WikidataLinker(clave, result['lang'])
+
         result['DBpedia'] = DBpediaLinker(result['lemmatizer'])
+        if result['DBpedia'] is None:
+            result['DBpedia'] = DBpediaLinker(clave)
 
     elif result['lang'] == 'es':
         # result['stop-word'] = es_stopWords(clave)
@@ -303,16 +294,45 @@ def process(clave):
         # result['stemmer'] = es_stemmer(clave)
         result['lemmatizer'] = es_lemmatizer(clave)
         result['Wikidata'] = WikidataLinker(result['lemmatizer'], result['lang'])
+        if result['Wikidata'] is None:
+            result['Wikidata'] = WikidataLinker(clave, result['lang'])
+
         result['DBpedia'] = DBpediaLinker(result['lemmatizer'])
+        if result['DBpedia'] is None:
+            result['DBpedia'] = DBpediaLinker(clave)
 
     elif result['lang'] == 'ca':
         # result['stop-word'] = ca_stopWords(clave)
         # result['synonym'] = synonyms(clave)
         result['lemmatizer'] = ca_lemmatizer(clave)
         result['Wikidata'] = WikidataLinker(result['lemmatizer'], result['lang'])
+        if result['Wikidata'] is None:
+            result['Wikidata'] = WikidataLinker(clave, result['lang'])
+
         result['DBpedia'] = DBpediaLinker(result['lemmatizer'])
+        if result['DBpedia'] is None:
+            result['DBpedia'] = DBpediaLinker(clave)
 
     return output
+
+
+def stadistics_d_keys(dict_in):
+    multi_cont = 0
+    one_cont = 0
+    none_cont = 0
+    for k in dict_in.keys():
+        if dict_in[k]['Wikidata'] and dict_in[k]['DBpedia']:
+            multi_cont += 1
+        elif dict_in[k]['Wikidata'] or dict_in[k]['DBpedia']:
+            one_cont += 1
+        else:
+            none_cont += 1
+
+    print("------ STADISTICS ------")
+    print("Total of keywords processed:", len(dict_in))
+    print("Contains two uris:", multi_cont)
+    print("Contains one uri:", one_cont)
+    print("Contains zero uri:", none_cont)
 
 
 # -------------- modify file replace-keywords-uri.csv --------------
@@ -342,7 +362,48 @@ def modify_file_keywords_to_uri(dict):
             csv_file_out.write('{},{}\n'.format(resourcer, f_key))
 
 
-# -------------- create compacting_keys_file_structure.csv --------------
+# -------------- buid comp_keys information --------------
+def create_comp_dict(keyword, dict_out, dict_comp):
+    db = dict_comp[keyword]['DBpedia']
+    wd = dict_comp[keyword]['Wikidata']
+
+    if db:
+        dict_out[db] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
+        wrapper = DBpedia_wrapper(db)
+        dict_out[db].extend(wrapper)
+    else:
+        dict_out[wd] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
+        wrapper = Wikidata_wrapper(wd)
+        dict_out[wd].extend(wrapper)
+        if wd is None:
+            dict_out[keyword] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
+
+    # Clean repeated labels
+    for key, value in dict_out.items():
+        labels_list = []
+        for item in value:
+            if item not in labels_list:
+                labels_list.append(item)
+        dict_out[key] = labels_list
+
+    return dict_out
+
+
+def stadistics_comp_keys(dict_in, dict_comp):
+    cont_uri = 0
+    cont_no_uri = 0
+    for k in dict_in.keys():
+        if k not in dict_comp.keys():
+            cont_uri += 1
+        else:
+            cont_no_uri += 1
+    print("------ STADISTICS ------")
+    print("Total of keywords processed:", len(dict_in))
+    print("Contains uri as key:", cont_uri)
+    print("Contains no uri as key:", cont_no_uri)
+
+
+# -------------- create compacting_keys.csv --------------
 def create_compacting_keys_structure(dict):
     # File with compacting structure
     salida = "../files/compacting_keys.csv"
@@ -359,11 +420,11 @@ def create_compacting_keys_structure(dict):
 
 if __name__ == '__main__':
 
-    # Generate a new file with same data but this time without quote marks
     # entrada = "../files/samples_researchers_publications-keywords.csv"
     entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
+    # Generate a new file with same data but this time without quote marks
     correct_keywords_file(entrada, salida)
 
     start = time.time()
@@ -380,54 +441,54 @@ if __name__ == '__main__':
     pool = multiprocessing.Pool()
     try:
         result_async = [pool.apply_async(process, args=(keyword,)) for keyword in d_key.keys()]
+        loop = tqdm(total=len(result_async), position=0, leave=False, colour='green')
         for o in result_async:
+            loop.set_description("Calculando diccionario...".format(o))
             output = o.get()
             d_key[output['keyword']] = output['result']
+            loop.update(1)
 
         print("--------------------------------------------")
         print("------ INFORMATION KEYWORDS STRUCTURE ------")
         print("--------------------------------------------")
         print(json.dumps(d_key, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        loop.close()
     finally:
         end = time.time()
-        print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end - start))))
         pool.close()
+
+    # Stadistics of dictionary
+    stadistics_d_keys(d_key)
+    print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end - start))))
 
     # File modifier to resource/uri
     modify_file_keywords_to_uri(d_key)
 
+    # --------------------- Compacting keyword dictionary ---------------------
+    start2 = time.time()
+
+    com_keys = {}
+    loop = tqdm(total=len(kw_clean), position=0, leave=False, colour='green')
+
+    for k in kw_clean:
+        k_norm2 = normalize(k)
+        loop.set_description("Construint el diccionari per compactar".format(k))
+
+        # Create content of dictionary
+        com_keys = create_comp_dict(k_norm2, com_keys, d_key)
+
+        loop.update(1)
+    loop.close()
+
+    end2 = time.time()
+
     print("-------------------------------------------")
     print("------ COMPACTING KEYWORDS STRUCTURE ------")
     print("-------------------------------------------")
-
-    # Compacting keyword dictionary
-    com_keys = {}
-    for k in kw_clean:
-        k_norm2 = normalize(k)
-
-        db = d_key[k_norm2]['DBpedia']
-
-        if db:
-            com_keys[db] = [{'keyword': k_norm2, 'language': d_key[k_norm2]['lang']}]
-            wrapper = DBpedia_wrapper(db)
-            com_keys[db].extend(wrapper)
-        else:
-            wd = d_key[k_norm2]['Wikidata']
-            com_keys[wd] = [{'keyword': k, 'language': d_key[k_norm2]['lang']}]
-            wrapper = Wikidata_wrapper(wd)
-            com_keys[wd].extend(wrapper)
-            if wd is None:
-                com_keys[k_norm2] = [{'keyword': k, 'language': d_key[k_norm2]['lang']}]
-
-        # Clean repeated labels
-        for key, value in com_keys.items():
-            labels_list = []
-            for item in value:
-                if item not in labels_list:
-                    labels_list.append(item)
-            com_keys[key] = labels_list
-
     print(json.dumps(com_keys, indent=1, ensure_ascii=False).encode('utf-8').decode())
+
+    stadistics_comp_keys(com_keys, d_key)
+    print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end2 - start2))))
 
     # Create file with keywords compacted
     create_compacting_keys_structure(com_keys)
