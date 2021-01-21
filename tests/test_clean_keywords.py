@@ -101,9 +101,9 @@ class SimpleTestFileKeywordsSplit(unittest.TestCase):
 class ComplexTestFileKeywordsSplit(unittest.TestCase):
 
     def test_punctuation_mark_coma(self):
-        file_in = "files/coma_example.csv"
-        file_out = "files/coma_result.csv"
-        expected_file = "files/result_file.csv"
+        file_in = "files/coma/coma_example.csv"
+        file_out = "files/coma/coma_result.csv"
+        expected_file = "files/coma/expected_coma.csv"
 
         df = pd.read_csv(file_in, delimiter=',')
 
@@ -113,7 +113,72 @@ class ComplexTestFileKeywordsSplit(unittest.TestCase):
 
         df_split.to_csv(file_out, index=False)
 
-        self.assertListEqual(list(io.open(file_out)), list(io.open(expected_file)))
+        with io.open(file_out) as f_out, io.open(expected_file) as expected:
+            self.assertListEqual(list(f_out), list(expected))
+
+    def test_punctuation_mark_semicolon(self):
+        file_in = "files/semicolon/semicolon_example.csv"
+        file_out = "files/semicolon/semicolon_result.csv"
+        expected_file = "files/semicolon/expected_semicolon.csv"
+
+        df = pd.read_csv(file_in, delimiter=',')
+
+        df.drop_duplicates(subset=None, keep="first", inplace=True)
+
+        df_split = tfg_nlp.splitter(df)
+
+        df_split.to_csv(file_out, index=False)
+
+        with io.open(file_out) as f_out, io.open(expected_file) as expected:
+            self.assertListEqual(list(f_out), list(expected))
+
+    def test_punctuation_mark_dot(self):
+        file_in = "files/dot/dot_example.csv"
+        file_out = "files/dot/dot_result.csv"
+        expected_file = "files/dot/expected_dot.csv"
+
+        df = pd.read_csv(file_in, delimiter=',')
+
+        df.drop_duplicates(subset=None, keep="first", inplace=True)
+
+        df_split = tfg_nlp.splitter(df)
+
+        df_split.to_csv(file_out, index=False)
+
+        with io.open(file_out) as f_out, io.open(expected_file) as expected:
+            self.assertListEqual(list(f_out), list(expected))
+
+    def test_punctuation_mark_dash(self):
+        file_in = "files/dash/dash_example.csv"
+        file_out = "files/dash/dash_result.csv"
+        expected_file = "files/dash/expected_dash.csv"
+
+        df = pd.read_csv(file_in, delimiter=',')
+
+        df.drop_duplicates(subset=None, keep="first", inplace=True)
+
+        df_split = tfg_nlp.splitter(df)
+
+        df_split.to_csv(file_out, index=False)
+
+        with io.open(file_out) as f_out, io.open(expected_file) as expected:
+            self.assertListEqual(list(f_out), list(expected))
+
+    def test_punctuation_mark_dash(self):
+        file_in = "files/slash/slash_example.csv"
+        file_out = "files/slash/slash_result.csv"
+        expected_file = "files/slash/expected_slash.csv"
+
+        df = pd.read_csv(file_in, delimiter=',')
+
+        df.drop_duplicates(subset=None, keep="first", inplace=True)
+
+        df_split = tfg_nlp.splitter(df)
+
+        df_split.to_csv(file_out, index=False)
+
+        with io.open(file_out) as f_out, io.open(expected_file) as expected:
+            self.assertListEqual(list(f_out), list(expected))
 
 
 if __name__ == '__main__':
