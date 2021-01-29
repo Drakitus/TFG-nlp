@@ -72,15 +72,13 @@ class WikidataEntityLinker(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
 
-    def pick_preferred(self, x, y):
-        if len(x['label']) < len(y['label']):
-            return x
-        elif len(y['label']) < len(x['label']):
-            return y
-        elif len(x['concepturi']) < len(y['concepturi']):
-            return x
-        else:
-            return y
+    def pick_preferred(self, x):
+        for element in x:
+            if 'description' in element:
+                if 'article' not in element.get('description'):
+                    return element
+            else:
+                return element
 
     def link_entity(self, entity_label, language):
         """ Links a single entity to Wikidata.
@@ -119,6 +117,9 @@ class WikidataEntityLinker(BaseEstimator, TransformerMixin):
         if len(search_results) == 0:
             self.linked_entities_cache[entity_label] = None
             return self.link_entity(entity_label, language)
-        result = reduce(lambda x, y: self.pick_preferred(x, y), search_results)
-        self.linked_entities_cache[entity_label] = result['concepturi']
+        result = self.pick_preferred(search_results)
+        if result is None:
+            self.linked_entities_cache[entity_label] = None
+        else:
+            self.linked_entities_cache[entity_label] = result['concepturi']
         return self.link_entity(entity_label, language)
