@@ -46,22 +46,26 @@ def Wikidata_wrapper(url):
 def DBpedia_wrapper(url):
     user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) ' \
                  'Chrome/50.0.2661.102 Safari/537.36'
+    try:
+        sparql = SPARQLWrapper("http://dbpedia.org/sparql", agent=user_agent)
+        sparql.setQuery("""
+                  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                  SELECT ?label
+                  WHERE {{ 
+                  <{url}> rdfs:label ?label 
+                   FILTER(lang(?label) in ('en', 'es', 'ca')).
+                    
+                  }}           
+        """.format(url=url))
+        sparql.setReturnFormat(JSON)
+        results = sparql.query().convert()
+        ent_list = []
+        for result in results["results"]["bindings"]:
+            kewords = normalize(result["label"]["value"])
+            dict = {'keyword': kewords, 'language': result["label"]["xml:lang"]}
+            ent_list.append(dict)
+        return ent_list
 
-    sparql = SPARQLWrapper("http://dbpedia.org/sparql", agent=user_agent)
-    sparql.setQuery("""
-              PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-              SELECT ?label
-              WHERE {{ 
-              <{url}> rdfs:label ?label 
-               FILTER(lang(?label) in ('en', 'es', 'ca')).
-                
-              }}           
-    """.format(url=url))
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-    ent_list = []
-    for result in results["results"]["bindings"]:
-        kewords = normalize(result["label"]["value"])
-        dict = {'keyword': kewords, 'language': result["label"]["xml:lang"]}
-        ent_list.append(dict)
-    return ent_list
+    except Exception as e:
+        traceback.print_exc(file=sys.stdout)
+        raise e
