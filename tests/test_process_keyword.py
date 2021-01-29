@@ -28,6 +28,26 @@ class TestProcessKeyword(unittest.TestCase):
         for result in results:
             self.assertEqual("http://dbpedia.org/resource/Artificial_intelligence", result["result"]["DBpedia"])
 
+    def test_case_different_description(self):
+        keywords = ["copyright"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://www.wikidata.org/entity/Q1297822", result["result"]["Wikidata"])
+
+    def test_case_different_description2(self):
+        keywords = ["search"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://www.wikidata.org/entity/Q671718", result["result"]["Wikidata"])
+
+    def test_case_different_description3(self):
+        keywords = ["navegación"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://www.wikidata.org/entity/Q1972518", result["result"]["Wikidata"])
 
 if __name__ == '__main__':
     unittest.main()

@@ -164,10 +164,26 @@ class ComplexTestFileKeywordsSplit(unittest.TestCase):
         with io.open(file_out) as f_out, io.open(expected_file) as expected:
             self.assertListEqual(list(f_out), list(expected))
 
-    def test_punctuation_mark_dash(self):
+    def test_punctuation_mark_slash(self):
         file_in = "files/slash/slash_example.csv"
         file_out = "files/slash/slash_result.csv"
         expected_file = "files/slash/expected_slash.csv"
+
+        df = pd.read_csv(file_in, delimiter=',')
+
+        df.drop_duplicates(subset=None, keep="first", inplace=True)
+
+        df_split = tfg_nlp.splitter(df)
+
+        df_split.to_csv(file_out, index=False)
+
+        with io.open(file_out) as f_out, io.open(expected_file) as expected:
+            self.assertListEqual(list(f_out), list(expected))
+
+    def test_parentheses(self):
+        file_in = "files/parentheses/parentheses_example.csv"
+        file_out = "files/parentheses/parentheses_result.csv"
+        expected_file = "files/parentheses/expected_parentheses.csv"
 
         df = pd.read_csv(file_in, delimiter=',')
 
