@@ -4,6 +4,7 @@ import spacy
 import pycld2 as cld2
 import re
 import multiprocessing
+import io
 # import hunspell
 
 from linking_entity_linking import *
@@ -229,7 +230,6 @@ def correct_keywords_file(file_in, file_out):
             f_out.write('{},"{}"\n'.format(nombre, palabra))
 
 
-# -------------- Prepare the file to be processed --------------
 def keywords_cleaner(f_in):
     # Get the data from the file
     df = pd.read_csv(f_in, delimiter=',')
@@ -255,20 +255,27 @@ def keywords_cleaner(f_in):
 
 # -------------- Split multiple keywords in one row --------------
 def splitter(df):
+    # Delete words in parentheses
+    df['keyword'] = df['keyword'].str.replace(r"\s*\([^()]*\)", "").str.strip()
+    df['keyword'] = df['keyword'].str.partition('(')
+    # Delete words between brakets
+    df['keyword'] = df['keyword'].str.replace(r"(\s*\[.*?\]\s*)", "").str.strip()
+
+    # Split by punctuation marks
     df['keyword'] = df['keyword'].str.split('[;,/]|\. |- | -')
     df = df.explode('keyword')
     df['keyword'] = df['keyword'].str.strip()
 
+    # Deletes empty values in dataframe
+    nan_value = float("NaN")
+    df.replace("", nan_value, inplace=True)
+    df.dropna(subset=['keyword'], inplace=True)
+
     return df
 
 
-# -------------- build d_keys information --------------
+# -------------- Build d_keys information --------------
 def process(clave):
-    # Atributes for stadistics
-    multi_cont = 0
-    one_cont = 0
-    none_cont = 0
-
     # print('Processing {}'.format(clave))
     result = {'lang': language_keyword(clave)}
     output = {'keyword': clave, 'result': result}
@@ -378,6 +385,13 @@ def create_comp_dict(keyword, dict_out, dict_comp):
         if wd is None:
             dict_out[keyword] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
 
+    # Clean repeated keys
+    if db in dict_out.keys():
+        try:
+            del dict_out[db]
+        except KeyError:
+            pass
+
     # Clean repeated labels
     for key, value in dict_out.items():
         labels_list = []
@@ -420,7 +434,7 @@ def create_compacting_keys_structure(dict):
 
 if __name__ == '__main__':
 
-    # entrada = "../files/samples_researchers_publications-keywords.csv"
+    #entrada = "../files/samples_researchers_publications-keywords.csv"
     entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
@@ -441,18 +455,18 @@ if __name__ == '__main__':
     pool = multiprocessing.Pool()
     try:
         result_async = [pool.apply_async(process, args=(keyword,)) for keyword in d_key.keys()]
-        loop = tqdm(total=len(result_async), position=0, leave=False, colour='green')
+        #loop = tqdm(total=len(result_async), position=0, leave=False, colour='green')
         for o in result_async:
-            loop.set_description("Calculando diccionario...".format(o))
+            #loop.set_description("Calculando diccionario...".format(o))
             output = o.get()
             d_key[output['keyword']] = output['result']
-            loop.update(1)
+            #loop.update(1)
 
         print("--------------------------------------------")
         print("------ INFORMATION KEYWORDS STRUCTURE ------")
         print("--------------------------------------------")
         print(json.dumps(d_key, indent=1, ensure_ascii=False).encode('utf-8').decode())
-        loop.close()
+        #loop.close()
     finally:
         end = time.time()
         pool.close()
