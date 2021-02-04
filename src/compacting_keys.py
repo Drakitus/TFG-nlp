@@ -1,4 +1,5 @@
 import sys
+import time
 import traceback
 
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -12,6 +13,12 @@ def utf8_format(clave):
     else:
         d = clave
     return d
+
+
+def wait_retry_after(response):
+    if 'retry-after' in response.info().keys():
+        print('Continuing after {}...'.format(response.info()['retry-after']))
+        time.sleep(response.info()['retry-after'])
 
 
 def Wikidata_wrapper(url):
@@ -29,7 +36,10 @@ def Wikidata_wrapper(url):
             FILTER(!CONTAINS(?name, ':')) .
         }}""".format(url=url))
         sparql.setReturnFormat(JSON)
-        results = sparql.query().convert()
+
+        response = sparql.query()
+        wait_retry_after(response)
+        results = response.convert()
 
         ent_list = []
         for result in results["results"]["bindings"]:
