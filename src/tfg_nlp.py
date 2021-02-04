@@ -231,6 +231,19 @@ def correct_keywords_file(file_in, file_out):
 
 
 def keywords_cleaner(f_in):
+    df_dict = clean_file(f_in)
+
+    keywords = [d.get('keyword') for d in df_dict]
+    # Delete duplicates from keywords list
+    kw_list = list(dict.fromkeys(keywords))
+
+    # Deletes empty strings in case they exist
+    kw_clean = list(filter(None, kw_list))
+
+    return kw_clean
+
+
+def clean_file(f_in):
     # Get the data from the file
     df = pd.read_csv(f_in, delimiter=',')
 
@@ -240,17 +253,14 @@ def keywords_cleaner(f_in):
     # Delete multiple keywords in one line separated by punctuation marks
     df_split = splitter(df)
 
+    df_split = df_split[df_split['keyword'].str.len() > 3]
+    df_split.reset_index(drop=True)
+
     df_split.to_csv(f_in, index=False)
 
     df_dict = df_split.to_dict('records')
-    keywords = [d.get('keyword') for d in df_dict]
-    # Delete duplicates from keywords list
-    kw_list = list(dict.fromkeys(keywords))
 
-    # Deletes empty strings in case they exist
-    kw_clean = list(filter(None, kw_list))
-
-    return kw_clean
+    return df_dict
 
 
 # -------------- Split multiple keywords in one row --------------
@@ -270,13 +280,14 @@ def splitter(df):
     nan_value = float("NaN")
     df.replace("", nan_value, inplace=True)
     df.dropna(subset=['keyword'], inplace=True)
+    df.reset_index(drop=True)
 
     return df
 
 
 # -------------- Build d_keys information --------------
 def process(clave):
-    # print('Processing {}'.format(clave))
+    print('Processing {}'.format(clave))
     result = {'lang': language_keyword(clave)}
     output = {'keyword': clave, 'result': result}
 
@@ -385,21 +396,24 @@ def create_comp_dict(keyword, dict_out, dict_comp):
         if wd is None:
             dict_out[keyword] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
 
-    # Clean repeated keys
-    if db in dict_out.keys():
-        try:
-            del dict_out[db]
-        except KeyError:
-            pass
+    # Delete None keys
+    for k in list(dict_out):
+        if k is None:
+            dict_out.pop(k)
 
     # Clean repeated labels
+    clean_repeated_labels(dict_out)
+
+    return dict_out
+
+
+def clean_repeated_labels(dict_out):
     for key, value in dict_out.items():
         labels_list = []
         for item in value:
             if item not in labels_list:
                 labels_list.append(item)
         dict_out[key] = labels_list
-
     return dict_out
 
 
@@ -434,7 +448,7 @@ def create_compacting_keys_structure(dict):
 
 if __name__ == '__main__':
 
-    #entrada = "../files/samples_researchers_publications-keywords.csv"
+    # entrada = "../files/samples_researchers_publications-keywords.csv"
     entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
@@ -444,29 +458,29 @@ if __name__ == '__main__':
     start = time.time()
 
     # Clean file and organize keywords to be processed
-    kw_clean = keywords_cleaner(salida)
+    kw_cleaned = keywords_cleaner(salida)
 
     # Dictionary keyword information structure
     d_key = {}
-    for k in kw_clean:
+    for k in kw_cleaned:
         k_norm = normalize(k)
         d_key[k_norm] = {}
 
     pool = multiprocessing.Pool()
     try:
         result_async = [pool.apply_async(process, args=(keyword,)) for keyword in d_key.keys()]
-        #loop = tqdm(total=len(result_async), position=0, leave=False, colour='green')
+        # loop = tqdm(total=len(result_async), position=0, leave=False, colour='green')
         for o in result_async:
-            #loop.set_description("Calculando diccionario...".format(o))
+            # loop.set_description("Calculando diccionario...".format(o))
             output = o.get()
             d_key[output['keyword']] = output['result']
-            #loop.update(1)
+            # loop.update(1)
 
         print("--------------------------------------------")
         print("------ INFORMATION KEYWORDS STRUCTURE ------")
         print("--------------------------------------------")
         print(json.dumps(d_key, indent=1, ensure_ascii=False).encode('utf-8').decode())
-        #loop.close()
+        # loop.close()
     finally:
         end = time.time()
         pool.close()
@@ -482,9 +496,9 @@ if __name__ == '__main__':
     start2 = time.time()
 
     com_keys = {}
-    loop = tqdm(total=len(kw_clean), position=0, leave=False, colour='green')
+    loop = tqdm(total=len(kw_cleaned), position=0, leave=False, colour='green')
 
-    for k in kw_clean:
+    for k in kw_cleaned:
         k_norm2 = normalize(k)
         loop.set_description("Construint el diccionari per compactar".format(k))
 
