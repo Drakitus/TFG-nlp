@@ -75,8 +75,9 @@ class WikidataEntityLinker(BaseEstimator, TransformerMixin):
     def pick_preferred(self, x):
         for element in x:
             if 'description' in element:
-                if 'article' not in element.get('description'):
-                    return element
+                if 'Wikimedia disambiguation page' not in element.get('description'):
+                    if 'article' not in element.get('description') and 'journal' not in element.get('description'):
+                        return element
             else:
                 return element
 
@@ -118,8 +119,10 @@ class WikidataEntityLinker(BaseEstimator, TransformerMixin):
             self.linked_entities_cache[entity_label] = None
             return self.link_entity(entity_label, language)
         result = self.pick_preferred(search_results)
+
         if result is None:
             self.linked_entities_cache[entity_label] = None
         else:
             self.linked_entities_cache[entity_label] = result['concepturi']
+
         return self.link_entity(entity_label, language)
