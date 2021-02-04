@@ -49,5 +49,62 @@ class TestProcessKeyword(unittest.TestCase):
         for result in results:
             self.assertEqual("http://www.wikidata.org/entity/Q1972518", result["result"]["Wikidata"])
 
+    def test_case_numbers(self):
+        keywords = ["1917"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://www.wikidata.org/entity/Q2092", result["result"]["Wikidata"])
+
+    def test_case_punctuation_mark(self):
+        keywords = ["long-range interactions"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://www.wikidata.org/entity/Q63926701", result["result"]["Wikidata"])
+
+    def test_case_punctuation_mark2(self):
+        keywords = ["qrt-pcr"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://dbpedia.org/resource/Polymerase_chain_reaction", result["result"]["DBpedia"])
+
+    def test_case_other_language(self):
+        keywords = ["wilkomen"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual(None, result["result"]["Wikidata"])
+
+    def test_case_name_of_person(self):
+        keywords = ["antonio del amo"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://www.wikidata.org/entity/Q607975", result["result"]["Wikidata"])
+
+    def test_case_strange_character(self):
+        keywords = ["β-catenin"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://www.wikidata.org/entity/Q10861922", result["result"]["Wikidata"])
+
+    def test_case_article(self):
+        keywords = ["article"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://www.wikidata.org/entity/Q191067", result["result"]["Wikidata"])
+
+    def test_case_journal(self):
+        keywords = ["journal"]
+        results = [tfg_nlp.process(keyword) for keyword in keywords]
+        print(json.dumps(results, indent=1, ensure_ascii=False).encode('utf-8').decode())
+        for result in results:
+            self.assertEqual("http://www.wikidata.org/entity/Q41298", result["result"]["Wikidata"])
+
+
 if __name__ == '__main__':
     unittest.main()
