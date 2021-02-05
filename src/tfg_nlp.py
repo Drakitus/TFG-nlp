@@ -253,6 +253,7 @@ def clean_file(f_in):
     # Delete multiple keywords in one line separated by punctuation marks
     df_split = splitter(df)
 
+    # Delete words with less than 3 words
     df_split = df_split[df_split['keyword'].str.len() > 3]
     df_split.reset_index(drop=True)
 
@@ -394,7 +395,8 @@ def create_comp_dict(keyword, dict_out, dict_comp):
         wrapper = Wikidata_wrapper(wd)
         dict_out[wd].extend(wrapper)
         if wd is None:
-            dict_out[keyword] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
+            # dict_out[keyword] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
+            dict_out.pop(keyword, None)
 
     # Delete None keys
     for k in list(dict_out):
@@ -408,12 +410,17 @@ def create_comp_dict(keyword, dict_out, dict_comp):
 
 
 def clean_repeated_labels(dict_out):
-    for key, value in dict_out.items():
+    for key, value in list(dict_out.items()):
         labels_list = []
         for item in value:
             if item not in labels_list:
                 labels_list.append(item)
         dict_out[key] = labels_list
+
+        # Delete words with just one label
+        if len(dict_out[key]) == 1:
+            dict_out.pop(key, None)
+
     return dict_out
 
 
