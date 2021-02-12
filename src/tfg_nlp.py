@@ -22,13 +22,12 @@ from nltk.corpus import wordnet
 from nltk.stem import SnowballStemmer
 from collections import defaultdict
 from tqdm import tqdm
-from urllib.parse import urlparse
+from rdflib import Graph, RDF, RDFS, SKOS, URIRef, Literal
+from rdflib.namespace import Namespace, NamespaceManager
 
-import nltk
 
-
+# import nltk
 # nltk.download('wordnet')
-
 # from nltk.stem import WordNetLemmatizer
 
 
@@ -264,8 +263,9 @@ def clean_file(f_in):
     return df_dict
 
 
-# -------------- Split multiple keywords in one row --------------
 def splitter(df):
+    # Split multiple keywords in one row
+
     # Delete words in parentheses
     df['keyword'] = df['keyword'].str.replace(r"\s*\([^()]*\)", "").str.strip()
     df['keyword'] = df['keyword'].str.partition('(')
@@ -335,7 +335,7 @@ def process(clave):
     return output
 
 
-def stadistics_d_keys(dict_in):
+def statistics_d_keys(dict_in):
     multi_cont = 0
     one_cont = 0
     none_cont = 0
@@ -357,7 +357,7 @@ def stadistics_d_keys(dict_in):
 # -------------- modify file replace-keywords-uri.csv --------------
 def modify_file_keywords_to_uri(dict):
     file = "../files/file-keywords-split.csv"
-    file2 = "../files/replace-keywors-uri.csv"
+    file2 = "../files/replace-keywords-uri.csv"
     with open(file, "r") as csv_file, open(file2, "w", encoding='utf-8') as csv_file_out:
         headers = next(csv_file, None)  # Write header
         if headers:
@@ -369,16 +369,15 @@ def modify_file_keywords_to_uri(dict):
 
             # Replace keywords for uris
             if key in dict.keys():
-                if dict[key]['DBpedia'] is not None:
-                    f_key = key.replace(key, dict[key]['DBpedia'])
+                if dict[key]['Wikidata'] is not None:
+                    f_key = key.replace(key, dict[key]['Wikidata'])
+                    csv_file_out.write('{},{}\n'.format(resourcer, f_key))
                 else:
-                    if dict[key]['Wikidata'] is not None:
-                        f_key = key.replace(key, dict[key]['Wikidata'])
-                    else:
-                        f_key = key
+                    if dict[key]['DBpedia'] is not None:
+                        f_key = key.replace(key, dict[key]['DBpedia'])
+                        csv_file_out.write('{},{}\n'.format(resourcer, f_key))
             else:
                 csv_file_out.write('{},{}\n'.format(resourcer, key))
-            csv_file_out.write('{},{}\n'.format(resourcer, f_key))
 
 
 # -------------- buid comp_keys information --------------
@@ -386,15 +385,15 @@ def create_comp_dict(keyword, dict_out, dict_comp):
     db = dict_comp[keyword]['DBpedia']
     wd = dict_comp[keyword]['Wikidata']
 
-    if db:
-        dict_out[db] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
-        wrapper = DBpedia_wrapper(db)
-        dict_out[db].extend(wrapper)
-    else:
+    if wd:
         dict_out[wd] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
         wrapper = Wikidata_wrapper(wd)
         dict_out[wd].extend(wrapper)
-        if wd is None:
+    else:
+        dict_out[db] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
+        wrapper = DBpedia_wrapper(db)
+        dict_out[db].extend(wrapper)
+        if db is None:
             # dict_out[keyword] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
             dict_out.pop(keyword, None)
 
@@ -424,21 +423,28 @@ def clean_repeated_labels(dict_out):
     return dict_out
 
 
-def stadistics_comp_keys(dict_in, dict_comp):
-    cont_uri = 0
-    cont_no_uri = 0
-    for k in dict_in.keys():
-        if k not in dict_comp.keys():
-            cont_uri += 1
-        else:
-            cont_no_uri += 1
+def statistics_comp_keys(dict_in):
+    cont_two = 0
+    cont_three = 0
+    cont_more = 0
+    for values in dict_in.values():
+        for ind in range(0, len(values)):
+            x = ind + 1
+        if x == 2:
+            cont_two += 1
+        elif x == 3:
+            cont_three += 1
+        elif x > 3:
+            cont_more += 1
+
     print("------ STADISTICS ------")
     print("Total of keywords processed:", len(dict_in))
-    print("Contains uri as key:", cont_uri)
-    print("Contains no uri as key:", cont_no_uri)
+    print("Contains two languages:", cont_two)
+    print("Contains three languages:", cont_three)
+    print("Contains more than three languages:", cont_more)
 
 
-# -------------- create compacting_keys.csv --------------
+# -------------- create compacting_keys file --------------
 def create_compacting_keys_structure(dict):
     # File with compacting structure
     salida = "../files/compacting_keys.csv"
@@ -449,14 +455,38 @@ def create_compacting_keys_structure(dict):
             writer.writerow([key, value])
 
 
+# -------------- data serialization --------------
+def serialization(dict1, dict2):
+
+    rdf = Graph()
+    namespace_manager = NamespaceManager(rdf)
+    namespace_manager.bind("skos", SKOS)
+    VIVO = Namespace("http://vivoweb.org/ontology/core#")
+    namespace_manager.bind("core", VIVO)
+
+    for uri in dict2:
+        concept = URIRef(uri)
+        rdf.add((concept, RDF.type, SKOS.Concept))
+        for keyword in dict2[uri]:
+            rdf.add((concept, RDFS.label, Literal(keyword["keyword"], lang=keyword["language"])))
+
+    for researcher in dict1:
+        rdf.add((URIRef(researcher["researcher"]), VIVO.hasResearchArea, URIRef(researcher["term"])))
+
+    print(rdf.serialize(format="turtle", encoding="UTF-8").decode("utf-8"))
+
+    # Serialize to a file
+    rdf.serialize(destination="../files/researchers_areas.ttl", format="turtle")
+
+
 # ------------------------------------------
 # -------------- MAIN PROGRAM --------------
 # ------------------------------------------
 
 if __name__ == '__main__':
 
-    # entrada = "../files/samples_researchers_publications-keywords.csv"
-    entrada = "../files/Researcher-06000001-keywords.csv"
+    entrada = "../files/samples_researchers_publications-keywords.csv"
+    #entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
     # Generate a new file with same data but this time without quote marks
@@ -467,7 +497,7 @@ if __name__ == '__main__':
     # Clean file and organize keywords to be processed
     kw_cleaned = keywords_cleaner(salida)
 
-    # Dictionary keyword information structure
+    # --------------------- Dictionary keyword information structure ---------------------
     d_key = {}
     for k in kw_cleaned:
         k_norm = normalize(k)
@@ -476,24 +506,21 @@ if __name__ == '__main__':
     pool = multiprocessing.Pool()
     try:
         result_async = [pool.apply_async(process, args=(keyword,)) for keyword in d_key.keys()]
-        # loop = tqdm(total=len(result_async), position=0, leave=False, colour='green')
         for o in result_async:
-            # loop.set_description("Calculando diccionario...".format(o))
             output = o.get()
             d_key[output['keyword']] = output['result']
-            # loop.update(1)
 
         print("--------------------------------------------")
         print("------ INFORMATION KEYWORDS STRUCTURE ------")
         print("--------------------------------------------")
         print(json.dumps(d_key, indent=1, ensure_ascii=False).encode('utf-8').decode())
-        # loop.close()
     finally:
         end = time.time()
         pool.close()
 
-    # Stadistics of dictionary
-    stadistics_d_keys(d_key)
+    # Statistics of dictionary
+    statistics_d_keys(d_key)
+
     print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end - start))))
 
     # File modifier to resource/uri
@@ -507,7 +534,7 @@ if __name__ == '__main__':
 
     for k in kw_cleaned:
         k_norm2 = normalize(k)
-        loop.set_description("Construint el diccionari per compactar".format(k))
+        loop.set_description("Building compacting keys dictionary".format(k))
 
         # Create content of dictionary
         com_keys = create_comp_dict(k_norm2, com_keys, d_key)
@@ -522,8 +549,25 @@ if __name__ == '__main__':
     print("-------------------------------------------")
     print(json.dumps(com_keys, indent=1, ensure_ascii=False).encode('utf-8').decode())
 
-    stadistics_comp_keys(com_keys, d_key)
+    # Statistics
+    statistics_comp_keys(com_keys)
+
     print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end2 - start2))))
 
     # Create file with keywords compacted
     create_compacting_keys_structure(com_keys)
+
+    # --------------------- SKOS serialization ---------------------
+    researcher_terms = []
+    # Create new dictionary with file content of replace-keywords-uri.csv
+    with open('../files/replace-keywords-uri.csv', mode='r') as file_in:
+        file_in.readline()  # Ignore first lane
+        for lane in file_in:
+            part = lane.rstrip().split(",")
+            researcher = part[0]
+            term = part[1]
+
+            researcher_terms.append({'researcher': researcher, 'term': term})
+
+    # Serialize results of dictionaries created with final results
+    serialization(researcher_terms, com_keys)

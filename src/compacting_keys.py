@@ -6,15 +6,6 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from tfg_nlp import normalize
 
 
-def utf8_format(clave):
-    if clave is not None:
-        e = clave.encode('utf-8')
-        d = e.decode('utf-8')
-    else:
-        d = clave
-    return d
-
-
 def wait_retry_after(response):
     if 'retry-after' in response.info().keys():
         print('Continuing after {}...'.format(response.info()['retry-after']))
@@ -32,8 +23,8 @@ def Wikidata_wrapper(url):
             ?article schema:about <{url}> ;
                        schema:inLanguage ?lang ;
                        schema:name ?name.
-            FILTER(?lang in ('en', 'es', 'ca')).
-            FILTER(!CONTAINS(?name, ':')) .
+            FILTER(?lang in ('en', 'es', 'ca'))
+            FILTER(!CONTAINS(?name, ':'))
         }}""".format(url=url))
         sparql.setReturnFormat(JSON)
 
@@ -63,7 +54,7 @@ def DBpedia_wrapper(url):
                   SELECT ?label
                   WHERE {{ 
                   <{url}> rdfs:label ?label 
-                   FILTER(lang(?label) in ('en', 'es', 'ca')).
+                   FILTER(lang(?label) in ('en', 'es', 'ca'))
                     
                   }}           
         """.format(url=url))
