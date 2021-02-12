@@ -10,7 +10,7 @@ class TestWikidataEntityLinking(unittest.TestCase):
 
     def test_wikidata_linking_en(self):
         entity = self.wikidata_linker.link_entity('e-learning', "en")
-        self.assertEqual(entity, 'http://www.wikidata.org/entity/Q182250')
+        self.assertEqual(entity, 'http://www.wikidata.org/entity/Q1068473')
 
     def test_wikidata_linking_es(self):
         entity = self.wikidata_linker.link_entity('usabilidad', "es")
