@@ -51,9 +51,15 @@ class DBPediaEntityLinker(BaseEstimator, TransformerMixin):
 
             print(res)
 
-        res_dict = json.loads(res.content)
+        try:
+            res_dict = json.loads(res.content)
+        except Exception:
+            print("Decoding JSON has failed")
+            return None
+
         if 'Resources' not in res_dict:
             return None
+
         for resource in res_dict['Resources']:
             return resource['@URI']
 
