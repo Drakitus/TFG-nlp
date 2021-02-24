@@ -892,7 +892,7 @@
         <http://www.wikidata.org/entity/Q504027>,
         <http://www.wikidata.org/entity/Q57809177>,
         <http://www.wikidata.org/entity/Q58456576>,
-        <http://www.wikidata.org/entity/Q59395388>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60142176>,
         <http://www.wikidata.org/entity/Q60582855>,
         <http://www.wikidata.org/entity/Q63257644>,
@@ -1127,9 +1127,9 @@
         <http://www.wikidata.org/entity/Q5705>,
         <http://www.wikidata.org/entity/Q57243082>,
         <http://www.wikidata.org/entity/Q5786128>,
+        <http://www.wikidata.org/entity/Q58243870>,
         <http://www.wikidata.org/entity/Q58341638>,
         <http://www.wikidata.org/entity/Q61492541>,
-        <http://www.wikidata.org/entity/Q62687965>,
         <http://www.wikidata.org/entity/Q6927>,
         <http://www.wikidata.org/entity/Q6955>,
         <http://www.wikidata.org/entity/Q7147963>,
@@ -1254,10 +1254,10 @@
         <http://www.wikidata.org/entity/Q57959422>,
         <http://www.wikidata.org/entity/Q580101>,
         <http://www.wikidata.org/entity/Q58127886>,
+        <http://www.wikidata.org/entity/Q58691354>,
         <http://www.wikidata.org/entity/Q59309956>,
         <http://www.wikidata.org/entity/Q60286012>,
         <http://www.wikidata.org/entity/Q604008>,
-        <http://www.wikidata.org/entity/Q61784171>,
         <http://www.wikidata.org/entity/Q62399640>,
         <http://www.wikidata.org/entity/Q6520159>,
         <http://www.wikidata.org/entity/Q66095801>,
@@ -1528,7 +1528,7 @@
         <http://www.wikidata.org/entity/Q544006>,
         <http://www.wikidata.org/entity/Q57632014>,
         <http://www.wikidata.org/entity/Q59192574>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q7280328>,
         <http://www.wikidata.org/entity/Q748250>,
         <http://www.wikidata.org/entity/Q7981051>,
@@ -1924,9 +1924,9 @@
         <http://www.wikidata.org/entity/Q58392063>,
         <http://www.wikidata.org/entity/Q58456576>,
         <http://www.wikidata.org/entity/Q587926>,
-        <http://www.wikidata.org/entity/Q59395388>,
         <http://www.wikidata.org/entity/Q59665238>,
         <http://www.wikidata.org/entity/Q59823053>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60142176>,
         <http://www.wikidata.org/entity/Q60582855>,
         <http://www.wikidata.org/entity/Q63257644>,
@@ -2000,7 +2000,7 @@
         <http://www.wikidata.org/entity/Q58456576>,
         <http://www.wikidata.org/entity/Q58494177>,
         <http://www.wikidata.org/entity/Q58691250>,
-        <http://www.wikidata.org/entity/Q59395388>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60487294>,
         <http://www.wikidata.org/entity/Q60582855>,
         <http://www.wikidata.org/entity/Q61665121>,
@@ -4118,7 +4118,6 @@
         <http://www.wikidata.org/entity/Q55870734>,
         <http://www.wikidata.org/entity/Q56380457>,
         <http://www.wikidata.org/entity/Q56943059>,
-        <http://www.wikidata.org/entity/Q57008858>,
         <http://www.wikidata.org/entity/Q57013519>,
         <http://www.wikidata.org/entity/Q57026390>,
         <http://www.wikidata.org/entity/Q57027125>,
@@ -4128,6 +4127,7 @@
         <http://www.wikidata.org/entity/Q57251440>,
         <http://www.wikidata.org/entity/Q57252146>,
         <http://www.wikidata.org/entity/Q57693541>,
+        <http://www.wikidata.org/entity/Q57913051>,
         <http://www.wikidata.org/entity/Q58054325>,
         <http://www.wikidata.org/entity/Q58067807>,
         <http://www.wikidata.org/entity/Q58116304>,
@@ -4683,6 +4683,7 @@
         <http://www.wikidata.org/entity/Q57614933>,
         <http://www.wikidata.org/entity/Q57737315>,
         <http://www.wikidata.org/entity/Q58001868>,
+        <http://www.wikidata.org/entity/Q58691354>,
         <http://www.wikidata.org/entity/Q58994817>,
         <http://www.wikidata.org/entity/Q591138>,
         <http://www.wikidata.org/entity/Q59240285>,
@@ -4692,7 +4693,6 @@
         <http://www.wikidata.org/entity/Q59302531>,
         <http://www.wikidata.org/entity/Q60617645>,
         <http://www.wikidata.org/entity/Q61457>,
-        <http://www.wikidata.org/entity/Q61784171>,
         <http://www.wikidata.org/entity/Q66221>,
         <http://www.wikidata.org/entity/Q68190987>,
         <http://www.wikidata.org/entity/Q7094>,
@@ -4743,6 +4743,7 @@
         <http://www.wikidata.org/entity/Q506040>,
         <http://www.wikidata.org/entity/Q54484235>,
         <http://www.wikidata.org/entity/Q550092>,
+        <http://www.wikidata.org/entity/Q58691354>,
         <http://www.wikidata.org/entity/Q591138>,
         <http://www.wikidata.org/entity/Q59297926>,
         <http://www.wikidata.org/entity/Q59302531>,
@@ -4750,7 +4751,6 @@
         <http://www.wikidata.org/entity/Q60617645>,
         <http://www.wikidata.org/entity/Q61457>,
         <http://www.wikidata.org/entity/Q61658134>,
-        <http://www.wikidata.org/entity/Q61784171>,
         <http://www.wikidata.org/entity/Q63958676>,
         <http://www.wikidata.org/entity/Q677065>,
         <http://www.wikidata.org/entity/Q8104>,
@@ -5129,7 +5129,7 @@
         <http://www.wikidata.org/entity/Q57809177>,
         <http://www.wikidata.org/entity/Q58456576>,
         <http://www.wikidata.org/entity/Q58494177>,
-        <http://www.wikidata.org/entity/Q59395388>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60142176>,
         <http://www.wikidata.org/entity/Q622825>,
         <http://www.wikidata.org/entity/Q63257644>,
@@ -6047,7 +6047,6 @@
         <http://www.wikidata.org/entity/Q45701>,
         <http://www.wikidata.org/entity/Q4739805>,
         <http://www.wikidata.org/entity/Q497743>,
-        <http://www.wikidata.org/entity/Q56980233>,
         <http://www.wikidata.org/entity/Q57007639>,
         <http://www.wikidata.org/entity/Q57236478>,
         <http://www.wikidata.org/entity/Q57320401>,
@@ -6057,6 +6056,7 @@
         <http://www.wikidata.org/entity/Q60496518>,
         <http://www.wikidata.org/entity/Q61476>,
         <http://www.wikidata.org/entity/Q62608889>,
+        <http://www.wikidata.org/entity/Q62676058>,
         <http://www.wikidata.org/entity/Q65559543>,
         <http://www.wikidata.org/entity/Q658656>,
         <http://www.wikidata.org/entity/Q677065>,
@@ -6510,7 +6510,7 @@
         <http://www.wikidata.org/entity/Q57529732>,
         <http://www.wikidata.org/entity/Q57555004>,
         <http://www.wikidata.org/entity/Q57580844>,
-        <http://www.wikidata.org/entity/Q57642303>,
+        <http://www.wikidata.org/entity/Q57711326>,
         <http://www.wikidata.org/entity/Q57778565>,
         <http://www.wikidata.org/entity/Q57817215>,
         <http://www.wikidata.org/entity/Q57892935>,
@@ -6732,7 +6732,6 @@
         <http://www.wikidata.org/entity/Q497743>,
         <http://www.wikidata.org/entity/Q5090>,
         <http://www.wikidata.org/entity/Q5381536>,
-        <http://www.wikidata.org/entity/Q56980233>,
         <http://www.wikidata.org/entity/Q57007639>,
         <http://www.wikidata.org/entity/Q57183195>,
         <http://www.wikidata.org/entity/Q57236478>,
@@ -6747,6 +6746,7 @@
         <http://www.wikidata.org/entity/Q61080174>,
         <http://www.wikidata.org/entity/Q61476>,
         <http://www.wikidata.org/entity/Q62608889>,
+        <http://www.wikidata.org/entity/Q62676058>,
         <http://www.wikidata.org/entity/Q64146758>,
         <http://www.wikidata.org/entity/Q65559543>,
         <http://www.wikidata.org/entity/Q658656>,
@@ -6847,9 +6847,9 @@
         <http://www.wikidata.org/entity/Q59202857>,
         <http://www.wikidata.org/entity/Q59220328>,
         <http://www.wikidata.org/entity/Q59370753>,
-        <http://www.wikidata.org/entity/Q59395388>,
         <http://www.wikidata.org/entity/Q59417454>,
         <http://www.wikidata.org/entity/Q59665238>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60487294>,
         <http://www.wikidata.org/entity/Q60582855>,
         <http://www.wikidata.org/entity/Q63257644>,
@@ -6954,7 +6954,7 @@
         <http://www.wikidata.org/entity/Q35409>,
         <http://www.wikidata.org/entity/Q3914>,
         <http://www.wikidata.org/entity/Q5705>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q65205645>,
         <http://www.wikidata.org/entity/Q702269>,
         <http://www.wikidata.org/entity/Q828395>,
@@ -6999,7 +6999,7 @@
         <http://www.wikidata.org/entity/Q5459916>,
         <http://www.wikidata.org/entity/Q58309058>,
         <http://www.wikidata.org/entity/Q58456576>,
-        <http://www.wikidata.org/entity/Q59395388>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q63257644>,
         <http://www.wikidata.org/entity/Q659495>,
         <http://www.wikidata.org/entity/Q904653> .
@@ -7459,8 +7459,8 @@
         <http://www.wikidata.org/entity/Q58601111>,
         <http://www.wikidata.org/entity/Q58839460>,
         <http://www.wikidata.org/entity/Q59192574>,
-        <http://www.wikidata.org/entity/Q59278619>,
         <http://www.wikidata.org/entity/Q593289>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q626225>,
         <http://www.wikidata.org/entity/Q62657921>,
         <http://www.wikidata.org/entity/Q63861526>,
@@ -7869,7 +7869,6 @@
         <http://www.wikidata.org/entity/Q56758734>,
         <http://www.wikidata.org/entity/Q56915715>,
         <http://www.wikidata.org/entity/Q56936396>,
-        <http://www.wikidata.org/entity/Q56980233>,
         <http://www.wikidata.org/entity/Q56990280>,
         <http://www.wikidata.org/entity/Q57073180>,
         <http://www.wikidata.org/entity/Q5725005>,
@@ -7962,12 +7961,13 @@
         <http://www.wikidata.org/entity/Q61476>,
         <http://www.wikidata.org/entity/Q616013>,
         <http://www.wikidata.org/entity/Q61611078>,
-        <http://www.wikidata.org/entity/Q61663136>,
+        <http://www.wikidata.org/entity/Q62676058>,
         <http://www.wikidata.org/entity/Q62870407>,
         <http://www.wikidata.org/entity/Q632184>,
         <http://www.wikidata.org/entity/Q634340>,
         <http://www.wikidata.org/entity/Q64142842>,
         <http://www.wikidata.org/entity/Q64252003>,
+        <http://www.wikidata.org/entity/Q64391094>,
         <http://www.wikidata.org/entity/Q64579677>,
         <http://www.wikidata.org/entity/Q646660>,
         <http://www.wikidata.org/entity/Q6498684>,
@@ -8098,8 +8098,8 @@
         <http://www.wikidata.org/entity/Q58831367>,
         <http://www.wikidata.org/entity/Q58839460>,
         <http://www.wikidata.org/entity/Q59192574>,
-        <http://www.wikidata.org/entity/Q59278619>,
         <http://www.wikidata.org/entity/Q59900830>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q626225>,
         <http://www.wikidata.org/entity/Q63185542>,
         <http://www.wikidata.org/entity/Q63861526>,
@@ -8644,7 +8644,7 @@
         <http://www.wikidata.org/entity/Q5779855>,
         <http://www.wikidata.org/entity/Q5805493>,
         <http://www.wikidata.org/entity/Q59192574>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q602482>,
         <http://www.wikidata.org/entity/Q61993008>,
         <http://www.wikidata.org/entity/Q62657921>,
@@ -8729,6 +8729,7 @@
         <http://www.wikidata.org/entity/Q56287194>,
         <http://www.wikidata.org/entity/Q574491>,
         <http://www.wikidata.org/entity/Q57614933>,
+        <http://www.wikidata.org/entity/Q58691354>,
         <http://www.wikidata.org/entity/Q591138>,
         <http://www.wikidata.org/entity/Q59240285>,
         <http://www.wikidata.org/entity/Q59243599>,
@@ -8738,7 +8739,6 @@
         <http://www.wikidata.org/entity/Q60617645>,
         <http://www.wikidata.org/entity/Q61457>,
         <http://www.wikidata.org/entity/Q61658134>,
-        <http://www.wikidata.org/entity/Q61784171>,
         <http://www.wikidata.org/entity/Q677065>,
         <http://www.wikidata.org/entity/Q718113>,
         <http://www.wikidata.org/entity/Q8047>,
@@ -8830,7 +8830,7 @@
         <http://www.wikidata.org/entity/Q58555548>,
         <http://www.wikidata.org/entity/Q5858637>,
         <http://www.wikidata.org/entity/Q5908290>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q618779>,
         <http://www.wikidata.org/entity/Q66077049>,
         <http://www.wikidata.org/entity/Q6684664>,
@@ -9612,9 +9612,9 @@
         <http://www.wikidata.org/entity/Q587926>,
         <http://www.wikidata.org/entity/Q58917>,
         <http://www.wikidata.org/entity/Q59186106>,
-        <http://www.wikidata.org/entity/Q59395388>,
         <http://www.wikidata.org/entity/Q59665238>,
         <http://www.wikidata.org/entity/Q59823053>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60142176>,
         <http://www.wikidata.org/entity/Q60487294>,
         <http://www.wikidata.org/entity/Q60548269>,
@@ -9989,8 +9989,8 @@
         <http://www.wikidata.org/entity/Q58456576>,
         <http://www.wikidata.org/entity/Q58691250>,
         <http://www.wikidata.org/entity/Q587926>,
-        <http://www.wikidata.org/entity/Q59395388>,
         <http://www.wikidata.org/entity/Q59665238>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60487294>,
         <http://www.wikidata.org/entity/Q60548269>,
         <http://www.wikidata.org/entity/Q60582855>,
@@ -10654,10 +10654,10 @@
         <http://www.wikidata.org/entity/Q4922008>,
         <http://www.wikidata.org/entity/Q5129197>,
         <http://www.wikidata.org/entity/Q57529599>,
-        <http://www.wikidata.org/entity/Q57769243>,
         <http://www.wikidata.org/entity/Q5858637>,
         <http://www.wikidata.org/entity/Q595448>,
         <http://www.wikidata.org/entity/Q60195>,
+        <http://www.wikidata.org/entity/Q62533110>,
         <http://www.wikidata.org/entity/Q699385>,
         <http://www.wikidata.org/entity/Q7167>,
         <http://www.wikidata.org/entity/Q7252>,
@@ -13365,7 +13365,6 @@
         <http://www.wikidata.org/entity/Q5375605>,
         <http://www.wikidata.org/entity/Q5508816>,
         <http://www.wikidata.org/entity/Q55613>,
-        <http://www.wikidata.org/entity/Q56527695>,
         <http://www.wikidata.org/entity/Q56708726>,
         <http://www.wikidata.org/entity/Q57041313>,
         <http://www.wikidata.org/entity/Q57051838>,
@@ -13379,6 +13378,7 @@
         <http://www.wikidata.org/entity/Q58311962>,
         <http://www.wikidata.org/entity/Q58398657>,
         <http://www.wikidata.org/entity/Q58702>,
+        <http://www.wikidata.org/entity/Q60542724>,
         <http://www.wikidata.org/entity/Q60577264>,
         <http://www.wikidata.org/entity/Q60580403>,
         <http://www.wikidata.org/entity/Q61603646>,
@@ -13738,8 +13738,8 @@
         <http://www.wikidata.org/entity/Q5459916>,
         <http://www.wikidata.org/entity/Q56426041>,
         <http://www.wikidata.org/entity/Q58456576>,
-        <http://www.wikidata.org/entity/Q59395388>,
         <http://www.wikidata.org/entity/Q59665238>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60582855>,
         <http://www.wikidata.org/entity/Q63257644>,
         <http://www.wikidata.org/entity/Q63980262>,
@@ -14140,6 +14140,7 @@
         <http://www.wikidata.org/entity/Q55080113>,
         <http://www.wikidata.org/entity/Q555097>,
         <http://www.wikidata.org/entity/Q55647657>,
+        <http://www.wikidata.org/entity/Q55891276>,
         <http://www.wikidata.org/entity/Q56846035>,
         <http://www.wikidata.org/entity/Q57339461>,
         <http://www.wikidata.org/entity/Q57838292>,
@@ -14222,7 +14223,7 @@
         <http://www.wikidata.org/entity/Q57500242>,
         <http://www.wikidata.org/entity/Q57749678>,
         <http://www.wikidata.org/entity/Q58000946>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q657069>,
         <http://www.wikidata.org/entity/Q6684664>,
         <http://www.wikidata.org/entity/Q726474>,
@@ -15817,9 +15818,9 @@
         <http://www.wikidata.org/entity/Q58811814>,
         <http://www.wikidata.org/entity/Q59202857>,
         <http://www.wikidata.org/entity/Q59220328>,
-        <http://www.wikidata.org/entity/Q59395388>,
         <http://www.wikidata.org/entity/Q59417454>,
         <http://www.wikidata.org/entity/Q59665238>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q63257644>,
         <http://www.wikidata.org/entity/Q68526873>,
         <http://www.wikidata.org/entity/Q68702147>,
@@ -15972,9 +15973,9 @@
         <http://www.wikidata.org/entity/Q167947>,
         <http://www.wikidata.org/entity/Q1806889>,
         <http://www.wikidata.org/entity/Q2142963>,
-        <http://www.wikidata.org/entity/Q56980233>,
         <http://www.wikidata.org/entity/Q57236478>,
         <http://www.wikidata.org/entity/Q61476>,
+        <http://www.wikidata.org/entity/Q62676058>,
         <http://www.wikidata.org/entity/Q677065>,
         <http://www.wikidata.org/entity/Q898579>,
         <http://www.wikidata.org/entity/Q898793>,
@@ -17619,7 +17620,6 @@
         <http://www.wikidata.org/entity/Q55613>,
         <http://www.wikidata.org/entity/Q56153162>,
         <http://www.wikidata.org/entity/Q56180569>,
-        <http://www.wikidata.org/entity/Q56527695>,
         <http://www.wikidata.org/entity/Q56708726>,
         <http://www.wikidata.org/entity/Q56781278>,
         <http://www.wikidata.org/entity/Q56972773>,
@@ -17671,6 +17671,7 @@
         <http://www.wikidata.org/entity/Q60520293>,
         <http://www.wikidata.org/entity/Q60522042>,
         <http://www.wikidata.org/entity/Q60535767>,
+        <http://www.wikidata.org/entity/Q60542724>,
         <http://www.wikidata.org/entity/Q60561614>,
         <http://www.wikidata.org/entity/Q60580403>,
         <http://www.wikidata.org/entity/Q61603646>,
@@ -18159,9 +18160,9 @@
         <http://www.wikidata.org/entity/Q58744152>,
         <http://www.wikidata.org/entity/Q58917>,
         <http://www.wikidata.org/entity/Q59358425>,
-        <http://www.wikidata.org/entity/Q59395388>,
         <http://www.wikidata.org/entity/Q59665238>,
         <http://www.wikidata.org/entity/Q59823053>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60142176>,
         <http://www.wikidata.org/entity/Q63257644>,
         <http://www.wikidata.org/entity/Q63980262>,
@@ -18313,8 +18314,8 @@
         <http://www.wikidata.org/entity/Q59099543>,
         <http://www.wikidata.org/entity/Q59156788>,
         <http://www.wikidata.org/entity/Q59156828>,
-        <http://www.wikidata.org/entity/Q59278619>,
         <http://www.wikidata.org/entity/Q59382555>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q6052857>,
         <http://www.wikidata.org/entity/Q6496562>,
         <http://www.wikidata.org/entity/Q67319694>,
@@ -18720,7 +18721,7 @@
         <http://www.wikidata.org/entity/Q3817324>,
         <http://www.wikidata.org/entity/Q42515>,
         <http://www.wikidata.org/entity/Q52343359>,
-        <http://www.wikidata.org/entity/Q62687965>,
+        <http://www.wikidata.org/entity/Q58243870>,
         <http://www.wikidata.org/entity/Q649186>,
         <http://www.wikidata.org/entity/Q6927>,
         <http://www.wikidata.org/entity/Q6955> .
@@ -18917,7 +18918,7 @@
         <http://www.wikidata.org/entity/Q4438147>,
         <http://www.wikidata.org/entity/Q5373655>,
         <http://www.wikidata.org/entity/Q58000946>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q730920>,
         <http://www.wikidata.org/entity/Q93515079>,
         <http://www.wikidata.org/entity/Q9415> .
@@ -19554,7 +19555,6 @@
         <http://www.wikidata.org/entity/Q532078>,
         <http://www.wikidata.org/entity/Q542419>,
         <http://www.wikidata.org/entity/Q56445505>,
-        <http://www.wikidata.org/entity/Q56980233>,
         <http://www.wikidata.org/entity/Q577117>,
         <http://www.wikidata.org/entity/Q57757942>,
         <http://www.wikidata.org/entity/Q581950>,
@@ -19580,6 +19580,7 @@
         <http://www.wikidata.org/entity/Q60617461>,
         <http://www.wikidata.org/entity/Q60694011>,
         <http://www.wikidata.org/entity/Q61476>,
+        <http://www.wikidata.org/entity/Q62676058>,
         <http://www.wikidata.org/entity/Q634340>,
         <http://www.wikidata.org/entity/Q6501028>,
         <http://www.wikidata.org/entity/Q65559066>,
@@ -19931,7 +19932,6 @@
         <http://www.wikidata.org/entity/Q56445505>,
         <http://www.wikidata.org/entity/Q56608127>,
         <http://www.wikidata.org/entity/Q56608131>,
-        <http://www.wikidata.org/entity/Q56980233>,
         <http://www.wikidata.org/entity/Q5725005>,
         <http://www.wikidata.org/entity/Q57365904>,
         <http://www.wikidata.org/entity/Q57570503>,
@@ -19946,6 +19946,7 @@
         <http://www.wikidata.org/entity/Q60546654>,
         <http://www.wikidata.org/entity/Q60694011>,
         <http://www.wikidata.org/entity/Q61476>,
+        <http://www.wikidata.org/entity/Q62676058>,
         <http://www.wikidata.org/entity/Q65929600>,
         <http://www.wikidata.org/entity/Q663290>,
         <http://www.wikidata.org/entity/Q6786565>,
@@ -20503,7 +20504,7 @@
         <http://www.wikidata.org/entity/Q188473>,
         <http://www.wikidata.org/entity/Q380962>,
         <http://www.wikidata.org/entity/Q58000946>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q730920> .
 
 <https://vivo.invid.udl.cat/individual/UDL-07004134> core:hasResearchArea <http://dbpedia.org/resource/Fluvial_processes>,
@@ -20824,7 +20825,7 @@
         <http://www.wikidata.org/entity/Q28502538>,
         <http://www.wikidata.org/entity/Q350453>,
         <http://www.wikidata.org/entity/Q57694002>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q60476077>,
         <http://www.wikidata.org/entity/Q783578>,
         <http://www.wikidata.org/entity/Q837142> .
@@ -21158,7 +21159,7 @@
         <http://www.wikidata.org/entity/Q260607>,
         <http://www.wikidata.org/entity/Q3055244>,
         <http://www.wikidata.org/entity/Q3817324>,
-        <http://www.wikidata.org/entity/Q62687965>,
+        <http://www.wikidata.org/entity/Q58243870>,
         <http://www.wikidata.org/entity/Q674950>,
         <http://www.wikidata.org/entity/Q6927>,
         <http://www.wikidata.org/entity/Q6955>,
@@ -21561,8 +21562,8 @@
         <http://www.wikidata.org/entity/Q489777>,
         <http://www.wikidata.org/entity/Q56019503>,
         <http://www.wikidata.org/entity/Q57663237>,
-        <http://www.wikidata.org/entity/Q60522042>,
-        <http://www.wikidata.org/entity/Q61784171> .
+        <http://www.wikidata.org/entity/Q58691354>,
+        <http://www.wikidata.org/entity/Q60522042> .
 
 <https://vivo.invid.udl.cat/individual/UDL-07005152> core:hasResearchArea <http://www.wikidata.org/entity/Q1133903>,
         <http://www.wikidata.org/entity/Q14882441>,
@@ -22349,10 +22350,10 @@
         <http://www.wikidata.org/entity/Q14623204>,
         <http://www.wikidata.org/entity/Q30669487>,
         <http://www.wikidata.org/entity/Q58493074>,
-        <http://www.wikidata.org/entity/Q64645620>,
         <http://www.wikidata.org/entity/Q7551419>,
         <http://www.wikidata.org/entity/Q829367>,
         <http://www.wikidata.org/entity/Q8434>,
+        <http://www.wikidata.org/entity/Q96734234>,
         <http://www.wikidata.org/entity/Q98442705> .
 
 <https://vivo.invid.udl.cat/individual/UDL-07006624> core:hasResearchArea <http://www.wikidata.org/entity/Q1194747>,
@@ -22840,7 +22841,7 @@
 <https://vivo.invid.udl.cat/individual/UDL-AR001600> core:hasResearchArea <http://www.wikidata.org/entity/Q2151963>,
         <http://www.wikidata.org/entity/Q3331475>,
         <http://www.wikidata.org/entity/Q504893>,
-        <http://www.wikidata.org/entity/Q61784171> .
+        <http://www.wikidata.org/entity/Q58691354> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR001656> core:hasResearchArea <http://www.wikidata.org/entity/Q283835>,
         <http://www.wikidata.org/entity/Q594676>,
@@ -23447,7 +23448,7 @@
 
 <https://vivo.invid.udl.cat/individual/UDL-AR004496> core:hasResearchArea <http://www.wikidata.org/entity/Q136822>,
         <http://www.wikidata.org/entity/Q59192574>,
-        <http://www.wikidata.org/entity/Q59278619> .
+        <http://www.wikidata.org/entity/Q60199188> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR004523> core:hasResearchArea <http://www.wikidata.org/entity/Q233107> .
 
@@ -24342,7 +24343,7 @@
 
 <https://vivo.invid.udl.cat/individual/UDL-AR009592> core:hasResearchArea <http://www.wikidata.org/entity/Q17634913>,
         <http://www.wikidata.org/entity/Q214339>,
-        <http://www.wikidata.org/entity/Q59278619> .
+        <http://www.wikidata.org/entity/Q60199188> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR009594> core:hasResearchArea <http://www.wikidata.org/entity/Q61465> .
 
@@ -26039,7 +26040,7 @@
         <http://www.wikidata.org/entity/Q2736>,
         <http://www.wikidata.org/entity/Q827023> .
 
-<https://vivo.invid.udl.cat/individual/UDL-AR014381> core:hasResearchArea <http://www.wikidata.org/entity/Q59278619>,
+<https://vivo.invid.udl.cat/individual/UDL-AR014381> core:hasResearchArea <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q858732> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR014382> core:hasResearchArea <http://www.wikidata.org/entity/Q2129305>,
@@ -26158,7 +26159,7 @@
         <http://www.wikidata.org/entity/Q461335>,
         <http://www.wikidata.org/entity/Q59392510> .
 
-<https://vivo.invid.udl.cat/individual/UDL-AR014529> core:hasResearchArea <http://www.wikidata.org/entity/Q57008858>,
+<https://vivo.invid.udl.cat/individual/UDL-AR014529> core:hasResearchArea <http://www.wikidata.org/entity/Q57913051>,
         <http://www.wikidata.org/entity/Q8502>,
         <http://www.wikidata.org/entity/Q852998> .
 
@@ -26270,7 +26271,7 @@
         <http://www.wikidata.org/entity/Q1811092> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR014892> core:hasResearchArea <http://www.wikidata.org/entity/Q2620772>,
-        <http://www.wikidata.org/entity/Q59278619> .
+        <http://www.wikidata.org/entity/Q60199188> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR014899> core:hasResearchArea <http://dbpedia.org/resource/Fertilizer>,
         <http://www.wikidata.org/entity/Q191258> .
@@ -27493,7 +27494,7 @@
         <http://www.wikidata.org/entity/Q504027> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR017178> core:hasResearchArea <http://www.wikidata.org/entity/Q504027>,
-        <http://www.wikidata.org/entity/Q59395388>,
+        <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q904653> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR017188> core:hasResearchArea <http://www.wikidata.org/entity/Q193119>,
@@ -28503,7 +28504,7 @@
         <http://www.wikidata.org/entity/Q72499>,
         <http://www.wikidata.org/entity/Q889503> .
 
-<https://vivo.invid.udl.cat/individual/UDL-AR018569> core:hasResearchArea <http://www.wikidata.org/entity/Q59395388>,
+<https://vivo.invid.udl.cat/individual/UDL-AR018569> core:hasResearchArea <http://www.wikidata.org/entity/Q59907157>,
         <http://www.wikidata.org/entity/Q60582855>,
         <http://www.wikidata.org/entity/Q7239549> .
 
@@ -29046,7 +29047,7 @@
         <http://www.wikidata.org/entity/Q37226>,
         <http://www.wikidata.org/entity/Q3918>,
         <http://www.wikidata.org/entity/Q58177189>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q618779> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR019604> core:hasResearchArea <http://www.wikidata.org/entity/Q128700>,
@@ -31370,6 +31371,7 @@
         <http://www.wikidata.org/entity/Q813912> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR021987> core:hasResearchArea <http://www.wikidata.org/entity/Q3972943>,
+        <http://www.wikidata.org/entity/Q55891276>,
         <http://www.wikidata.org/entity/Q96320406> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR021988> core:hasResearchArea <http://www.wikidata.org/entity/Q207434>,
@@ -31971,7 +31973,7 @@
 
 <https://vivo.invid.udl.cat/individual/UDL-AR022527> core:hasResearchArea <http://www.wikidata.org/entity/Q1377863>,
         <http://www.wikidata.org/entity/Q58000946>,
-        <http://www.wikidata.org/entity/Q59278619>,
+        <http://www.wikidata.org/entity/Q60199188>,
         <http://www.wikidata.org/entity/Q730920> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR022533> core:hasResearchArea <http://www.wikidata.org/entity/Q1703648>,
@@ -32331,8 +32333,8 @@
         <http://dbpedia.org/resource/Grape>,
         <http://www.wikidata.org/entity/Q489777>,
         <http://www.wikidata.org/entity/Q56019503>,
-        <http://www.wikidata.org/entity/Q60522042>,
-        <http://www.wikidata.org/entity/Q61784171> .
+        <http://www.wikidata.org/entity/Q58691354>,
+        <http://www.wikidata.org/entity/Q60522042> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR022950> core:hasResearchArea <http://www.wikidata.org/entity/Q160020>,
         <http://www.wikidata.org/entity/Q30046>,
@@ -32615,7 +32617,7 @@
         <http://www.wikidata.org/entity/Q6786565> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR023160> core:hasResearchArea <http://www.wikidata.org/entity/Q144412>,
-        <http://www.wikidata.org/entity/Q57642303>,
+        <http://www.wikidata.org/entity/Q57711326>,
         <http://www.wikidata.org/entity/Q58028870>,
         <http://www.wikidata.org/entity/Q906645> .
 
@@ -33270,7 +33272,7 @@
         <http://www.wikidata.org/entity/Q836719> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR023657> core:hasResearchArea <http://dbpedia.org/resource/Gerontology>,
-        <http://www.wikidata.org/entity/Q57769243>,
+        <http://www.wikidata.org/entity/Q62533110>,
         <http://www.wikidata.org/entity/Q7252>,
         <http://www.wikidata.org/entity/Q841628> .
 
@@ -33421,7 +33423,7 @@
 <https://vivo.invid.udl.cat/individual/UDL-AR023764> core:hasResearchArea <http://dbpedia.org/resource/Fin>,
         <http://www.wikidata.org/entity/Q121176>,
         <http://www.wikidata.org/entity/Q136822>,
-        <http://www.wikidata.org/entity/Q59278619> .
+        <http://www.wikidata.org/entity/Q60199188> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR023765> core:hasResearchArea <http://dbpedia.org/resource/Nozzle>,
         <http://www.wikidata.org/entity/Q1141546>,
@@ -36209,7 +36211,7 @@
 
 <https://vivo.invid.udl.cat/individual/UDL-AR025816> core:hasResearchArea <http://www.wikidata.org/entity/Q1806889>,
         <http://www.wikidata.org/entity/Q2142963>,
-        <http://www.wikidata.org/entity/Q56980233>,
+        <http://www.wikidata.org/entity/Q62676058>,
         <http://www.wikidata.org/entity/Q898579>,
         <http://www.wikidata.org/entity/Q904893> .
 
@@ -37384,8 +37386,8 @@
         <http://www.wikidata.org/entity/Q53392357>,
         <http://www.wikidata.org/entity/Q57041313> .
 
-<https://vivo.invid.udl.cat/individual/UDL-AR026621> core:hasResearchArea <http://www.wikidata.org/entity/Q56527695>,
-        <http://www.wikidata.org/entity/Q58181838>,
+<https://vivo.invid.udl.cat/individual/UDL-AR026621> core:hasResearchArea <http://www.wikidata.org/entity/Q58181838>,
+        <http://www.wikidata.org/entity/Q60542724>,
         <http://www.wikidata.org/entity/Q61603646> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR026622> core:hasResearchArea <http://www.wikidata.org/entity/Q125928>,
@@ -39351,7 +39353,7 @@
 
 <https://vivo.invid.udl.cat/individual/UDL-AR028368> core:hasResearchArea <http://www.wikidata.org/entity/Q136822>,
         <http://www.wikidata.org/entity/Q57904174>,
-        <http://www.wikidata.org/entity/Q59278619> .
+        <http://www.wikidata.org/entity/Q60199188> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR028374> core:hasResearchArea <http://dbpedia.org/resource/Lung>,
         <http://dbpedia.org/resource/Spirometry>,
@@ -39704,7 +39706,7 @@
         <http://www.wikidata.org/entity/Q1567693>,
         <http://www.wikidata.org/entity/Q2352616>,
         <http://www.wikidata.org/entity/Q3817324>,
-        <http://www.wikidata.org/entity/Q62687965>,
+        <http://www.wikidata.org/entity/Q58243870>,
         <http://www.wikidata.org/entity/Q6927>,
         <http://www.wikidata.org/entity/Q6955> .
 
@@ -41240,7 +41242,7 @@
 
 <https://vivo.invid.udl.cat/individual/UDL-AR029440> core:hasResearchArea <http://dbpedia.org/resource/Electric_battery>,
         <http://www.wikidata.org/entity/Q11755880>,
-        <http://www.wikidata.org/entity/Q61663136>,
+        <http://www.wikidata.org/entity/Q64391094>,
         <http://www.wikidata.org/entity/Q814196> .
 
 <https://vivo.invid.udl.cat/individual/UDL-AR029444> core:hasResearchArea <http://dbpedia.org/resource/Terrestrial_animal>,
@@ -53118,7 +53120,8 @@
         "kbdi-tv"@en .
 
 <http://www.wikidata.org/entity/Q5782934> a skos:Concept ;
-    rdfs:label "conflictividad"@es,
+    rdfs:label "labor dispute"@en,
+        "conflictividad"@es,
         "conflictividad laboral"@es .
 
 <http://www.wikidata.org/entity/Q5783> a skos:Concept ;
@@ -61395,7 +61398,8 @@
 
 <http://www.wikidata.org/entity/Q1758763> a skos:Concept ;
     rdfs:label "choristoneura"@en,
-        "spruce budworm"@en .
+        "spruce budworm"@en,
+        "choristoneura"@es .
 
 <http://www.wikidata.org/entity/Q1759633> a skos:Concept ;
     rdfs:label "globus pàl·lid"@ca,
@@ -65187,7 +65191,7 @@
     rdfs:label "grau militar"@ca,
         "military rank"@en,
         "ranking"@en,
-        "rango militar"@es .
+        "grado militar"@es .
 
 <http://www.wikidata.org/entity/Q56408668> a skos:Concept ;
     rdfs:label "aprenentatge col·laboratiu"@ca,

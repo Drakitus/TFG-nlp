@@ -13,8 +13,7 @@ def wait_retry_after(response):
 
 
 def Wikidata_wrapper(url):
-    user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) ' \
-                 'Chrome/50.0.2661.102 Safari/537.36'
+    user_agent = 'Wikidata (marcmasipc@hotmail.com) SPARQLWrapper/1.8.5'
     try:
         sparql = SPARQLWrapper("https://query.wikidata.org/sparql", agent=user_agent)
         sparql.setQuery("""
@@ -45,8 +44,7 @@ def Wikidata_wrapper(url):
 
 
 def DBpedia_wrapper(url):
-    user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) ' \
-                 'Chrome/50.0.2661.102 Safari/537.36'
+    user_agent = 'DBpediaExtractor (marcmasipc@hotmail.com) SPARQLWrapper/1.8.5'
     try:
         sparql = SPARQLWrapper("http://dbpedia.org/sparql", agent=user_agent)
         sparql.setQuery("""
