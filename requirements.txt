@@ -1,15 +1,20 @@
-jupyter
-pandas
-spacy == 2.3.4
-snowballstemmer
-langdetect
-nltk
-pycld2
-rake-nltk
-stop-words
-sklearn
-hunspell
-SPARQLWrapper
+#hunspell
 https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-2.3.1/es_core_news_sm-2.3.1.tar.gz
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
 https://github.com/ccoreilly/spacy-catala/releases/download/ca_fasttext_wiki_md-1.0.0/ca_fasttext_wiki_md-1.0.0.tar.gz
+jupyter==1.0.0
+langdetect==1.0.8
+nltk==3.5
+pandas==1.1.4
+pycld2==0.41
+rake-nltk==1.0.4
+rdflib==5.0.0
+regex==2020.11.13
+requests==2.25.0
+sklearn==0.0
+snowballstemmer==2.0.0
+spacy == 2.3.4
+SPARQLWrapper==1.8.5
+stop-words==2018.7.23
+tqdm==4.52.0
+urllib3==1.26.2
