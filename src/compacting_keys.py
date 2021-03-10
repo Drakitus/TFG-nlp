@@ -16,15 +16,17 @@ def Wikidata_wrapper(url):
     user_agent = 'Wikidata (marcmasipc@hotmail.com) SPARQLWrapper/1.8.5'
     try:
         sparql = SPARQLWrapper("https://query.wikidata.org/sparql", agent=user_agent)
-        sparql.setQuery("""
-            SELECT DISTINCT ?lang ?name 
+        sparql.setQuery(
+            """SELECT DISTINCT (LANG(?name) AS ?lang) ?name (BOUND(?type) AS ?isArticle)
             WHERE {{
-            ?article schema:about <{url}> ;
-                       schema:inLanguage ?lang ;
-                       schema:name ?name.
-            FILTER(?lang in ('en', 'es', 'ca'))
-            FILTER(!CONTAINS(?name, ':'))
-        }}""".format(url=url))
+              BIND(<{url}>AS ?uri)
+              ?uri rdfs:label ?name .
+              FILTER(LANG(?name) IN ('en', 'es', 'ca'))
+              OPTIONAL {{
+                ?uri wdt:P31 ?type .
+                ?type wdt:P279* wd:Q732577 . # publication
+              }}
+            }}""".format(url=url))
         sparql.setReturnFormat(JSON)
 
         response = sparql.query()
@@ -48,20 +50,24 @@ def DBpedia_wrapper(url):
     try:
         sparql = SPARQLWrapper("http://dbpedia.org/sparql", agent=user_agent)
         sparql.setQuery("""
-                  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                  SELECT ?label
-                  WHERE {{ 
-                  <{url}> rdfs:label ?label 
-                   FILTER(lang(?label) in ('en', 'es', 'ca'))
-                    
-                  }}           
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            SELECT DISTINCT (LANG(?name) AS ?lang) ?name (BOUND(?type) AS ?isArticle)
+            WHERE {{
+                BIND(<{url}>AS ?uri)
+                ?uri rdfs:label ?name .
+                FILTER(LANG(?name) IN ('en', 'es', 'ca'))
+                OPTIONAL {{
+                    ?uri rdfs:Resource ?type .
+                    ?type rdfs:subClassOf <https://dbpedia.org/ontology/publication> . # publication
+                }}
+            }}          
         """.format(url=url))
         sparql.setReturnFormat(JSON)
         results = sparql.query().convert()
         ent_list = []
         for result in results["results"]["bindings"]:
-            kewords = normalize(result["label"]["value"])
-            dict = {'keyword': kewords, 'language': result["label"]["xml:lang"]}
+            kewords = normalize(result["name"]["value"])
+            dict = {'keyword': kewords, 'language': result["lang"]["value"]}
             ent_list.append(dict)
         return ent_list
 
