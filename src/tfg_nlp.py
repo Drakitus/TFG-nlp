@@ -253,7 +253,7 @@ def clean_file(f_in):
     df_split = splitter(df)
 
     # Delete words with less than 3 words
-    df_split = df_split[df_split['keyword'].str.len() > 3]
+    df_split = df_split[df_split['keyword'].str.len() > 4]
     df_split.reset_index(drop=True)
 
     df_split.to_csv(f_in, index=False)
@@ -375,7 +375,13 @@ def modify_file_keywords_to_uri(dict):
                 else:
                     if dict[key]['DBpedia'] is not None:
                         f_key = key.replace(key, dict[key]['DBpedia'])
-                        csv_file_out.write('{},{}\n'.format(resourcer, f_key))
+
+                        if "," in f_key:
+                            f_key_q = '"' + f_key + '"'
+                            csv_file_out.write('{},{}\n'.format(resourcer, f_key_q))
+                        else:
+                            csv_file_out.write('{},{}\n'.format(resourcer, f_key))
+
             else:
                 csv_file_out.write('{},{}\n'.format(resourcer, key))
 
@@ -455,13 +461,27 @@ def create_compacting_keys_structure(dict):
             writer.writerow([key, value])
 
 
+def compare_resource_keywords_uri(file1, dict):
+    # Convert the file into dataframe to make changes and skiped uris cant be read by csv
+    df_file = pd.read_csv(file1, delimiter=',')
+
+    # Check if file contains the same uris as final dictionary
+    for u in df_file['keyword']:
+        if u not in dict.keys():
+            badwords = df_file[df_file['keyword'] == u].index
+            df_file.drop(badwords, inplace=True)
+
+    df_file.drop_duplicates(subset=None, keep="first", inplace=True)
+    df_file.reset_index(drop=True)
+    df_file.to_csv(file1, index=False)
+
+
 # -------------- data serialization --------------
 def serialization(dict1, dict2):
-
     rdf = Graph()
     namespace_manager = NamespaceManager(rdf)
     namespace_manager.bind("skos", SKOS)
-    VIVO = Namespace("http://vivoweb.org/ontology/core#")
+    VIVO = Namespace("http://experts.udl.cat/ontology/core#")
     namespace_manager.bind("core", VIVO)
 
     for uri in dict2:
@@ -485,8 +505,8 @@ def serialization(dict1, dict2):
 
 if __name__ == '__main__':
 
-    entrada = "../files/samples_researchers_publications-keywords.csv"
-    #entrada = "../files/Researcher-06000001-keywords.csv"
+    # entrada = "../files/samples_researchers_publications-keywords.csv"
+    entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
     # Generate a new file with same data but this time without quote marks
@@ -530,9 +550,9 @@ if __name__ == '__main__':
     start2 = time.time()
 
     com_keys = {}
-    loop = tqdm(total=len(kw_cleaned), position=0, leave=False, colour='green')
+    loop = tqdm(total=len(d_key.keys()), position=0, leave=False, colour='green')
 
-    for k in kw_cleaned:
+    for k in d_key.keys():
         k_norm2 = normalize(k)
         loop.set_description("Building compacting keys dictionary".format(k))
 
@@ -554,6 +574,10 @@ if __name__ == '__main__':
 
     print('Elapsed: {}'.format(time.strftime("%Hh:%Mm:%Ss", time.gmtime(end2 - start2))))
 
+    # Upadate replace-keywords-uri to restrictions of comp_keys
+    file1 = "../files/replace-keywords-uri.csv"
+    compare_resource_keywords_uri(file1, com_keys)
+
     # Create file with keywords compacted
     create_compacting_keys_structure(com_keys)
 
@@ -567,7 +591,10 @@ if __name__ == '__main__':
             researcher = part[0]
             term = part[1]
 
-            researcher_terms.append({'researcher': researcher, 'term': term})
+            term_clean = term.replace('"', "")
+            print(term_clean)
+
+            researcher_terms.append({'researcher': researcher, 'term': term_clean})
 
     # Serialize results of dictionaries created with final results
     serialization(researcher_terms, com_keys)
