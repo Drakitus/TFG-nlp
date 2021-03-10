@@ -105,6 +105,16 @@ class TestProcessKeyword(unittest.TestCase):
         for result in results:
             self.assertEqual("http://www.wikidata.org/entity/Q41298", result["result"]["Wikidata"])
 
+    def test_compare_uri(self):
+        dict_test = {
+            'http://dbpedia.org/resource/Anglès,_Girona': [{'keyword': "didàctica de l'anglès", 'language': 'ca'},
+                                                           {'keyword': 'anglès (la selva)', 'language': 'ca'},
+                                                           {'keyword': 'anglès, girona', 'language': 'en'},
+                                                           {'keyword': 'anglés', 'language': 'es'}]}
+        file = 'files/compare/compare_uris.csv'
+
+        tfg_nlp.compare_resource_keywords_uri(file, dict_test)
+
 
 if __name__ == '__main__':
     unittest.main()
