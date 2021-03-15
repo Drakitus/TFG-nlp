@@ -376,6 +376,7 @@ def modify_file_keywords_to_uri(dict):
                     if dict[key]['DBpedia'] is not None:
                         f_key = key.replace(key, dict[key]['DBpedia'])
 
+                        # Check uri with coma to be read correctly by file
                         if "," in f_key:
                             f_key_q = '"' + f_key + '"'
                             csv_file_out.write('{},{}\n'.format(resourcer, f_key_q))
@@ -410,7 +411,13 @@ def create_comp_dict(keyword, dict_out, dict_comp):
 
     # Clean repeated labels
     clean_repeated_labels(dict_out)
-
+    """
+    for k in list(dict_out):
+        if "," in k:
+            key_clean = '"' + k + '"'
+            dict_out[key_clean] = dict_out[k]
+            del dict_out[k]
+    """
     return dict_out
 
 
@@ -484,6 +491,12 @@ def serialization(dict1, dict2):
     VIVO = Namespace("http://experts.udl.cat/ontology/core#")
     namespace_manager.bind("core", VIVO)
 
+    for k in list(dict2):
+        if '"' in k:
+            k_clean = k.replace('"', "")
+            dict2[k_clean] = dict2[k]
+            del dict2[k]
+
     for uri in dict2:
         concept = URIRef(uri)
         rdf.add((concept, RDF.type, SKOS.Concept))
@@ -505,8 +518,8 @@ def serialization(dict1, dict2):
 
 if __name__ == '__main__':
 
-    # entrada = "../files/samples_researchers_publications-keywords.csv"
-    entrada = "../files/Researcher-06000001-keywords.csv"
+    entrada = "../files/samples_researchers_publications-keywords.csv"
+    #entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
     # Generate a new file with same data but this time without quote marks
@@ -585,16 +598,19 @@ if __name__ == '__main__':
     researcher_terms = []
     # Create new dictionary with file content of replace-keywords-uri.csv
     with open('../files/replace-keywords-uri.csv', mode='r') as file_in:
-        file_in.readline()  # Ignore first lane
-        for lane in file_in:
-            part = lane.rstrip().split(",")
-            researcher = part[0]
-            term = part[1]
+        reader = csv.reader(file_in, quoting=csv.QUOTE_ALL)
+        next(reader)  # Ignore first lane
+        for lane in reader:
+            researcher = lane[0]
+            term = lane[1]
 
-            term_clean = term.replace('"', "")
-            print(term_clean)
+            # Delete quotes of words of file to serialize
+            if '"' in term:
+                term_clean = term.replace('"', "")
+                researcher_terms.append({'researcher': researcher, 'term': term_clean})
+            else:
+                researcher_terms.append({'researcher': researcher, 'term': term })
 
-            researcher_terms.append({'researcher': researcher, 'term': term_clean})
 
     # Serialize results of dictionaries created with final results
     serialization(researcher_terms, com_keys)
