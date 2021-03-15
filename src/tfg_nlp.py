@@ -411,13 +411,7 @@ def create_comp_dict(keyword, dict_out, dict_comp):
 
     # Clean repeated labels
     clean_repeated_labels(dict_out)
-    """
-    for k in list(dict_out):
-        if "," in k:
-            key_clean = '"' + k + '"'
-            dict_out[key_clean] = dict_out[k]
-            del dict_out[k]
-    """
+
     return dict_out
 
 
@@ -519,7 +513,7 @@ def serialization(dict1, dict2):
 if __name__ == '__main__':
 
     entrada = "../files/samples_researchers_publications-keywords.csv"
-    #entrada = "../files/Researcher-06000001-keywords.csv"
+    # entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
     # Generate a new file with same data but this time without quote marks
@@ -609,8 +603,7 @@ if __name__ == '__main__':
                 term_clean = term.replace('"', "")
                 researcher_terms.append({'researcher': researcher, 'term': term_clean})
             else:
-                researcher_terms.append({'researcher': researcher, 'term': term })
-
+                researcher_terms.append({'researcher': researcher, 'term': term})
 
     # Serialize results of dictionaries created with final results
     serialization(researcher_terms, com_keys)
