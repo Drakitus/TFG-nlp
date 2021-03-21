@@ -401,7 +401,6 @@ def create_comp_dict(keyword, dict_out, dict_comp):
         wrapper = DBpedia_wrapper(db)
         dict_out[db].extend(wrapper)
         if db is None:
-            # dict_out[keyword] = [{'keyword': keyword, 'language': dict_comp[keyword]['lang']}]
             dict_out.pop(keyword, None)
 
     # Delete None keys
