@@ -36,8 +36,9 @@ def Wikidata_wrapper(url):
         ent_list = []
         for result in results["results"]["bindings"]:
             keywords = normalize(result["name"]["value"])
-            dict = {'keyword': keywords, 'language': result["lang"]["value"]}
-            ent_list.append(dict)
+            if result["isArticle"]["value"] == "false":
+                dict = {'keyword': keywords, 'language': result["lang"]["value"]}
+                ent_list.append(dict)
         return ent_list
 
     except Exception as e:
@@ -66,9 +67,10 @@ def DBpedia_wrapper(url):
         results = sparql.query().convert()
         ent_list = []
         for result in results["results"]["bindings"]:
-            kewords = normalize(result["name"]["value"])
-            dict = {'keyword': kewords, 'language': result["lang"]["value"]}
-            ent_list.append(dict)
+            keywords = normalize(result["name"]["value"])
+            if result["isArticle"]["value"] == "0":
+                dict = {'keyword': keywords, 'language': result["lang"]["value"]}
+                ent_list.append(dict)
         return ent_list
 
     except Exception as e:

@@ -513,7 +513,7 @@ def serialization(dict1, dict2):
 if __name__ == '__main__':
 
     entrada = "../files/samples_researchers_publications-keywords.csv"
-    # entrada = "../files/Researcher-06000001-keywords.csv"
+    #entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
     # Generate a new file with same data but this time without quote marks
