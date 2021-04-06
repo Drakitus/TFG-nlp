@@ -131,6 +131,7 @@
 
 <https://experts.udl.cat/individual/UDL-00000039> core:hasResearchArea <http://dbpedia.org/resource/Mestre>,
         <http://dbpedia.org/resource/Montferrat>,
+        <http://www.wikidata.org/entity/Q11290858>,
         <http://www.wikidata.org/entity/Q11690727>,
         <http://www.wikidata.org/entity/Q11944564>,
         <http://www.wikidata.org/entity/Q1277524>,
@@ -187,6 +188,7 @@
         <http://www.wikidata.org/entity/Q105324597>,
         <http://www.wikidata.org/entity/Q105575937>,
         <http://www.wikidata.org/entity/Q1093314>,
+        <http://www.wikidata.org/entity/Q1127677>,
         <http://www.wikidata.org/entity/Q11453>,
         <http://www.wikidata.org/entity/Q114750>,
         <http://www.wikidata.org/entity/Q11663>,
@@ -470,13 +472,13 @@
         <http://www.wikidata.org/entity/Q28953>,
         <http://www.wikidata.org/entity/Q2913982>,
         <http://www.wikidata.org/entity/Q39286>,
-        <http://www.wikidata.org/entity/Q4045217>,
         <http://www.wikidata.org/entity/Q411097>,
         <http://www.wikidata.org/entity/Q425522>,
         <http://www.wikidata.org/entity/Q45262>,
         <http://www.wikidata.org/entity/Q483242>,
         <http://www.wikidata.org/entity/Q53279>,
         <http://www.wikidata.org/entity/Q564179>,
+        <http://www.wikidata.org/entity/Q5672141>,
         <http://www.wikidata.org/entity/Q595663>,
         <http://www.wikidata.org/entity/Q640085>,
         <http://www.wikidata.org/entity/Q66224353>,
@@ -613,14 +615,14 @@
         <http://www.wikidata.org/entity/Q192776>,
         <http://www.wikidata.org/entity/Q2151963>,
         <http://www.wikidata.org/entity/Q2873>,
-        <http://www.wikidata.org/entity/Q312>,
         <http://www.wikidata.org/entity/Q3314483>,
         <http://www.wikidata.org/entity/Q3543263>,
         <http://www.wikidata.org/entity/Q378859>,
         <http://www.wikidata.org/entity/Q426933>,
         <http://www.wikidata.org/entity/Q506040>,
         <http://www.wikidata.org/entity/Q550092>,
-        <http://www.wikidata.org/entity/Q659495> .
+        <http://www.wikidata.org/entity/Q659495>,
+        <http://www.wikidata.org/entity/Q89> .
 
 <https://experts.udl.cat/individual/UDL-00000096> core:hasResearchArea <http://dbpedia.org/resource/Sons_of_Divine_Providence>,
         <http://www.wikidata.org/entity/Q12284>,
@@ -781,6 +783,7 @@
 <https://experts.udl.cat/individual/UDL-00000119> core:hasResearchArea <http://dbpedia.org/resource/1-Heptanol>,
         <http://dbpedia.org/resource/Acrylate>,
         <http://dbpedia.org/resource/Halohydrin>,
+        <http://dbpedia.org/resource/Nuclear_magnetic_resonance_spectroscopy>,
         <http://dbpedia.org/resource/Propyl_group>,
         <http://dbpedia.org/resource/Transesterification>,
         <http://www.wikidata.org/entity/Q11379>,
@@ -819,6 +822,7 @@
         <http://www.wikidata.org/entity/Q188686>,
         <http://www.wikidata.org/entity/Q189833>,
         <http://www.wikidata.org/entity/Q1938983>,
+        <http://www.wikidata.org/entity/Q200464>,
         <http://www.wikidata.org/entity/Q201788>,
         <http://www.wikidata.org/entity/Q22667>,
         <http://www.wikidata.org/entity/Q22856>,
@@ -974,12 +978,12 @@
         <http://www.wikidata.org/entity/Q1433083>,
         <http://www.wikidata.org/entity/Q176737>,
         <http://www.wikidata.org/entity/Q179965>,
-        <http://www.wikidata.org/entity/Q27897327>,
         <http://www.wikidata.org/entity/Q327092>,
         <http://www.wikidata.org/entity/Q3523867>,
         <http://www.wikidata.org/entity/Q5104099>,
         <http://www.wikidata.org/entity/Q616005>,
-        <http://www.wikidata.org/entity/Q7162> .
+        <http://www.wikidata.org/entity/Q7162>,
+        <http://www.wikidata.org/entity/Q9257630> .
 
 <https://experts.udl.cat/individual/UDL-00000139> core:hasResearchArea <http://dbpedia.org/resource/Associação_Académica_de_Coimbra_–_O.A.F.>,
         <http://dbpedia.org/resource/Conducting>,
@@ -1036,7 +1040,6 @@
         <http://www.wikidata.org/entity/Q9842> .
 
 <https://experts.udl.cat/individual/UDL-00000143> core:hasResearchArea <http://dbpedia.org/resource/Colonial_history_of_the_United_States>,
-        <http://www.wikidata.org/entity/Q10411246>,
         <http://www.wikidata.org/entity/Q11643588>,
         <http://www.wikidata.org/entity/Q1279400>,
         <http://www.wikidata.org/entity/Q1399147>,
@@ -1047,6 +1050,7 @@
         <http://www.wikidata.org/entity/Q2365406>,
         <http://www.wikidata.org/entity/Q3281534>,
         <http://www.wikidata.org/entity/Q5308718>,
+        <http://www.wikidata.org/entity/Q5456>,
         <http://www.wikidata.org/entity/Q55513>,
         <http://www.wikidata.org/entity/Q56193466>,
         <http://www.wikidata.org/entity/Q580130>,
@@ -1360,6 +1364,7 @@
         <http://www.wikidata.org/entity/Q787>,
         <http://www.wikidata.org/entity/Q8054>,
         <http://www.wikidata.org/entity/Q836719>,
+        <http://www.wikidata.org/entity/Q845777>,
         <http://www.wikidata.org/entity/Q9368>,
         <http://www.wikidata.org/entity/Q9394> .
 
@@ -1589,7 +1594,6 @@
         <http://www.wikidata.org/entity/Q14599311>,
         <http://www.wikidata.org/entity/Q14864262>,
         <http://www.wikidata.org/entity/Q14865309>,
-        <http://www.wikidata.org/entity/Q14897873>,
         <http://www.wikidata.org/entity/Q162555>,
         <http://www.wikidata.org/entity/Q174984>,
         <http://www.wikidata.org/entity/Q17916818>,
@@ -1712,6 +1716,7 @@
         <http://dbpedia.org/resource/Peer-to-peer>,
         <http://dbpedia.org/resource/Streaming_media>,
         <http://dbpedia.org/resource/Video_on_demand>,
+        <http://www.wikidata.org/entity/Q106245667>,
         <http://www.wikidata.org/entity/Q1190465>,
         <http://www.wikidata.org/entity/Q1319773>,
         <http://www.wikidata.org/entity/Q1377767>,
@@ -1746,7 +1751,6 @@
         <http://www.wikidata.org/entity/Q12078>,
         <http://www.wikidata.org/entity/Q123414>,
         <http://www.wikidata.org/entity/Q126945>,
-        <http://www.wikidata.org/entity/Q12825018>,
         <http://www.wikidata.org/entity/Q1295316>,
         <http://www.wikidata.org/entity/Q1503477>,
         <http://www.wikidata.org/entity/Q15315135>,
@@ -1759,6 +1763,7 @@
         <http://www.wikidata.org/entity/Q331839>,
         <http://www.wikidata.org/entity/Q5277342>,
         <http://www.wikidata.org/entity/Q592442>,
+        <http://www.wikidata.org/entity/Q5982337>,
         <http://www.wikidata.org/entity/Q6123797> .
 
 <https://experts.udl.cat/individual/UDL-00000260> core:hasResearchArea <http://dbpedia.org/resource/Crime_fiction>,
@@ -2045,6 +2050,7 @@
         <http://www.wikidata.org/entity/Q1889114>,
         <http://www.wikidata.org/entity/Q2035437>,
         <http://www.wikidata.org/entity/Q24024731>,
+        <http://www.wikidata.org/entity/Q28474>,
         <http://www.wikidata.org/entity/Q2921032>,
         <http://www.wikidata.org/entity/Q2980446>,
         <http://www.wikidata.org/entity/Q37221>,
@@ -2054,7 +2060,6 @@
         <http://www.wikidata.org/entity/Q726474>,
         <http://www.wikidata.org/entity/Q7317264>,
         <http://www.wikidata.org/entity/Q80205>,
-        <http://www.wikidata.org/entity/Q843905>,
         <http://www.wikidata.org/entity/Q962365> .
 
 <https://experts.udl.cat/individual/UDL-00000313> core:hasResearchArea <http://dbpedia.org/resource/Antipsychotic>,
@@ -2144,7 +2149,6 @@
         <http://www.wikidata.org/entity/Q1039642>,
         <http://www.wikidata.org/entity/Q1049481>,
         <http://www.wikidata.org/entity/Q1058438>,
-        <http://www.wikidata.org/entity/Q1065241>,
         <http://www.wikidata.org/entity/Q107592>,
         <http://www.wikidata.org/entity/Q10978>,
         <http://www.wikidata.org/entity/Q1108792>,
@@ -2241,6 +2245,7 @@
         <http://www.wikidata.org/entity/Q830>,
         <http://www.wikidata.org/entity/Q864310>,
         <http://www.wikidata.org/entity/Q864574>,
+        <http://www.wikidata.org/entity/Q864693>,
         <http://www.wikidata.org/entity/Q864895>,
         <http://www.wikidata.org/entity/Q873864>,
         <http://www.wikidata.org/entity/Q898814>,
@@ -2272,6 +2277,7 @@
         <http://www.wikidata.org/entity/Q139200>,
         <http://www.wikidata.org/entity/Q14897899>,
         <http://www.wikidata.org/entity/Q14904927>,
+        <http://www.wikidata.org/entity/Q1514415>,
         <http://www.wikidata.org/entity/Q162564>,
         <http://www.wikidata.org/entity/Q175621>,
         <http://www.wikidata.org/entity/Q177635>,
@@ -2400,6 +2406,7 @@
         <http://dbpedia.org/resource/Gene>,
         <http://dbpedia.org/resource/Web_server>,
         <http://dbpedia.org/resource/Xylulose>,
+        <http://www.wikidata.org/entity/Q105989936>,
         <http://www.wikidata.org/entity/Q11575>,
         <http://www.wikidata.org/entity/Q12121859>,
         <http://www.wikidata.org/entity/Q12149006>,
@@ -2591,6 +2598,7 @@
         <http://dbpedia.org/resource/Positiva_Records>,
         <http://www.wikidata.org/entity/Q100400128>,
         <http://www.wikidata.org/entity/Q1029430>,
+        <http://www.wikidata.org/entity/Q10666891>,
         <http://www.wikidata.org/entity/Q1140229>,
         <http://www.wikidata.org/entity/Q1153173>,
         <http://www.wikidata.org/entity/Q1189047>,
@@ -2797,6 +2805,7 @@
         <http://www.wikidata.org/entity/Q103350>,
         <http://www.wikidata.org/entity/Q1165392>,
         <http://www.wikidata.org/entity/Q1297897>,
+        <http://www.wikidata.org/entity/Q134267>,
         <http://www.wikidata.org/entity/Q1347355>,
         <http://www.wikidata.org/entity/Q1419660>,
         <http://www.wikidata.org/entity/Q1430402>,
@@ -2806,7 +2815,6 @@
         <http://www.wikidata.org/entity/Q1639895>,
         <http://www.wikidata.org/entity/Q169390>,
         <http://www.wikidata.org/entity/Q16957102>,
-        <http://www.wikidata.org/entity/Q17103642>,
         <http://www.wikidata.org/entity/Q1759895>,
         <http://www.wikidata.org/entity/Q177603>,
         <http://www.wikidata.org/entity/Q1800556>,
@@ -3132,7 +3140,6 @@
         <http://dbpedia.org/resource/Chisel>,
         <http://dbpedia.org/resource/Crop_residue>,
         <http://dbpedia.org/resource/Crop_rotation>,
-        <http://dbpedia.org/resource/Germination>,
         <http://dbpedia.org/resource/Herbicide>,
         <http://dbpedia.org/resource/Lolium>,
         <http://dbpedia.org/resource/Vegetable_oil>,
@@ -3242,7 +3249,6 @@
         <http://www.wikidata.org/entity/Q169950>,
         <http://www.wikidata.org/entity/Q170409>,
         <http://www.wikidata.org/entity/Q17146659>,
-        <http://www.wikidata.org/entity/Q1740919>,
         <http://www.wikidata.org/entity/Q18496397>,
         <http://www.wikidata.org/entity/Q193603>,
         <http://www.wikidata.org/entity/Q20810231>,
@@ -3280,7 +3286,8 @@
         <http://www.wikidata.org/entity/Q852998>,
         <http://www.wikidata.org/entity/Q898653>,
         <http://www.wikidata.org/entity/Q899805>,
-        <http://www.wikidata.org/entity/Q928498> .
+        <http://www.wikidata.org/entity/Q928498>,
+        <http://www.wikidata.org/entity/Q982239> .
 
 <https://experts.udl.cat/individual/UDL-00000446> core:hasResearchArea <http://www.wikidata.org/entity/Q12055176>,
         <http://www.wikidata.org/entity/Q13474305>,
@@ -3654,7 +3661,6 @@
         <http://dbpedia.org/resource/Mold>,
         <http://dbpedia.org/resource/Plant_hormone>,
         <http://dbpedia.org/resource/Postharvest>,
-        <http://www.wikidata.org/entity/Q105989683>,
         <http://www.wikidata.org/entity/Q1146493>,
         <http://www.wikidata.org/entity/Q1207505>,
         <http://www.wikidata.org/entity/Q12136>,
@@ -3676,7 +3682,6 @@
         <http://www.wikidata.org/entity/Q193598>,
         <http://www.wikidata.org/entity/Q196>,
         <http://www.wikidata.org/entity/Q2069402>,
-        <http://www.wikidata.org/entity/Q21119023>,
         <http://www.wikidata.org/entity/Q2121926>,
         <http://www.wikidata.org/entity/Q2151963>,
         <http://www.wikidata.org/entity/Q218385>,
@@ -3685,7 +3690,6 @@
         <http://www.wikidata.org/entity/Q22981361>,
         <http://www.wikidata.org/entity/Q268414>,
         <http://www.wikidata.org/entity/Q26972>,
-        <http://www.wikidata.org/entity/Q312>,
         <http://www.wikidata.org/entity/Q3314483>,
         <http://www.wikidata.org/entity/Q355263>,
         <http://www.wikidata.org/entity/Q410754>,
@@ -3706,6 +3710,7 @@
         <http://www.wikidata.org/entity/Q8047>,
         <http://www.wikidata.org/entity/Q8104>,
         <http://www.wikidata.org/entity/Q841156>,
+        <http://www.wikidata.org/entity/Q89>,
         <http://www.wikidata.org/entity/Q907280>,
         <http://www.wikidata.org/entity/Q9530>,
         <http://www.wikidata.org/entity/Q97376408> .
@@ -3736,7 +3741,6 @@
         <http://www.wikidata.org/entity/Q22981361>,
         <http://www.wikidata.org/entity/Q268414>,
         <http://www.wikidata.org/entity/Q2873>,
-        <http://www.wikidata.org/entity/Q312>,
         <http://www.wikidata.org/entity/Q31810601>,
         <http://www.wikidata.org/entity/Q3331475>,
         <http://www.wikidata.org/entity/Q3543263>,
@@ -3754,6 +3758,7 @@
         <http://www.wikidata.org/entity/Q677065>,
         <http://www.wikidata.org/entity/Q8104>,
         <http://www.wikidata.org/entity/Q841156>,
+        <http://www.wikidata.org/entity/Q89>,
         <http://www.wikidata.org/entity/Q910267>,
         <http://www.wikidata.org/entity/Q97376408> .
 
@@ -3861,6 +3866,7 @@
         <http://dbpedia.org/resource/Concurrency_(road)>,
         <http://dbpedia.org/resource/Message_passing>,
         <http://dbpedia.org/resource/Pipeline_transport>,
+        <http://www.wikidata.org/entity/Q106161654>,
         <http://www.wikidata.org/entity/Q1190465>,
         <http://www.wikidata.org/entity/Q1319773>,
         <http://www.wikidata.org/entity/Q1377767>,
@@ -3868,7 +3874,6 @@
         <http://www.wikidata.org/entity/Q14623204>,
         <http://www.wikidata.org/entity/Q15545584>,
         <http://www.wikidata.org/entity/Q161410>,
-        <http://www.wikidata.org/entity/Q16511806>,
         <http://www.wikidata.org/entity/Q180634>,
         <http://www.wikidata.org/entity/Q187787>,
         <http://www.wikidata.org/entity/Q1968693>,
@@ -4263,6 +4268,7 @@
         <http://www.wikidata.org/entity/Q8134>,
         <http://www.wikidata.org/entity/Q8434>,
         <http://www.wikidata.org/entity/Q874727>,
+        <http://www.wikidata.org/entity/Q89>,
         <http://www.wikidata.org/entity/Q899805>,
         <http://www.wikidata.org/entity/Q9051832>,
         <http://www.wikidata.org/entity/Q914138> .
@@ -4299,11 +4305,11 @@
         <http://www.wikidata.org/entity/Q50407495>,
         <http://www.wikidata.org/entity/Q543310>,
         <http://www.wikidata.org/entity/Q585259>,
-        <http://www.wikidata.org/entity/Q65921492>,
         <http://www.wikidata.org/entity/Q7162>,
         <http://www.wikidata.org/entity/Q7893853>,
         <http://www.wikidata.org/entity/Q815382>,
         <http://www.wikidata.org/entity/Q840400>,
+        <http://www.wikidata.org/entity/Q845777>,
         <http://www.wikidata.org/entity/Q938205> .
 
 <https://experts.udl.cat/individual/UDL-00000592> core:hasResearchArea <http://dbpedia.org/resource/Barley>,
@@ -4595,6 +4601,7 @@
         <http://dbpedia.org/resource/Web_server>,
         <http://www.wikidata.org/entity/Q1000371>,
         <http://www.wikidata.org/entity/Q10272309>,
+        <http://www.wikidata.org/entity/Q106087617>,
         <http://www.wikidata.org/entity/Q11575>,
         <http://www.wikidata.org/entity/Q12121859>,
         <http://www.wikidata.org/entity/Q12149006>,
@@ -4736,6 +4743,7 @@
         <http://www.wikidata.org/entity/Q18123008>,
         <http://www.wikidata.org/entity/Q193010>,
         <http://www.wikidata.org/entity/Q1953032>,
+        <http://www.wikidata.org/entity/Q19705949>,
         <http://www.wikidata.org/entity/Q19834818>,
         <http://www.wikidata.org/entity/Q207011>,
         <http://www.wikidata.org/entity/Q2087279>,
@@ -4771,6 +4779,7 @@
         <http://dbpedia.org/resource/Halohydrin>,
         <http://dbpedia.org/resource/Lipophilicity>,
         <http://dbpedia.org/resource/Microwave>,
+        <http://dbpedia.org/resource/Nuclear_magnetic_resonance_spectroscopy>,
         <http://dbpedia.org/resource/Phenols>,
         <http://dbpedia.org/resource/Photoionization>,
         <http://dbpedia.org/resource/Propyl_group>,
@@ -5167,7 +5176,6 @@
         <http://www.wikidata.org/entity/Q290439>,
         <http://www.wikidata.org/entity/Q30295815>,
         <http://www.wikidata.org/entity/Q306135>,
-        <http://www.wikidata.org/entity/Q312>,
         <http://www.wikidata.org/entity/Q3136137>,
         <http://www.wikidata.org/entity/Q3190226>,
         <http://www.wikidata.org/entity/Q36814998>,
@@ -5207,6 +5215,7 @@
         <http://www.wikidata.org/entity/Q830393>,
         <http://www.wikidata.org/entity/Q856775>,
         <http://www.wikidata.org/entity/Q864310>,
+        <http://www.wikidata.org/entity/Q89>,
         <http://www.wikidata.org/entity/Q902638>,
         <http://www.wikidata.org/entity/Q90545563>,
         <http://www.wikidata.org/entity/Q906645>,
@@ -5305,6 +5314,7 @@
         <http://dbpedia.org/resource/Limonene>,
         <http://dbpedia.org/resource/Lipophilicity>,
         <http://dbpedia.org/resource/Microwave>,
+        <http://dbpedia.org/resource/Nuclear_magnetic_resonance_spectroscopy>,
         <http://dbpedia.org/resource/Phenols>,
         <http://dbpedia.org/resource/Photoionization>,
         <http://dbpedia.org/resource/Propyl_group>,
@@ -5943,7 +5953,6 @@
         <http://www.wikidata.org/entity/Q190007>,
         <http://www.wikidata.org/entity/Q1920219>,
         <http://www.wikidata.org/entity/Q207011>,
-        <http://www.wikidata.org/entity/Q207199>,
         <http://www.wikidata.org/entity/Q21201>,
         <http://www.wikidata.org/entity/Q22813352>,
         <http://www.wikidata.org/entity/Q23404>,
@@ -5959,6 +5968,7 @@
         <http://www.wikidata.org/entity/Q48270>,
         <http://www.wikidata.org/entity/Q49773>,
         <http://www.wikidata.org/entity/Q54826171>,
+        <http://www.wikidata.org/entity/Q597>,
         <http://www.wikidata.org/entity/Q6159182>,
         <http://www.wikidata.org/entity/Q778407>,
         <http://www.wikidata.org/entity/Q82955>,
@@ -6052,6 +6062,7 @@
         <http://www.wikidata.org/entity/Q1034411>,
         <http://www.wikidata.org/entity/Q1056832>,
         <http://www.wikidata.org/entity/Q105858460>,
+        <http://www.wikidata.org/entity/Q106161654>,
         <http://www.wikidata.org/entity/Q1076056>,
         <http://www.wikidata.org/entity/Q108200>,
         <http://www.wikidata.org/entity/Q11016>,
@@ -6118,7 +6129,6 @@
         <http://www.wikidata.org/entity/Q159719>,
         <http://www.wikidata.org/entity/Q160066>,
         <http://www.wikidata.org/entity/Q161064>,
-        <http://www.wikidata.org/entity/Q16511806>,
         <http://www.wikidata.org/entity/Q166142>,
         <http://www.wikidata.org/entity/Q16719795>,
         <http://www.wikidata.org/entity/Q167947>,
@@ -6173,6 +6183,7 @@
         <http://www.wikidata.org/entity/Q210272>,
         <http://www.wikidata.org/entity/Q212920>,
         <http://www.wikidata.org/entity/Q2142963>,
+        <http://www.wikidata.org/entity/Q214609>,
         <http://www.wikidata.org/entity/Q215108>,
         <http://www.wikidata.org/entity/Q215712>,
         <http://www.wikidata.org/entity/Q216033>,
@@ -6181,6 +6192,7 @@
         <http://www.wikidata.org/entity/Q219416>,
         <http://www.wikidata.org/entity/Q22713464>,
         <http://www.wikidata.org/entity/Q2298412>,
+        <http://www.wikidata.org/entity/Q2308599>,
         <http://www.wikidata.org/entity/Q2334061>,
         <http://www.wikidata.org/entity/Q2384813>,
         <http://www.wikidata.org/entity/Q2412849>,
@@ -6270,7 +6282,6 @@
         <http://www.wikidata.org/entity/Q581861>,
         <http://www.wikidata.org/entity/Q581950>,
         <http://www.wikidata.org/entity/Q58467951>,
-        <http://www.wikidata.org/entity/Q5849500>,
         <http://www.wikidata.org/entity/Q58778>,
         <http://www.wikidata.org/entity/Q589260>,
         <http://www.wikidata.org/entity/Q59156788>,
@@ -6408,7 +6419,6 @@
         <http://www.wikidata.org/entity/Q11697891>,
         <http://www.wikidata.org/entity/Q12078>,
         <http://www.wikidata.org/entity/Q1216998>,
-        <http://www.wikidata.org/entity/Q12825018>,
         <http://www.wikidata.org/entity/Q133212>,
         <http://www.wikidata.org/entity/Q14599311>,
         <http://www.wikidata.org/entity/Q1503477>,
@@ -6428,6 +6438,7 @@
         <http://www.wikidata.org/entity/Q5277342>,
         <http://www.wikidata.org/entity/Q58447>,
         <http://www.wikidata.org/entity/Q592442>,
+        <http://www.wikidata.org/entity/Q5982337>,
         <http://www.wikidata.org/entity/Q68685>,
         <http://www.wikidata.org/entity/Q744577>,
         <http://www.wikidata.org/entity/Q93165> .
@@ -6591,6 +6602,7 @@
         <http://dbpedia.org/resource/Wood>,
         <http://www.wikidata.org/entity/Q102227345>,
         <http://www.wikidata.org/entity/Q1093314>,
+        <http://www.wikidata.org/entity/Q1127677>,
         <http://www.wikidata.org/entity/Q11453>,
         <http://www.wikidata.org/entity/Q125928>,
         <http://www.wikidata.org/entity/Q133128>,
@@ -6602,7 +6614,6 @@
         <http://www.wikidata.org/entity/Q218155>,
         <http://www.wikidata.org/entity/Q2428433>,
         <http://www.wikidata.org/entity/Q2690965>,
-        <http://www.wikidata.org/entity/Q2885646>,
         <http://www.wikidata.org/entity/Q3008355>,
         <http://www.wikidata.org/entity/Q3047120>,
         <http://www.wikidata.org/entity/Q342790>,
@@ -6610,6 +6621,7 @@
         <http://www.wikidata.org/entity/Q3556769>,
         <http://www.wikidata.org/entity/Q372561>,
         <http://www.wikidata.org/entity/Q43059>,
+        <http://www.wikidata.org/entity/Q5798609>,
         <http://www.wikidata.org/entity/Q62138>,
         <http://www.wikidata.org/entity/Q654236>,
         <http://www.wikidata.org/entity/Q7942>,
@@ -6652,6 +6664,7 @@
         <http://www.wikidata.org/entity/Q975085> .
 
 <https://experts.udl.cat/individual/UDL-00000826> core:hasResearchArea <http://dbpedia.org/resource/Achaemenid_coinage>,
+        <http://www.wikidata.org/entity/Q101040966>,
         <http://www.wikidata.org/entity/Q11453>,
         <http://www.wikidata.org/entity/Q11990>,
         <http://www.wikidata.org/entity/Q15090>,
@@ -6659,7 +6672,6 @@
         <http://www.wikidata.org/entity/Q28113351>,
         <http://www.wikidata.org/entity/Q31072971>,
         <http://www.wikidata.org/entity/Q330284>,
-        <http://www.wikidata.org/entity/Q37206633>,
         <http://www.wikidata.org/entity/Q5705>,
         <http://www.wikidata.org/entity/Q80719444> .
 
@@ -6674,8 +6686,8 @@
 <https://experts.udl.cat/individual/UDL-00000834> core:hasResearchArea <http://dbpedia.org/resource/Catalan_literature>,
         <http://www.wikidata.org/entity/Q3123212>,
         <http://www.wikidata.org/entity/Q66119246>,
-        <http://www.wikidata.org/entity/Q776060>,
-        <http://www.wikidata.org/entity/Q844569> .
+        <http://www.wikidata.org/entity/Q844569>,
+        <http://www.wikidata.org/entity/Q9259> .
 
 <https://experts.udl.cat/individual/UDL-00000839> core:hasResearchArea <http://www.wikidata.org/entity/Q11023>,
         <http://www.wikidata.org/entity/Q128709>,
@@ -6710,7 +6722,6 @@
         <http://www.wikidata.org/entity/Q6008868>,
         <http://www.wikidata.org/entity/Q605035>,
         <http://www.wikidata.org/entity/Q718809>,
-        <http://www.wikidata.org/entity/Q778743>,
         <http://www.wikidata.org/entity/Q7981051>,
         <http://www.wikidata.org/entity/Q967647> .
 
@@ -6735,7 +6746,6 @@
         <http://www.wikidata.org/entity/Q208130>,
         <http://www.wikidata.org/entity/Q290439>,
         <http://www.wikidata.org/entity/Q29097150>,
-        <http://www.wikidata.org/entity/Q312>,
         <http://www.wikidata.org/entity/Q407142>,
         <http://www.wikidata.org/entity/Q43177>,
         <http://www.wikidata.org/entity/Q4610556>,
@@ -6744,6 +6754,7 @@
         <http://www.wikidata.org/entity/Q64223125>,
         <http://www.wikidata.org/entity/Q6631525>,
         <http://www.wikidata.org/entity/Q830393>,
+        <http://www.wikidata.org/entity/Q89>,
         <http://www.wikidata.org/entity/Q909821>,
         <http://www.wikidata.org/entity/Q910172>,
         <http://www.wikidata.org/entity/Q93165>,
@@ -6842,7 +6853,6 @@
         <http://dbpedia.org/resource/Fuji_music>,
         <http://dbpedia.org/resource/Hue>,
         <http://dbpedia.org/resource/Postharvest>,
-        <http://www.wikidata.org/entity/Q105989683>,
         <http://www.wikidata.org/entity/Q1207505>,
         <http://www.wikidata.org/entity/Q1250033>,
         <http://www.wikidata.org/entity/Q128700>,
@@ -6856,14 +6866,12 @@
         <http://www.wikidata.org/entity/Q1757629>,
         <http://www.wikidata.org/entity/Q1827455>,
         <http://www.wikidata.org/entity/Q18674606>,
-        <http://www.wikidata.org/entity/Q21119023>,
         <http://www.wikidata.org/entity/Q2151963>,
         <http://www.wikidata.org/entity/Q218385>,
         <http://www.wikidata.org/entity/Q22323608>,
         <http://www.wikidata.org/entity/Q22981361>,
         <http://www.wikidata.org/entity/Q268414>,
         <http://www.wikidata.org/entity/Q26972>,
-        <http://www.wikidata.org/entity/Q312>,
         <http://www.wikidata.org/entity/Q3314483>,
         <http://www.wikidata.org/entity/Q3331475>,
         <http://www.wikidata.org/entity/Q355263>,
@@ -6885,6 +6893,7 @@
         <http://www.wikidata.org/entity/Q80719258>,
         <http://www.wikidata.org/entity/Q8104>,
         <http://www.wikidata.org/entity/Q841156>,
+        <http://www.wikidata.org/entity/Q89>,
         <http://www.wikidata.org/entity/Q907280>,
         <http://www.wikidata.org/entity/Q910267>,
         <http://www.wikidata.org/entity/Q9530>,
@@ -6903,6 +6912,7 @@
         <http://www.wikidata.org/entity/Q1067402>,
         <http://www.wikidata.org/entity/Q1068473>,
         <http://www.wikidata.org/entity/Q11042>,
+        <http://www.wikidata.org/entity/Q11290858>,
         <http://www.wikidata.org/entity/Q1194317>,
         <http://www.wikidata.org/entity/Q12147>,
         <http://www.wikidata.org/entity/Q12547146>,
@@ -7107,6 +7117,7 @@
         <http://dbpedia.org/resource/Wood>,
         <http://www.wikidata.org/entity/Q102296>,
         <http://www.wikidata.org/entity/Q1063>,
+        <http://www.wikidata.org/entity/Q1127677>,
         <http://www.wikidata.org/entity/Q1137122>,
         <http://www.wikidata.org/entity/Q113796>,
         <http://www.wikidata.org/entity/Q11451>,
@@ -7628,6 +7639,7 @@
         <http://dbpedia.org/resource/Ecosystem>,
         <http://dbpedia.org/resource/Peer-to-peer>,
         <http://dbpedia.org/resource/Time-sharing>,
+        <http://www.wikidata.org/entity/Q106087617>,
         <http://www.wikidata.org/entity/Q1319773>,
         <http://www.wikidata.org/entity/Q1326430>,
         <http://www.wikidata.org/entity/Q1377767>,
@@ -8145,6 +8157,7 @@
         <http://www.wikidata.org/entity/Q2311855>,
         <http://www.wikidata.org/entity/Q2326546>,
         <http://www.wikidata.org/entity/Q2447768>,
+        <http://www.wikidata.org/entity/Q245204>,
         <http://www.wikidata.org/entity/Q262547>,
         <http://www.wikidata.org/entity/Q2687731>,
         <http://www.wikidata.org/entity/Q26972>,
@@ -8155,7 +8168,6 @@
         <http://www.wikidata.org/entity/Q295425>,
         <http://www.wikidata.org/entity/Q30046>,
         <http://www.wikidata.org/entity/Q311202>,
-        <http://www.wikidata.org/entity/Q312>,
         <http://www.wikidata.org/entity/Q3314483>,
         <http://www.wikidata.org/entity/Q3360230>,
         <http://www.wikidata.org/entity/Q357896>,
@@ -8212,6 +8224,7 @@
         <http://www.wikidata.org/entity/Q841156>,
         <http://www.wikidata.org/entity/Q873864>,
         <http://www.wikidata.org/entity/Q878333>,
+        <http://www.wikidata.org/entity/Q89>,
         <http://www.wikidata.org/entity/Q898814>,
         <http://www.wikidata.org/entity/Q904564>,
         <http://www.wikidata.org/entity/Q96415567> .
@@ -8406,7 +8419,6 @@
 
 <https://experts.udl.cat/individual/UDL-00001073> core:hasResearchArea <http://dbpedia.org/resource/Rurales>,
         <http://www.wikidata.org/entity/Q103817>,
-        <http://www.wikidata.org/entity/Q10411246>,
         <http://www.wikidata.org/entity/Q1074523>,
         <http://www.wikidata.org/entity/Q12585>,
         <http://www.wikidata.org/entity/Q132151>,
@@ -8425,7 +8437,9 @@
         <http://www.wikidata.org/entity/Q2476047>,
         <http://www.wikidata.org/entity/Q27841>,
         <http://www.wikidata.org/entity/Q3773637>,
+        <http://www.wikidata.org/entity/Q5148429>,
         <http://www.wikidata.org/entity/Q5404323>,
+        <http://www.wikidata.org/entity/Q5456>,
         <http://www.wikidata.org/entity/Q5602008>,
         <http://www.wikidata.org/entity/Q5782934>,
         <http://www.wikidata.org/entity/Q6024696>,
@@ -9008,7 +9022,6 @@
         <http://www.wikidata.org/entity/Q21100688>,
         <http://www.wikidata.org/entity/Q212936>,
         <http://www.wikidata.org/entity/Q21756526>,
-        <http://www.wikidata.org/entity/Q22103935>,
         <http://www.wikidata.org/entity/Q224093>,
         <http://www.wikidata.org/entity/Q24087556>,
         <http://www.wikidata.org/entity/Q24774809>,
@@ -9026,6 +9039,7 @@
         <http://www.wikidata.org/entity/Q3605249>,
         <http://www.wikidata.org/entity/Q408693>,
         <http://www.wikidata.org/entity/Q410190>,
+        <http://www.wikidata.org/entity/Q411391>,
         <http://www.wikidata.org/entity/Q412563>,
         <http://www.wikidata.org/entity/Q413740>,
         <http://www.wikidata.org/entity/Q414006>,
@@ -9046,6 +9060,7 @@
         <http://www.wikidata.org/entity/Q5447138>,
         <http://www.wikidata.org/entity/Q5533489>,
         <http://www.wikidata.org/entity/Q57821>,
+        <http://www.wikidata.org/entity/Q632559>,
         <http://www.wikidata.org/entity/Q645858>,
         <http://www.wikidata.org/entity/Q64707442>,
         <http://www.wikidata.org/entity/Q6822347>,
@@ -9072,6 +9087,7 @@
         <http://www.wikidata.org/entity/Q736715> .
 
 <https://experts.udl.cat/individual/UDL-00001206> core:hasResearchArea <http://dbpedia.org/resource/Cardiology>,
+        <http://dbpedia.org/resource/Neurotrophin>,
         <http://dbpedia.org/resource/Protein_kinase>,
         <http://www.wikidata.org/entity/Q1047227>,
         <http://www.wikidata.org/entity/Q1072>,
@@ -9080,7 +9096,6 @@
         <http://www.wikidata.org/entity/Q11068>,
         <http://www.wikidata.org/entity/Q12136>,
         <http://www.wikidata.org/entity/Q14599311>,
-        <http://www.wikidata.org/entity/Q14897873>,
         <http://www.wikidata.org/entity/Q17916818>,
         <http://www.wikidata.org/entity/Q18247944>,
         <http://www.wikidata.org/entity/Q188151>,
@@ -9191,7 +9206,6 @@
         <http://dbpedia.org/resource/Progesterone>,
         <http://dbpedia.org/resource/Trout>,
         <http://www.wikidata.org/entity/Q1039642>,
-        <http://www.wikidata.org/entity/Q1065241>,
         <http://www.wikidata.org/entity/Q11575>,
         <http://www.wikidata.org/entity/Q11995>,
         <http://www.wikidata.org/entity/Q131672>,
@@ -9222,7 +9236,9 @@
         <http://www.wikidata.org/entity/Q830>,
         <http://www.wikidata.org/entity/Q836719>,
         <http://www.wikidata.org/entity/Q8452>,
+        <http://www.wikidata.org/entity/Q845777>,
         <http://www.wikidata.org/entity/Q864310>,
+        <http://www.wikidata.org/entity/Q864693>,
         <http://www.wikidata.org/entity/Q964401> .
 
 <https://experts.udl.cat/individual/UDL-00001320> core:hasResearchArea <http://dbpedia.org/resource/Carotenoid>,
@@ -9618,7 +9634,6 @@
 <https://experts.udl.cat/individual/UDL-00005023> core:hasResearchArea <http://dbpedia.org/resource/Abiotic_stress>,
         <http://dbpedia.org/resource/Five_prime_untranslated_region>,
         <http://dbpedia.org/resource/Food_security>,
-        <http://dbpedia.org/resource/Gene>,
         <http://dbpedia.org/resource/Genetically_modified_maize>,
         <http://dbpedia.org/resource/Hygromycin>,
         <http://dbpedia.org/resource/Mutation>,
@@ -9634,7 +9649,6 @@
         <http://www.wikidata.org/entity/Q191907>,
         <http://www.wikidata.org/entity/Q193598>,
         <http://www.wikidata.org/entity/Q21100688>,
-        <http://www.wikidata.org/entity/Q22103935>,
         <http://www.wikidata.org/entity/Q222046>,
         <http://www.wikidata.org/entity/Q224093>,
         <http://www.wikidata.org/entity/Q26972>,
@@ -9643,6 +9657,7 @@
         <http://www.wikidata.org/entity/Q3605249>,
         <http://www.wikidata.org/entity/Q37317897>,
         <http://www.wikidata.org/entity/Q410190>,
+        <http://www.wikidata.org/entity/Q411391>,
         <http://www.wikidata.org/entity/Q414006>,
         <http://www.wikidata.org/entity/Q418834>,
         <http://www.wikidata.org/entity/Q421959>,
@@ -9650,6 +9665,7 @@
         <http://www.wikidata.org/entity/Q461499>,
         <http://www.wikidata.org/entity/Q531507>,
         <http://www.wikidata.org/entity/Q5533489>,
+        <http://www.wikidata.org/entity/Q632559>,
         <http://www.wikidata.org/entity/Q6822347>,
         <http://www.wikidata.org/entity/Q68685>,
         <http://www.wikidata.org/entity/Q7108>,
@@ -9659,6 +9675,7 @@
 
 <https://experts.udl.cat/individual/UDL-00005027> core:hasResearchArea <http://dbpedia.org/resource/Cereal>,
         <http://dbpedia.org/resource/Multivariate_analysis>,
+        <http://dbpedia.org/resource/Nuclear_magnetic_resonance_spectroscopy>,
         <http://dbpedia.org/resource/Postharvest>,
         <http://www.wikidata.org/entity/Q13189>,
         <http://www.wikidata.org/entity/Q1403158>,
@@ -9841,7 +9858,6 @@
         <http://www.wikidata.org/entity/Q25419>,
         <http://www.wikidata.org/entity/Q262547>,
         <http://www.wikidata.org/entity/Q2629666>,
-        <http://www.wikidata.org/entity/Q312>,
         <http://www.wikidata.org/entity/Q3136137>,
         <http://www.wikidata.org/entity/Q36814998>,
         <http://www.wikidata.org/entity/Q375613>,
@@ -9863,6 +9879,7 @@
         <http://www.wikidata.org/entity/Q8047>,
         <http://www.wikidata.org/entity/Q830393>,
         <http://www.wikidata.org/entity/Q864310>,
+        <http://www.wikidata.org/entity/Q89>,
         <http://www.wikidata.org/entity/Q90545563>,
         <http://www.wikidata.org/entity/Q93165>,
         <http://www.wikidata.org/entity/Q99392206> .
@@ -9943,7 +9960,6 @@
         <http://www.wikidata.org/entity/Q207688>,
         <http://www.wikidata.org/entity/Q21100688>,
         <http://www.wikidata.org/entity/Q21756526>,
-        <http://www.wikidata.org/entity/Q22103935>,
         <http://www.wikidata.org/entity/Q224093>,
         <http://www.wikidata.org/entity/Q24087556>,
         <http://www.wikidata.org/entity/Q24774809>,
@@ -9962,6 +9978,7 @@
         <http://www.wikidata.org/entity/Q394222>,
         <http://www.wikidata.org/entity/Q408693>,
         <http://www.wikidata.org/entity/Q410190>,
+        <http://www.wikidata.org/entity/Q411391>,
         <http://www.wikidata.org/entity/Q412563>,
         <http://www.wikidata.org/entity/Q413740>,
         <http://www.wikidata.org/entity/Q414006>,
@@ -9982,6 +9999,7 @@
         <http://www.wikidata.org/entity/Q57821>,
         <http://www.wikidata.org/entity/Q59679511>,
         <http://www.wikidata.org/entity/Q627371>,
+        <http://www.wikidata.org/entity/Q632559>,
         <http://www.wikidata.org/entity/Q645858>,
         <http://www.wikidata.org/entity/Q64707442>,
         <http://www.wikidata.org/entity/Q67455737>,
@@ -10028,7 +10046,6 @@
         <http://dbpedia.org/resource/Crop_residue>,
         <http://dbpedia.org/resource/Detoxification>,
         <http://dbpedia.org/resource/Endangered_species>,
-        <http://dbpedia.org/resource/Germination>,
         <http://dbpedia.org/resource/Herbicide>,
         <http://dbpedia.org/resource/Huerta>,
         <http://dbpedia.org/resource/Hydrothermal_circulation>,
@@ -10515,7 +10532,6 @@
         <http://www.wikidata.org/entity/Q485762>,
         <http://www.wikidata.org/entity/Q5123>,
         <http://www.wikidata.org/entity/Q5705>,
-        <http://www.wikidata.org/entity/Q63173086>,
         <http://www.wikidata.org/entity/Q7015>,
         <http://www.wikidata.org/entity/Q76244>,
         <http://www.wikidata.org/entity/Q7884789>,
@@ -10547,6 +10563,7 @@
         <http://dbpedia.org/resource/Gene>,
         <http://dbpedia.org/resource/Web_server>,
         <http://dbpedia.org/resource/Xylulose>,
+        <http://www.wikidata.org/entity/Q105989936>,
         <http://www.wikidata.org/entity/Q11575>,
         <http://www.wikidata.org/entity/Q12121859>,
         <http://www.wikidata.org/entity/Q12149006>,
@@ -10719,6 +10736,7 @@
         <http://dbpedia.org/resource/Limonene>,
         <http://dbpedia.org/resource/Microwave>,
         <http://dbpedia.org/resource/Mutation>,
+        <http://dbpedia.org/resource/Nuclear_magnetic_resonance_spectroscopy>,
         <http://dbpedia.org/resource/Pulse-code_modulation>,
         <http://dbpedia.org/resource/Transesterification>,
         <http://www.wikidata.org/entity/Q11351>,
@@ -11030,6 +11048,7 @@
         <http://www.wikidata.org/entity/Q1365091>,
         <http://www.wikidata.org/entity/Q14897899>,
         <http://www.wikidata.org/entity/Q14904927>,
+        <http://www.wikidata.org/entity/Q1514415>,
         <http://www.wikidata.org/entity/Q1546498>,
         <http://www.wikidata.org/entity/Q162564>,
         <http://www.wikidata.org/entity/Q175621>,
@@ -11062,7 +11081,7 @@
 
 <https://experts.udl.cat/individual/UDL-05000677> core:hasResearchArea <http://www.wikidata.org/entity/Q13189>,
         <http://www.wikidata.org/entity/Q17216>,
-        <http://www.wikidata.org/entity/Q312>,
+        <http://www.wikidata.org/entity/Q89>,
         <http://www.wikidata.org/entity/Q904653> .
 
 <https://experts.udl.cat/individual/UDL-05000685> core:hasResearchArea <http://dbpedia.org/resource/Epidemiology>,
@@ -11254,6 +11273,7 @@
         <http://www.wikidata.org/entity/Q768702>,
         <http://www.wikidata.org/entity/Q8054>,
         <http://www.wikidata.org/entity/Q836719>,
+        <http://www.wikidata.org/entity/Q845777>,
         <http://www.wikidata.org/entity/Q853421>,
         <http://www.wikidata.org/entity/Q917925>,
         <http://www.wikidata.org/entity/Q9368>,
@@ -11269,6 +11289,7 @@
         <http://dbpedia.org/resource/Vasa_vasorum>,
         <http://dbpedia.org/resource/Web_server>,
         <http://dbpedia.org/resource/Xylulose>,
+        <http://www.wikidata.org/entity/Q105989936>,
         <http://www.wikidata.org/entity/Q11575>,
         <http://www.wikidata.org/entity/Q12121859>,
         <http://www.wikidata.org/entity/Q12149006>,
@@ -11349,6 +11370,7 @@
         <http://www.wikidata.org/entity/Q306135>,
         <http://www.wikidata.org/entity/Q34956>,
         <http://www.wikidata.org/entity/Q37317897>,
+        <http://www.wikidata.org/entity/Q411391>,
         <http://www.wikidata.org/entity/Q412563>,
         <http://www.wikidata.org/entity/Q413740>,
         <http://www.wikidata.org/entity/Q421959>,
@@ -11460,7 +11482,6 @@
         <http://www.wikidata.org/entity/Q219239>,
         <http://www.wikidata.org/entity/Q234173>,
         <http://www.wikidata.org/entity/Q27135032>,
-        <http://www.wikidata.org/entity/Q27897327>,
         <http://www.wikidata.org/entity/Q2836947>,
         <http://www.wikidata.org/entity/Q29584363>,
         <http://www.wikidata.org/entity/Q30295946>,
@@ -11484,6 +11505,7 @@
         <http://www.wikidata.org/entity/Q858810>,
         <http://www.wikidata.org/entity/Q899670>,
         <http://www.wikidata.org/entity/Q901028>,
+        <http://www.wikidata.org/entity/Q9257630>,
         <http://www.wikidata.org/entity/Q974265> .
 
 <https://experts.udl.cat/individual/UDL-06000148> core:hasResearchArea <http://dbpedia.org/resource/Derecho>,
@@ -11739,6 +11761,7 @@
         <http://www.wikidata.org/entity/Q2022868>,
         <http://www.wikidata.org/entity/Q207721>,
         <http://www.wikidata.org/entity/Q2142963>,
+        <http://www.wikidata.org/entity/Q2308599>,
         <http://www.wikidata.org/entity/Q2667413>,
         <http://www.wikidata.org/entity/Q270952>,
         <http://www.wikidata.org/entity/Q27135032>,
@@ -12412,6 +12435,7 @@
         <http://www.wikidata.org/entity/Q150839>,
         <http://www.wikidata.org/entity/Q160653>,
         <http://www.wikidata.org/entity/Q21102930>,
+        <http://www.wikidata.org/entity/Q245204>,
         <http://www.wikidata.org/entity/Q292015>,
         <http://www.wikidata.org/entity/Q3314483>,
         <http://www.wikidata.org/entity/Q3834922>,
@@ -12601,6 +12625,7 @@
         <http://dbpedia.org/resource/Gas_chromatography>,
         <http://dbpedia.org/resource/Halohydrin>,
         <http://dbpedia.org/resource/Microwave>,
+        <http://dbpedia.org/resource/Nuclear_magnetic_resonance_spectroscopy>,
         <http://www.wikidata.org/entity/Q1207412>,
         <http://www.wikidata.org/entity/Q132501>,
         <http://www.wikidata.org/entity/Q167947>,
@@ -12958,7 +12983,6 @@
         <http://www.wikidata.org/entity/Q605035>,
         <http://www.wikidata.org/entity/Q626225>,
         <http://www.wikidata.org/entity/Q718809>,
-        <http://www.wikidata.org/entity/Q778743>,
         <http://www.wikidata.org/entity/Q7981051>,
         <http://www.wikidata.org/entity/Q967647> .
 
@@ -13065,8 +13089,8 @@
         <http://www.wikidata.org/entity/Q98668742>,
         <http://www.wikidata.org/entity/Q995600> .
 
-<https://experts.udl.cat/individual/UDL-07000804> core:hasResearchArea <http://dbpedia.org/resource/Gene>,
-        <http://dbpedia.org/resource/Genomics>,
+<https://experts.udl.cat/individual/UDL-07000804> core:hasResearchArea <http://dbpedia.org/resource/Genomics>,
+        <http://www.wikidata.org/entity/Q105989936>,
         <http://www.wikidata.org/entity/Q128570>,
         <http://www.wikidata.org/entity/Q403004>,
         <http://www.wikidata.org/entity/Q4915005>,
@@ -13164,7 +13188,6 @@
         <http://dbpedia.org/resource/Carotene>,
         <http://dbpedia.org/resource/DNA>,
         <http://dbpedia.org/resource/Food_security>,
-        <http://dbpedia.org/resource/Gene>,
         <http://dbpedia.org/resource/Genetically_modified_maize>,
         <http://dbpedia.org/resource/Genetically_modified_plant>,
         <http://dbpedia.org/resource/Maize>,
@@ -13185,6 +13208,7 @@
         <http://www.wikidata.org/entity/Q26972>,
         <http://www.wikidata.org/entity/Q306135>,
         <http://www.wikidata.org/entity/Q34956>,
+        <http://www.wikidata.org/entity/Q411391>,
         <http://www.wikidata.org/entity/Q428148>,
         <http://www.wikidata.org/entity/Q430117>,
         <http://www.wikidata.org/entity/Q522244>,
@@ -13231,6 +13255,7 @@
         <http://www.wikidata.org/entity/Q193583>,
         <http://www.wikidata.org/entity/Q1967871>,
         <http://www.wikidata.org/entity/Q2005087>,
+        <http://www.wikidata.org/entity/Q245204>,
         <http://www.wikidata.org/entity/Q2659931>,
         <http://www.wikidata.org/entity/Q2698455>,
         <http://www.wikidata.org/entity/Q290439>,
@@ -13813,7 +13838,7 @@
         <http://www.wikidata.org/entity/Q872> .
 
 <https://experts.udl.cat/individual/UDL-07001804> core:hasResearchArea <http://dbpedia.org/resource/Computational_biology>,
-        <http://dbpedia.org/resource/Gene>,
+        <http://www.wikidata.org/entity/Q105989936>,
         <http://www.wikidata.org/entity/Q128570>,
         <http://www.wikidata.org/entity/Q172491>,
         <http://www.wikidata.org/entity/Q177005>,
@@ -13957,6 +13982,7 @@
         <http://www.wikidata.org/entity/Q141124>,
         <http://www.wikidata.org/entity/Q163135>,
         <http://www.wikidata.org/entity/Q185089>,
+        <http://www.wikidata.org/entity/Q185317>,
         <http://www.wikidata.org/entity/Q188261>,
         <http://www.wikidata.org/entity/Q193825>,
         <http://www.wikidata.org/entity/Q218>,
@@ -13969,7 +13995,6 @@
         <http://www.wikidata.org/entity/Q412509>,
         <http://www.wikidata.org/entity/Q46889>,
         <http://www.wikidata.org/entity/Q47041>,
-        <http://www.wikidata.org/entity/Q4878190>,
         <http://www.wikidata.org/entity/Q7368>,
         <http://www.wikidata.org/entity/Q7375>,
         <http://www.wikidata.org/entity/Q787>,
@@ -14176,6 +14201,7 @@
         <http://www.wikidata.org/entity/Q2633862>,
         <http://www.wikidata.org/entity/Q28134963>,
         <http://www.wikidata.org/entity/Q28425>,
+        <http://www.wikidata.org/entity/Q2852249>,
         <http://www.wikidata.org/entity/Q286>,
         <http://www.wikidata.org/entity/Q29350771>,
         <http://www.wikidata.org/entity/Q295130>,
@@ -14216,7 +14242,6 @@
         <http://www.wikidata.org/entity/Q5283631>,
         <http://www.wikidata.org/entity/Q5290125>,
         <http://www.wikidata.org/entity/Q53582403>,
-        <http://www.wikidata.org/entity/Q567555>,
         <http://www.wikidata.org/entity/Q5765>,
         <http://www.wikidata.org/entity/Q585259>,
         <http://www.wikidata.org/entity/Q600042>,
@@ -14595,6 +14620,7 @@
         <http://www.wikidata.org/entity/Q2005087>,
         <http://www.wikidata.org/entity/Q21759948>,
         <http://www.wikidata.org/entity/Q23050136>,
+        <http://www.wikidata.org/entity/Q245204>,
         <http://www.wikidata.org/entity/Q2698455>,
         <http://www.wikidata.org/entity/Q290439>,
         <http://www.wikidata.org/entity/Q39572>,
@@ -14615,8 +14641,8 @@
         <http://www.wikidata.org/entity/Q452348> .
 
 <https://experts.udl.cat/individual/UDL-07002384> core:hasResearchArea <http://dbpedia.org/resource/National_Reorganization_Process>,
+        <http://www.wikidata.org/entity/Q134267>,
         <http://www.wikidata.org/entity/Q146491>,
-        <http://www.wikidata.org/entity/Q17103642>,
         <http://www.wikidata.org/entity/Q6163243> .
 
 <https://experts.udl.cat/individual/UDL-07002390> core:hasResearchArea <http://dbpedia.org/resource/Social_history>,
@@ -14797,13 +14823,13 @@
         <http://www.wikidata.org/entity/Q61766339> .
 
 <https://experts.udl.cat/individual/UDL-07002541> core:hasResearchArea <http://www.wikidata.org/entity/Q10281823>,
+        <http://www.wikidata.org/entity/Q106161654>,
         <http://www.wikidata.org/entity/Q11042>,
         <http://www.wikidata.org/entity/Q12961656>,
         <http://www.wikidata.org/entity/Q1398035>,
         <http://www.wikidata.org/entity/Q1413287>,
         <http://www.wikidata.org/entity/Q14623204>,
         <http://www.wikidata.org/entity/Q15545584>,
-        <http://www.wikidata.org/entity/Q16511806>,
         <http://www.wikidata.org/entity/Q175185>,
         <http://www.wikidata.org/entity/Q178354>,
         <http://www.wikidata.org/entity/Q18465165>,
@@ -14962,7 +14988,6 @@
         <http://www.wikidata.org/entity/Q165137>,
         <http://www.wikidata.org/entity/Q1757629>,
         <http://www.wikidata.org/entity/Q193598>,
-        <http://www.wikidata.org/entity/Q21119023>,
         <http://www.wikidata.org/entity/Q3314483>,
         <http://www.wikidata.org/entity/Q421998>,
         <http://www.wikidata.org/entity/Q426933>,
@@ -15046,6 +15071,7 @@
         <http://www.wikidata.org/entity/Q5192964>,
         <http://www.wikidata.org/entity/Q5720030>,
         <http://www.wikidata.org/entity/Q58702>,
+        <http://www.wikidata.org/entity/Q63391344>,
         <http://www.wikidata.org/entity/Q643839>,
         <http://www.wikidata.org/entity/Q683770>,
         <http://www.wikidata.org/entity/Q7560>,
@@ -15053,6 +15079,7 @@
         <http://www.wikidata.org/entity/Q7873>,
         <http://www.wikidata.org/entity/Q836719>,
         <http://www.wikidata.org/entity/Q840910>,
+        <http://www.wikidata.org/entity/Q845777>,
         <http://www.wikidata.org/entity/Q864574>,
         <http://www.wikidata.org/entity/Q9368> .
 
@@ -15106,7 +15133,6 @@
         <http://www.wikidata.org/entity/Q219239>,
         <http://www.wikidata.org/entity/Q234173>,
         <http://www.wikidata.org/entity/Q27135032>,
-        <http://www.wikidata.org/entity/Q27897327>,
         <http://www.wikidata.org/entity/Q2836947>,
         <http://www.wikidata.org/entity/Q29584363>,
         <http://www.wikidata.org/entity/Q30295946>,
@@ -15122,7 +15148,8 @@
         <http://www.wikidata.org/entity/Q58803>,
         <http://www.wikidata.org/entity/Q67201057>,
         <http://www.wikidata.org/entity/Q752823>,
-        <http://www.wikidata.org/entity/Q901028> .
+        <http://www.wikidata.org/entity/Q901028>,
+        <http://www.wikidata.org/entity/Q9257630> .
 
 <https://experts.udl.cat/individual/UDL-07003056> core:hasResearchArea <http://dbpedia.org/resource/Brain-derived_neurotrophic_factor>,
         <http://dbpedia.org/resource/Emociones_(Vikki_Carr_album)>,
@@ -15384,6 +15411,7 @@
         <http://www.wikidata.org/entity/Q207721>,
         <http://www.wikidata.org/entity/Q212920>,
         <http://www.wikidata.org/entity/Q2142963>,
+        <http://www.wikidata.org/entity/Q214609>,
         <http://www.wikidata.org/entity/Q2298412>,
         <http://www.wikidata.org/entity/Q2334061>,
         <http://www.wikidata.org/entity/Q2562744>,
@@ -15419,7 +15447,6 @@
         <http://www.wikidata.org/entity/Q577117>,
         <http://www.wikidata.org/entity/Q581950>,
         <http://www.wikidata.org/entity/Q58467951>,
-        <http://www.wikidata.org/entity/Q5849500>,
         <http://www.wikidata.org/entity/Q589260>,
         <http://www.wikidata.org/entity/Q61476>,
         <http://www.wikidata.org/entity/Q634340>,
@@ -15508,6 +15535,7 @@
         <http://www.wikidata.org/entity/Q830>,
         <http://www.wikidata.org/entity/Q836719>,
         <http://www.wikidata.org/entity/Q840910>,
+        <http://www.wikidata.org/entity/Q845777>,
         <http://www.wikidata.org/entity/Q906663> .
 
 <https://experts.udl.cat/individual/UDL-07003304> core:hasResearchArea <http://dbpedia.org/resource/Industrial_waste>,
@@ -15699,6 +15727,7 @@
         <http://www.wikidata.org/entity/Q207721>,
         <http://www.wikidata.org/entity/Q2086307>,
         <http://www.wikidata.org/entity/Q2142963>,
+        <http://www.wikidata.org/entity/Q214609>,
         <http://www.wikidata.org/entity/Q22713464>,
         <http://www.wikidata.org/entity/Q265158>,
         <http://www.wikidata.org/entity/Q2667413>,
@@ -15721,7 +15750,6 @@
         <http://www.wikidata.org/entity/Q542419>,
         <http://www.wikidata.org/entity/Q5725005>,
         <http://www.wikidata.org/entity/Q581950>,
-        <http://www.wikidata.org/entity/Q5849500>,
         <http://www.wikidata.org/entity/Q59680263>,
         <http://www.wikidata.org/entity/Q61476>,
         <http://www.wikidata.org/entity/Q65929600>,
@@ -15852,11 +15880,11 @@
         <http://dbpedia.org/resource/FIDE>,
         <http://dbpedia.org/resource/Portugal>,
         <http://www.wikidata.org/entity/Q205136>,
-        <http://www.wikidata.org/entity/Q207199>,
         <http://www.wikidata.org/entity/Q2942938>,
         <http://www.wikidata.org/entity/Q3395095>,
         <http://www.wikidata.org/entity/Q352960>,
         <http://www.wikidata.org/entity/Q37853>,
+        <http://www.wikidata.org/entity/Q597>,
         <http://www.wikidata.org/entity/Q6106654>,
         <http://www.wikidata.org/entity/Q8242964>,
         <http://www.wikidata.org/entity/Q9015119> .
@@ -15877,7 +15905,7 @@
         <http://www.wikidata.org/entity/Q19860885>,
         <http://www.wikidata.org/entity/Q21030988>,
         <http://www.wikidata.org/entity/Q217690>,
-        <http://www.wikidata.org/entity/Q312>,
+        <http://www.wikidata.org/entity/Q245204>,
         <http://www.wikidata.org/entity/Q3314483>,
         <http://www.wikidata.org/entity/Q467011>,
         <http://www.wikidata.org/entity/Q49104847>,
@@ -15886,7 +15914,8 @@
         <http://www.wikidata.org/entity/Q67552189>,
         <http://www.wikidata.org/entity/Q767728>,
         <http://www.wikidata.org/entity/Q81602>,
-        <http://www.wikidata.org/entity/Q83193> .
+        <http://www.wikidata.org/entity/Q83193>,
+        <http://www.wikidata.org/entity/Q89> .
 
 <https://experts.udl.cat/individual/UDL-07003656> core:hasResearchArea <http://dbpedia.org/resource/La_Floresta,_Uruguay>,
         <http://dbpedia.org/resource/VAT_Information_Exchange_System>,
@@ -16117,7 +16146,7 @@
         <http://www.wikidata.org/entity/Q7377>,
         <http://www.wikidata.org/entity/Q79899> .
 
-<https://experts.udl.cat/individual/UDL-07003949> core:hasResearchArea <http://dbpedia.org/resource/Gene> .
+<https://experts.udl.cat/individual/UDL-07003949> core:hasResearchArea <http://www.wikidata.org/entity/Q411391> .
 
 <https://experts.udl.cat/individual/UDL-07003954> core:hasResearchArea <http://www.wikidata.org/entity/Q15>,
         <http://www.wikidata.org/entity/Q174416>,
@@ -16151,12 +16180,13 @@
         <http://www.wikidata.org/entity/Q1637030>,
         <http://www.wikidata.org/entity/Q1815645>,
         <http://www.wikidata.org/entity/Q1967871>,
-        <http://www.wikidata.org/entity/Q312>,
+        <http://www.wikidata.org/entity/Q245204>,
         <http://www.wikidata.org/entity/Q467011>,
         <http://www.wikidata.org/entity/Q4915218>,
         <http://www.wikidata.org/entity/Q7193>,
         <http://www.wikidata.org/entity/Q81602>,
-        <http://www.wikidata.org/entity/Q83193> .
+        <http://www.wikidata.org/entity/Q83193>,
+        <http://www.wikidata.org/entity/Q89> .
 
 <https://experts.udl.cat/individual/UDL-07003960> core:hasResearchArea <http://dbpedia.org/resource/Esports>,
         <http://www.wikidata.org/entity/Q1377863>,
@@ -16204,7 +16234,6 @@
 <https://experts.udl.cat/individual/UDL-07004197> core:hasResearchArea <http://dbpedia.org/resource/Trout>,
         <http://www.wikidata.org/entity/Q1039642>,
         <http://www.wikidata.org/entity/Q1049481>,
-        <http://www.wikidata.org/entity/Q1065241>,
         <http://www.wikidata.org/entity/Q11575>,
         <http://www.wikidata.org/entity/Q11916279>,
         <http://www.wikidata.org/entity/Q131672>,
@@ -16222,7 +16251,8 @@
         <http://www.wikidata.org/entity/Q627371>,
         <http://www.wikidata.org/entity/Q6822347>,
         <http://www.wikidata.org/entity/Q780>,
-        <http://www.wikidata.org/entity/Q864310> .
+        <http://www.wikidata.org/entity/Q864310>,
+        <http://www.wikidata.org/entity/Q864693> .
 
 <https://experts.udl.cat/individual/UDL-07004203> core:hasResearchArea <http://www.wikidata.org/entity/Q154136>,
         <http://www.wikidata.org/entity/Q185836>,
@@ -16654,8 +16684,8 @@
         <http://www.wikidata.org/entity/Q8828>,
         <http://www.wikidata.org/entity/Q90478555>,
         <http://www.wikidata.org/entity/Q9091563>,
-        <http://www.wikidata.org/entity/Q913870>,
         <http://www.wikidata.org/entity/Q94944>,
+        <http://www.wikidata.org/entity/Q958738>,
         <http://www.wikidata.org/entity/Q97610820>,
         <http://www.wikidata.org/entity/Q984491> .
 
@@ -16666,8 +16696,8 @@
         <http://www.wikidata.org/entity/Q5884117> .
 
 <https://experts.udl.cat/individual/UDL-07004757> core:hasResearchArea <http://dbpedia.org/resource/Club_Universitario_de_Deportes>,
+        <http://www.wikidata.org/entity/Q134267>,
         <http://www.wikidata.org/entity/Q1347355>,
-        <http://www.wikidata.org/entity/Q17103642>,
         <http://www.wikidata.org/entity/Q1759895>,
         <http://www.wikidata.org/entity/Q177603>,
         <http://www.wikidata.org/entity/Q205555>,
@@ -16786,7 +16816,6 @@
         <http://www.wikidata.org/entity/Q37370937>,
         <http://www.wikidata.org/entity/Q605035>,
         <http://www.wikidata.org/entity/Q718809>,
-        <http://www.wikidata.org/entity/Q778743>,
         <http://www.wikidata.org/entity/Q7981051>,
         <http://www.wikidata.org/entity/Q8>,
         <http://www.wikidata.org/entity/Q967647> .
@@ -16865,7 +16894,6 @@
         <http://www.wikidata.org/entity/Q544006>,
         <http://www.wikidata.org/entity/Q638>,
         <http://www.wikidata.org/entity/Q7569>,
-        <http://www.wikidata.org/entity/Q778743>,
         <http://www.wikidata.org/entity/Q7889>,
         <http://www.wikidata.org/entity/Q7981051>,
         <http://www.wikidata.org/entity/Q79871>,
@@ -17064,8 +17092,8 @@
         <http://www.wikidata.org/entity/Q970687> .
 
 <https://experts.udl.cat/individual/UDL-07005191> core:hasResearchArea <http://dbpedia.org/resource/Gene>,
-        <http://www.wikidata.org/entity/Q12825018>,
-        <http://www.wikidata.org/entity/Q5277342> .
+        <http://www.wikidata.org/entity/Q5277342>,
+        <http://www.wikidata.org/entity/Q5982337> .
 
 <https://experts.udl.cat/individual/UDL-07005261> core:hasResearchArea <http://www.wikidata.org/entity/Q10384>,
         <http://www.wikidata.org/entity/Q121176>,
@@ -17957,7 +17985,7 @@
 <https://experts.udl.cat/individual/UDL-AR000629> core:hasResearchArea <http://www.wikidata.org/entity/Q10328747> .
 
 <https://experts.udl.cat/individual/UDL-AR000678> core:hasResearchArea <http://www.wikidata.org/entity/Q10330509>,
-        <http://www.wikidata.org/entity/Q4045217>,
+        <http://www.wikidata.org/entity/Q5672141>,
         <http://www.wikidata.org/entity/Q640085> .
 
 <https://experts.udl.cat/individual/UDL-AR000688> core:hasResearchArea <http://dbpedia.org/resource/Integral>,
@@ -18062,6 +18090,7 @@
         <http://www.wikidata.org/entity/Q80130> .
 
 <https://experts.udl.cat/individual/UDL-AR001423> core:hasResearchArea <http://www.wikidata.org/entity/Q15090>,
+        <http://www.wikidata.org/entity/Q200464>,
         <http://www.wikidata.org/entity/Q253140> .
 
 <https://experts.udl.cat/individual/UDL-AR001468> core:hasResearchArea <http://www.wikidata.org/entity/Q23145>,
@@ -18074,11 +18103,11 @@
 <https://experts.udl.cat/individual/UDL-AR001552> core:hasResearchArea <http://www.wikidata.org/entity/Q11697891>,
         <http://www.wikidata.org/entity/Q12078>,
         <http://www.wikidata.org/entity/Q1216998>,
-        <http://www.wikidata.org/entity/Q12825018>,
         <http://www.wikidata.org/entity/Q133212>,
         <http://www.wikidata.org/entity/Q153>,
         <http://www.wikidata.org/entity/Q1637543>,
-        <http://www.wikidata.org/entity/Q58447> .
+        <http://www.wikidata.org/entity/Q58447>,
+        <http://www.wikidata.org/entity/Q5982337> .
 
 <https://experts.udl.cat/individual/UDL-AR001562> core:hasResearchArea <http://www.wikidata.org/entity/Q424361>,
         <http://www.wikidata.org/entity/Q629>,
@@ -18312,7 +18341,8 @@
         <http://www.wikidata.org/entity/Q99981215> .
 
 <https://experts.udl.cat/individual/UDL-AR002372> core:hasResearchArea <http://www.wikidata.org/entity/Q13202263>,
-        <http://www.wikidata.org/entity/Q178803> .
+        <http://www.wikidata.org/entity/Q178803>,
+        <http://www.wikidata.org/entity/Q89> .
 
 <https://experts.udl.cat/individual/UDL-AR002375> core:hasResearchArea <http://dbpedia.org/resource/Industry>,
         <http://www.wikidata.org/entity/Q570579> .
@@ -18735,9 +18765,9 @@
         <http://www.wikidata.org/entity/Q410190>,
         <http://www.wikidata.org/entity/Q418834> .
 
-<https://experts.udl.cat/individual/UDL-AR005206> core:hasResearchArea <http://www.wikidata.org/entity/Q22103935>,
-        <http://www.wikidata.org/entity/Q421959>,
-        <http://www.wikidata.org/entity/Q461499> .
+<https://experts.udl.cat/individual/UDL-AR005206> core:hasResearchArea <http://www.wikidata.org/entity/Q421959>,
+        <http://www.wikidata.org/entity/Q461499>,
+        <http://www.wikidata.org/entity/Q632559> .
 
 <https://experts.udl.cat/individual/UDL-AR005207> core:hasResearchArea <http://www.wikidata.org/entity/Q161426>,
         <http://www.wikidata.org/entity/Q21100688>,
@@ -18923,6 +18953,7 @@
 
 <https://experts.udl.cat/individual/UDL-AR006813> core:hasResearchArea <http://www.wikidata.org/entity/Q1354085>,
         <http://www.wikidata.org/entity/Q165199>,
+        <http://www.wikidata.org/entity/Q19705949>,
         <http://www.wikidata.org/entity/Q808> .
 
 <https://experts.udl.cat/individual/UDL-AR006855> core:hasResearchArea <http://dbpedia.org/resource/Nova>,
@@ -19096,7 +19127,7 @@
         <http://www.wikidata.org/entity/Q342790> .
 
 <https://experts.udl.cat/individual/UDL-AR007927> core:hasResearchArea <http://www.wikidata.org/entity/Q209355>,
-        <http://www.wikidata.org/entity/Q2885646> .
+        <http://www.wikidata.org/entity/Q5798609> .
 
 <https://experts.udl.cat/individual/UDL-AR007937> core:hasResearchArea <http://www.wikidata.org/entity/Q200141> .
 
@@ -19661,8 +19692,8 @@
 <https://experts.udl.cat/individual/UDL-AR010681> core:hasResearchArea <http://www.wikidata.org/entity/Q188941> .
 
 <https://experts.udl.cat/individual/UDL-AR010764> core:hasResearchArea <http://www.wikidata.org/entity/Q12078>,
-        <http://www.wikidata.org/entity/Q12825018>,
-        <http://www.wikidata.org/entity/Q1637543> .
+        <http://www.wikidata.org/entity/Q1637543>,
+        <http://www.wikidata.org/entity/Q5982337> .
 
 <https://experts.udl.cat/individual/UDL-AR010775> core:hasResearchArea <http://www.wikidata.org/entity/Q3821127>,
         <http://www.wikidata.org/entity/Q5705> .
@@ -19921,9 +19952,9 @@
         <http://www.wikidata.org/entity/Q899285>,
         <http://www.wikidata.org/entity/Q948647> .
 
-<https://experts.udl.cat/individual/UDL-AR011386> core:hasResearchArea <http://dbpedia.org/resource/Peer-to-peer>,
-        <http://dbpedia.org/resource/Streaming_media>,
-        <http://dbpedia.org/resource/Video_on_demand> .
+<https://experts.udl.cat/individual/UDL-AR011386> core:hasResearchArea <http://dbpedia.org/resource/Streaming_media>,
+        <http://dbpedia.org/resource/Video_on_demand>,
+        <http://www.wikidata.org/entity/Q106245667> .
 
 <https://experts.udl.cat/individual/UDL-AR011400> core:hasResearchArea <http://www.wikidata.org/entity/Q13217466>,
         <http://www.wikidata.org/entity/Q169526>,
@@ -20177,8 +20208,8 @@
         <http://www.wikidata.org/entity/Q47263> .
 
 <https://experts.udl.cat/individual/UDL-AR012133> core:hasResearchArea <http://www.wikidata.org/entity/Q2151963>,
-        <http://www.wikidata.org/entity/Q312>,
-        <http://www.wikidata.org/entity/Q60617645> .
+        <http://www.wikidata.org/entity/Q60617645>,
+        <http://www.wikidata.org/entity/Q89> .
 
 <https://experts.udl.cat/individual/UDL-AR012150> core:hasResearchArea <http://www.wikidata.org/entity/Q1885038>,
         <http://www.wikidata.org/entity/Q36071> .
@@ -20216,8 +20247,8 @@
         <http://dbpedia.org/resource/Huerta>,
         <http://dbpedia.org/resource/Japamala> .
 
-<https://experts.udl.cat/individual/UDL-AR012306> core:hasResearchArea <http://www.wikidata.org/entity/Q160151>,
-        <http://www.wikidata.org/entity/Q37206633>,
+<https://experts.udl.cat/individual/UDL-AR012306> core:hasResearchArea <http://www.wikidata.org/entity/Q101040966>,
+        <http://www.wikidata.org/entity/Q160151>,
         <http://www.wikidata.org/entity/Q5705> .
 
 <https://experts.udl.cat/individual/UDL-AR012332> core:hasResearchArea <http://www.wikidata.org/entity/Q146992>,
@@ -20969,8 +21000,8 @@
         <http://www.wikidata.org/entity/Q597114> .
 
 <https://experts.udl.cat/individual/UDL-AR014572> core:hasResearchArea <http://www.wikidata.org/entity/Q1076546>,
-        <http://www.wikidata.org/entity/Q1740919>,
-        <http://www.wikidata.org/entity/Q61749210> .
+        <http://www.wikidata.org/entity/Q61749210>,
+        <http://www.wikidata.org/entity/Q982239> .
 
 <https://experts.udl.cat/individual/UDL-AR014573> core:hasResearchArea <http://www.wikidata.org/entity/Q12431>,
         <http://www.wikidata.org/entity/Q144005> .
@@ -21024,7 +21055,8 @@
 <https://experts.udl.cat/individual/UDL-AR014904> core:hasResearchArea <http://www.wikidata.org/entity/Q12379653>,
         <http://www.wikidata.org/entity/Q199687> .
 
-<https://experts.udl.cat/individual/UDL-AR014905> core:hasResearchArea <http://www.wikidata.org/entity/Q133128>,
+<https://experts.udl.cat/individual/UDL-AR014905> core:hasResearchArea <http://www.wikidata.org/entity/Q1127677>,
+        <http://www.wikidata.org/entity/Q133128>,
         <http://www.wikidata.org/entity/Q145954> .
 
 <https://experts.udl.cat/individual/UDL-AR014912> core:hasResearchArea <http://www.wikidata.org/entity/Q2476047> .
@@ -21254,7 +21286,8 @@
         <http://www.wikidata.org/entity/Q72588>,
         <http://www.wikidata.org/entity/Q899288> .
 
-<https://experts.udl.cat/individual/UDL-AR015414> core:hasResearchArea <http://www.wikidata.org/entity/Q167947>,
+<https://experts.udl.cat/individual/UDL-AR015414> core:hasResearchArea <http://dbpedia.org/resource/Nuclear_magnetic_resonance_spectroscopy>,
+        <http://www.wikidata.org/entity/Q167947>,
         <http://www.wikidata.org/entity/Q898793>,
         <http://www.wikidata.org/entity/Q900775> .
 
@@ -22127,7 +22160,7 @@
 <https://experts.udl.cat/individual/UDL-AR017383> core:hasResearchArea <http://dbpedia.org/resource/Ilegales>,
         <http://www.wikidata.org/entity/Q181784> .
 
-<https://experts.udl.cat/individual/UDL-AR017385> core:hasResearchArea <http://www.wikidata.org/entity/Q17103642>,
+<https://experts.udl.cat/individual/UDL-AR017385> core:hasResearchArea <http://www.wikidata.org/entity/Q134267>,
         <http://www.wikidata.org/entity/Q4674589> .
 
 <https://experts.udl.cat/individual/UDL-AR017386> core:hasResearchArea <http://www.wikidata.org/entity/Q1565352>,
@@ -22429,7 +22462,7 @@
 
 <https://experts.udl.cat/individual/UDL-AR017838> core:hasResearchArea <http://www.wikidata.org/entity/Q18058117> .
 
-<https://experts.udl.cat/individual/UDL-AR017839> core:hasResearchArea <http://www.wikidata.org/entity/Q14897873>,
+<https://experts.udl.cat/individual/UDL-AR017839> core:hasResearchArea <http://dbpedia.org/resource/Neurotrophin>,
         <http://www.wikidata.org/entity/Q210861>,
         <http://www.wikidata.org/entity/Q21130714> .
 
@@ -22580,7 +22613,8 @@
 <https://experts.udl.cat/individual/UDL-AR018082> core:hasResearchArea <http://www.wikidata.org/entity/Q165498>,
         <http://www.wikidata.org/entity/Q845260> .
 
-<https://experts.udl.cat/individual/UDL-AR018091> core:hasResearchArea <http://www.wikidata.org/entity/Q1194317>,
+<https://experts.udl.cat/individual/UDL-AR018091> core:hasResearchArea <http://www.wikidata.org/entity/Q11290858>,
+        <http://www.wikidata.org/entity/Q1194317>,
         <http://www.wikidata.org/entity/Q185467>,
         <http://www.wikidata.org/entity/Q8434>,
         <http://www.wikidata.org/entity/Q9415> .
@@ -22745,7 +22779,7 @@
 
 <https://experts.udl.cat/individual/UDL-AR018298> core:hasResearchArea <http://www.wikidata.org/entity/Q271707> .
 
-<https://experts.udl.cat/individual/UDL-AR018307> core:hasResearchArea <http://www.wikidata.org/entity/Q207199> .
+<https://experts.udl.cat/individual/UDL-AR018307> core:hasResearchArea <http://www.wikidata.org/entity/Q597> .
 
 <https://experts.udl.cat/individual/UDL-AR018316> core:hasResearchArea <http://www.wikidata.org/entity/Q732413> .
 
@@ -22907,7 +22941,7 @@
         <http://www.wikidata.org/entity/Q17080584> .
 
 <https://experts.udl.cat/individual/UDL-AR018604> core:hasResearchArea <http://www.wikidata.org/entity/Q163135>,
-        <http://www.wikidata.org/entity/Q4878190> .
+        <http://www.wikidata.org/entity/Q185317> .
 
 <https://experts.udl.cat/individual/UDL-AR018605> core:hasResearchArea <http://dbpedia.org/resource/Rumen>,
         <http://www.wikidata.org/entity/Q185089>,
@@ -23312,7 +23346,8 @@
 
 <https://experts.udl.cat/individual/UDL-AR019388> core:hasResearchArea <http://www.wikidata.org/entity/Q12204>,
         <http://www.wikidata.org/entity/Q150839>,
-        <http://www.wikidata.org/entity/Q25419> .
+        <http://www.wikidata.org/entity/Q25419>,
+        <http://www.wikidata.org/entity/Q63391344> .
 
 <https://experts.udl.cat/individual/UDL-AR019390> core:hasResearchArea <http://www.wikidata.org/entity/Q14911965>,
         <http://www.wikidata.org/entity/Q905901>,
@@ -23402,6 +23437,7 @@
 
 <https://experts.udl.cat/individual/UDL-AR019645> core:hasResearchArea <http://www.wikidata.org/entity/Q150839>,
         <http://www.wikidata.org/entity/Q21102930>,
+        <http://www.wikidata.org/entity/Q245204>,
         <http://www.wikidata.org/entity/Q3834922>,
         <http://www.wikidata.org/entity/Q4915218> .
 
@@ -23503,7 +23539,8 @@
         <http://www.wikidata.org/entity/Q162908>,
         <http://www.wikidata.org/entity/Q394431> .
 
-<https://experts.udl.cat/individual/UDL-AR019738> core:hasResearchArea <http://www.wikidata.org/entity/Q1717246>,
+<https://experts.udl.cat/individual/UDL-AR019738> core:hasResearchArea <http://www.wikidata.org/entity/Q10666891>,
+        <http://www.wikidata.org/entity/Q1717246>,
         <http://www.wikidata.org/entity/Q43894943>,
         <http://www.wikidata.org/entity/Q535691>,
         <http://www.wikidata.org/entity/Q60894> .
@@ -23619,9 +23656,9 @@
         <http://www.wikidata.org/entity/Q13411117>,
         <http://www.wikidata.org/entity/Q725> .
 
-<https://experts.udl.cat/individual/UDL-AR019813> core:hasResearchArea <http://dbpedia.org/resource/Gene>,
-        <http://www.wikidata.org/entity/Q193598>,
-        <http://www.wikidata.org/entity/Q26972> .
+<https://experts.udl.cat/individual/UDL-AR019813> core:hasResearchArea <http://www.wikidata.org/entity/Q193598>,
+        <http://www.wikidata.org/entity/Q26972>,
+        <http://www.wikidata.org/entity/Q411391> .
 
 <https://experts.udl.cat/individual/UDL-AR019818> core:hasResearchArea <http://dbpedia.org/resource/Mathematical_optimization>,
         <http://www.wikidata.org/entity/Q984063> .
@@ -23757,6 +23794,7 @@
 
 <https://experts.udl.cat/individual/UDL-AR020046> core:hasResearchArea <http://dbpedia.org/resource/Biological_pest_control>,
         <http://www.wikidata.org/entity/Q1135851>,
+        <http://www.wikidata.org/entity/Q245204>,
         <http://www.wikidata.org/entity/Q30046> .
 
 <https://experts.udl.cat/individual/UDL-AR020047> core:hasResearchArea <http://www.wikidata.org/entity/Q1190554>,
@@ -23776,9 +23814,9 @@
         <http://www.wikidata.org/entity/Q3314483> .
 
 <https://experts.udl.cat/individual/UDL-AR020064> core:hasResearchArea <http://dbpedia.org/resource/Biological_pest_control>,
-        <http://www.wikidata.org/entity/Q312>,
         <http://www.wikidata.org/entity/Q4915218>,
-        <http://www.wikidata.org/entity/Q81602> .
+        <http://www.wikidata.org/entity/Q81602>,
+        <http://www.wikidata.org/entity/Q89> .
 
 <https://experts.udl.cat/individual/UDL-AR020066> core:hasResearchArea <http://www.wikidata.org/entity/Q13147>,
         <http://www.wikidata.org/entity/Q38311> .
@@ -24484,7 +24522,7 @@
         <http://www.wikidata.org/entity/Q1160362>,
         <http://www.wikidata.org/entity/Q66251056> .
 
-<https://experts.udl.cat/individual/UDL-AR020996> core:hasResearchArea <http://dbpedia.org/resource/Gene>,
+<https://experts.udl.cat/individual/UDL-AR020996> core:hasResearchArea <http://www.wikidata.org/entity/Q105989936>,
         <http://www.wikidata.org/entity/Q4915005> .
 
 <https://experts.udl.cat/individual/UDL-AR020999> core:hasResearchArea <http://dbpedia.org/resource/Genotype>,
@@ -24639,8 +24677,8 @@
         <http://www.wikidata.org/entity/Q2620772> .
 
 <https://experts.udl.cat/individual/UDL-AR021228> core:hasResearchArea <http://www.wikidata.org/entity/Q116890>,
-        <http://www.wikidata.org/entity/Q312>,
-        <http://www.wikidata.org/entity/Q39338> .
+        <http://www.wikidata.org/entity/Q39338>,
+        <http://www.wikidata.org/entity/Q89> .
 
 <https://experts.udl.cat/individual/UDL-AR021229> core:hasResearchArea <http://www.wikidata.org/entity/Q1060990>,
         <http://www.wikidata.org/entity/Q2887413>,
@@ -24716,7 +24754,8 @@
         <http://www.wikidata.org/entity/Q2022868>,
         <http://www.wikidata.org/entity/Q58778> .
 
-<https://experts.udl.cat/individual/UDL-AR021320> core:hasResearchArea <http://www.wikidata.org/entity/Q150839> .
+<https://experts.udl.cat/individual/UDL-AR021320> core:hasResearchArea <http://www.wikidata.org/entity/Q150839>,
+        <http://www.wikidata.org/entity/Q245204> .
 
 <https://experts.udl.cat/individual/UDL-AR021321> core:hasResearchArea <http://www.wikidata.org/entity/Q3343100>,
         <http://www.wikidata.org/entity/Q5533830>,
@@ -24730,7 +24769,6 @@
 <https://experts.udl.cat/individual/UDL-AR021325> core:hasResearchArea <http://www.wikidata.org/entity/Q128700>,
         <http://www.wikidata.org/entity/Q165137>,
         <http://www.wikidata.org/entity/Q1757629>,
-        <http://www.wikidata.org/entity/Q21119023>,
         <http://www.wikidata.org/entity/Q8047> .
 
 <https://experts.udl.cat/individual/UDL-AR021329> core:hasResearchArea <http://www.wikidata.org/entity/Q119140> .
@@ -25183,7 +25221,7 @@
         <http://dbpedia.org/resource/Epididymis>,
         <http://dbpedia.org/resource/Gwembe>,
         <http://dbpedia.org/resource/Semen>,
-        <http://www.wikidata.org/entity/Q567555> .
+        <http://www.wikidata.org/entity/Q2852249> .
 
 <https://experts.udl.cat/individual/UDL-AR021810> core:hasResearchArea <http://dbpedia.org/resource/Ludwig_von_Bertalanffy>,
         <http://www.wikidata.org/entity/Q1132755>,
@@ -26337,7 +26375,7 @@
         <http://www.wikidata.org/entity/Q37430617>,
         <http://www.wikidata.org/entity/Q8828>,
         <http://www.wikidata.org/entity/Q9091563>,
-        <http://www.wikidata.org/entity/Q913870> .
+        <http://www.wikidata.org/entity/Q958738> .
 
 <https://experts.udl.cat/individual/UDL-AR023135> core:hasResearchArea <http://www.wikidata.org/entity/Q10387767>,
         <http://www.wikidata.org/entity/Q3918>,
@@ -26442,10 +26480,10 @@
         <http://www.wikidata.org/entity/Q1475848>,
         <http://www.wikidata.org/entity/Q276258> .
 
-<https://experts.udl.cat/individual/UDL-AR023208> core:hasResearchArea <http://www.wikidata.org/entity/Q10411246>,
-        <http://www.wikidata.org/entity/Q1399147>,
+<https://experts.udl.cat/individual/UDL-AR023208> core:hasResearchArea <http://www.wikidata.org/entity/Q1399147>,
         <http://www.wikidata.org/entity/Q2258527>,
-        <http://www.wikidata.org/entity/Q2365406> .
+        <http://www.wikidata.org/entity/Q2365406>,
+        <http://www.wikidata.org/entity/Q5456> .
 
 <https://experts.udl.cat/individual/UDL-AR023211> core:hasResearchArea <http://www.wikidata.org/entity/Q11990434>,
         <http://www.wikidata.org/entity/Q3908> .
@@ -26648,7 +26686,8 @@
 
 <https://experts.udl.cat/individual/UDL-AR023419> core:hasResearchArea <http://www.wikidata.org/entity/Q1815645> .
 
-<https://experts.udl.cat/individual/UDL-AR023420> core:hasResearchArea <http://www.wikidata.org/entity/Q4915218>,
+<https://experts.udl.cat/individual/UDL-AR023420> core:hasResearchArea <http://www.wikidata.org/entity/Q245204>,
+        <http://www.wikidata.org/entity/Q4915218>,
         <http://www.wikidata.org/entity/Q81602> .
 
 <https://experts.udl.cat/individual/UDL-AR023421> core:hasResearchArea <http://www.wikidata.org/entity/Q45262>,
@@ -26925,11 +26964,12 @@
 <https://experts.udl.cat/individual/UDL-AR023649> core:hasResearchArea <http://dbpedia.org/resource/Derecho>,
         <http://www.wikidata.org/entity/Q208202> .
 
-<https://experts.udl.cat/individual/UDL-AR023653> core:hasResearchArea <http://www.wikidata.org/entity/Q37221>,
-        <http://www.wikidata.org/entity/Q843905> .
+<https://experts.udl.cat/individual/UDL-AR023653> core:hasResearchArea <http://www.wikidata.org/entity/Q28474>,
+        <http://www.wikidata.org/entity/Q37221> .
 
 <https://experts.udl.cat/individual/UDL-AR023656> core:hasResearchArea <http://www.wikidata.org/entity/Q1760147>,
-        <http://www.wikidata.org/entity/Q836719> .
+        <http://www.wikidata.org/entity/Q836719>,
+        <http://www.wikidata.org/entity/Q845777> .
 
 <https://experts.udl.cat/individual/UDL-AR023657> core:hasResearchArea <http://dbpedia.org/resource/Gerontology>,
         <http://www.wikidata.org/entity/Q7252>,
@@ -27223,14 +27263,14 @@
         <http://www.wikidata.org/entity/Q185698>,
         <http://www.wikidata.org/entity/Q2142963> .
 
-<https://experts.udl.cat/individual/UDL-AR024024> core:hasResearchArea <http://www.wikidata.org/entity/Q10411246>,
-        <http://www.wikidata.org/entity/Q5404323>,
+<https://experts.udl.cat/individual/UDL-AR024024> core:hasResearchArea <http://www.wikidata.org/entity/Q5404323>,
+        <http://www.wikidata.org/entity/Q5456>,
         <http://www.wikidata.org/entity/Q736>,
         <http://www.wikidata.org/entity/Q750> .
 
-<https://experts.udl.cat/individual/UDL-AR024025> core:hasResearchArea <http://www.wikidata.org/entity/Q10411246>,
-        <http://www.wikidata.org/entity/Q162719>,
+<https://experts.udl.cat/individual/UDL-AR024025> core:hasResearchArea <http://www.wikidata.org/entity/Q162719>,
         <http://www.wikidata.org/entity/Q5404323>,
+        <http://www.wikidata.org/entity/Q5456>,
         <http://www.wikidata.org/entity/Q6024696>,
         <http://www.wikidata.org/entity/Q736>,
         <http://www.wikidata.org/entity/Q96064756> .
@@ -27478,7 +27518,8 @@
         <http://www.wikidata.org/entity/Q362544>,
         <http://www.wikidata.org/entity/Q3931116> .
 
-<https://experts.udl.cat/individual/UDL-AR024244> core:hasResearchArea <http://www.wikidata.org/entity/Q736> .
+<https://experts.udl.cat/individual/UDL-AR024244> core:hasResearchArea <http://www.wikidata.org/entity/Q5148429>,
+        <http://www.wikidata.org/entity/Q736> .
 
 <https://experts.udl.cat/individual/UDL-AR024248> core:hasResearchArea <http://www.wikidata.org/entity/Q504027> .
 
@@ -28074,8 +28115,7 @@
         <http://www.wikidata.org/entity/Q3089747>,
         <http://www.wikidata.org/entity/Q483921> .
 
-<https://experts.udl.cat/individual/UDL-AR024742> core:hasResearchArea <http://www.wikidata.org/entity/Q105989683>,
-        <http://www.wikidata.org/entity/Q13178>,
+<https://experts.udl.cat/individual/UDL-AR024742> core:hasResearchArea <http://www.wikidata.org/entity/Q13178>,
         <http://www.wikidata.org/entity/Q1403158>,
         <http://www.wikidata.org/entity/Q468695> .
 
@@ -28091,8 +28131,8 @@
         <http://www.wikidata.org/entity/Q131313>,
         <http://www.wikidata.org/entity/Q180254>,
         <http://www.wikidata.org/entity/Q2142963>,
+        <http://www.wikidata.org/entity/Q214609>,
         <http://www.wikidata.org/entity/Q332828>,
-        <http://www.wikidata.org/entity/Q5849500>,
         <http://www.wikidata.org/entity/Q898533> .
 
 <https://experts.udl.cat/individual/UDL-AR024752> core:hasResearchArea <http://dbpedia.org/resource/Holonomic_constraints>,
@@ -28707,8 +28747,8 @@
         <http://www.wikidata.org/entity/Q849032> .
 
 <https://experts.udl.cat/individual/UDL-AR025322> core:hasResearchArea <http://dbpedia.org/resource/Calcium>,
-        <http://www.wikidata.org/entity/Q312>,
-        <http://www.wikidata.org/entity/Q659495> .
+        <http://www.wikidata.org/entity/Q659495>,
+        <http://www.wikidata.org/entity/Q89> .
 
 <https://experts.udl.cat/individual/UDL-AR025323> core:hasResearchArea <http://www.wikidata.org/entity/Q104036770> .
 
@@ -28718,13 +28758,12 @@
         <http://www.wikidata.org/entity/Q97047424> .
 
 <https://experts.udl.cat/individual/UDL-AR025325> core:hasResearchArea <http://dbpedia.org/resource/Sudden_infant_death_syndrome>,
+        <http://www.wikidata.org/entity/Q106161654>,
         <http://www.wikidata.org/entity/Q12705>,
-        <http://www.wikidata.org/entity/Q1417724>,
-        <http://www.wikidata.org/entity/Q16511806> .
+        <http://www.wikidata.org/entity/Q1417724> .
 
 <https://experts.udl.cat/individual/UDL-AR025327> core:hasResearchArea <http://www.wikidata.org/entity/Q191591>,
-        <http://www.wikidata.org/entity/Q37370937>,
-        <http://www.wikidata.org/entity/Q778743> .
+        <http://www.wikidata.org/entity/Q37370937> .
 
 <https://experts.udl.cat/individual/UDL-AR025328> core:hasResearchArea <http://www.wikidata.org/entity/Q11916279>,
         <http://www.wikidata.org/entity/Q181394>,
@@ -28809,7 +28848,6 @@
 
 <https://experts.udl.cat/individual/UDL-AR025368> core:hasResearchArea <http://www.wikidata.org/entity/Q17272482>,
         <http://www.wikidata.org/entity/Q605035>,
-        <http://www.wikidata.org/entity/Q778743>,
         <http://www.wikidata.org/entity/Q7981051> .
 
 <https://experts.udl.cat/individual/UDL-AR025372> core:hasResearchArea <http://dbpedia.org/resource/Fertilizer>,
@@ -28919,7 +28957,7 @@
         <http://www.wikidata.org/entity/Q83330>,
         <http://www.wikidata.org/entity/Q944777> .
 
-<https://experts.udl.cat/individual/UDL-AR025483> core:hasResearchArea <http://www.wikidata.org/entity/Q17103642>,
+<https://experts.udl.cat/individual/UDL-AR025483> core:hasResearchArea <http://www.wikidata.org/entity/Q134267>,
         <http://www.wikidata.org/entity/Q1759895>,
         <http://www.wikidata.org/entity/Q205555>,
         <http://www.wikidata.org/entity/Q2995644>,
@@ -29031,7 +29069,7 @@
 <https://experts.udl.cat/individual/UDL-AR025576> core:hasResearchArea <http://dbpedia.org/resource/Protein>,
         <http://www.wikidata.org/entity/Q570197> .
 
-<https://experts.udl.cat/individual/UDL-AR025581> core:hasResearchArea <http://www.wikidata.org/entity/Q17103642>,
+<https://experts.udl.cat/individual/UDL-AR025581> core:hasResearchArea <http://www.wikidata.org/entity/Q134267>,
         <http://www.wikidata.org/entity/Q373752> .
 
 <https://experts.udl.cat/individual/UDL-AR025583> core:hasResearchArea <http://www.wikidata.org/entity/Q18489480>,
@@ -29151,6 +29189,7 @@
         <http://dbpedia.org/resource/Peptide> .
 
 <https://experts.udl.cat/individual/UDL-AR025659> core:hasResearchArea <http://www.wikidata.org/entity/Q12252367>,
+        <http://www.wikidata.org/entity/Q1514415>,
         <http://www.wikidata.org/entity/Q50263915>,
         <http://www.wikidata.org/entity/Q736715> .
 
@@ -29331,7 +29370,7 @@
         <http://www.wikidata.org/entity/Q18534251> .
 
 <https://experts.udl.cat/individual/UDL-AR025784> core:hasResearchArea <http://www.wikidata.org/entity/Q18412811>,
-        <http://www.wikidata.org/entity/Q567555> .
+        <http://www.wikidata.org/entity/Q2852249> .
 
 <https://experts.udl.cat/individual/UDL-AR025785> core:hasResearchArea <http://www.wikidata.org/entity/Q14599311> .
 
@@ -29554,13 +29593,15 @@
         <http://www.wikidata.org/entity/Q9690> .
 
 <https://experts.udl.cat/individual/UDL-AR025933> core:hasResearchArea <http://dbpedia.org/resource/Gastrointestinal_tract>,
-        <http://www.wikidata.org/entity/Q116890> .
+        <http://www.wikidata.org/entity/Q116890>,
+        <http://www.wikidata.org/entity/Q245204> .
 
 <https://experts.udl.cat/individual/UDL-AR025938> core:hasResearchArea <http://www.wikidata.org/entity/Q26972>,
-        <http://www.wikidata.org/entity/Q312>,
-        <http://www.wikidata.org/entity/Q407384> .
+        <http://www.wikidata.org/entity/Q407384>,
+        <http://www.wikidata.org/entity/Q89> .
 
-<https://experts.udl.cat/individual/UDL-AR025939> core:hasResearchArea <http://www.wikidata.org/entity/Q116890> .
+<https://experts.udl.cat/individual/UDL-AR025939> core:hasResearchArea <http://www.wikidata.org/entity/Q116890>,
+        <http://www.wikidata.org/entity/Q245204> .
 
 <https://experts.udl.cat/individual/UDL-AR025941> core:hasResearchArea <http://www.wikidata.org/entity/Q740083> .
 
@@ -29780,8 +29821,8 @@
         <http://www.wikidata.org/entity/Q6106654> .
 
 <https://experts.udl.cat/individual/UDL-AR026073> core:hasResearchArea <http://www.wikidata.org/entity/Q205136>,
-        <http://www.wikidata.org/entity/Q207199>,
-        <http://www.wikidata.org/entity/Q3395095> .
+        <http://www.wikidata.org/entity/Q3395095>,
+        <http://www.wikidata.org/entity/Q597> .
 
 <https://experts.udl.cat/individual/UDL-AR026077> core:hasResearchArea <http://dbpedia.org/resource/Acid>,
         <http://dbpedia.org/resource/Iron>,
@@ -29913,7 +29954,8 @@
 
 <https://experts.udl.cat/individual/UDL-AR026191> core:hasResearchArea <http://dbpedia.org/resource/Enthalpy>,
         <http://www.wikidata.org/entity/Q1806889>,
-        <http://www.wikidata.org/entity/Q2142963> .
+        <http://www.wikidata.org/entity/Q2142963>,
+        <http://www.wikidata.org/entity/Q2308599> .
 
 <https://experts.udl.cat/individual/UDL-AR026196> core:hasResearchArea <http://dbpedia.org/resource/Robotics>,
         <http://www.wikidata.org/entity/Q378859>,
@@ -29932,7 +29974,8 @@
 
 <https://experts.udl.cat/individual/UDL-AR026207> core:hasResearchArea <http://www.wikidata.org/entity/Q8354702> .
 
-<https://experts.udl.cat/individual/UDL-AR026208> core:hasResearchArea <http://www.wikidata.org/entity/Q133128>,
+<https://experts.udl.cat/individual/UDL-AR026208> core:hasResearchArea <http://www.wikidata.org/entity/Q1127677>,
+        <http://www.wikidata.org/entity/Q133128>,
         <http://www.wikidata.org/entity/Q754765>,
         <http://www.wikidata.org/entity/Q8354702> .
 
@@ -30163,7 +30206,8 @@
         <http://www.wikidata.org/entity/Q79460>,
         <http://www.wikidata.org/entity/Q899285> .
 
-<https://experts.udl.cat/individual/UDL-AR026474> core:hasResearchArea <http://www.wikidata.org/entity/Q898814> .
+<https://experts.udl.cat/individual/UDL-AR026474> core:hasResearchArea <http://www.wikidata.org/entity/Q245204>,
+        <http://www.wikidata.org/entity/Q898814> .
 
 <https://experts.udl.cat/individual/UDL-AR026475> core:hasResearchArea <http://dbpedia.org/resource/Wildfire>,
         <http://www.wikidata.org/entity/Q5705> .
@@ -30197,8 +30241,8 @@
         <http://www.wikidata.org/entity/Q736777>,
         <http://www.wikidata.org/entity/Q889503> .
 
-<https://experts.udl.cat/individual/UDL-AR026494> core:hasResearchArea <http://www.wikidata.org/entity/Q312>,
-        <http://www.wikidata.org/entity/Q407142> .
+<https://experts.udl.cat/individual/UDL-AR026494> core:hasResearchArea <http://www.wikidata.org/entity/Q407142>,
+        <http://www.wikidata.org/entity/Q89> .
 
 <https://experts.udl.cat/individual/UDL-AR026495> core:hasResearchArea <http://www.wikidata.org/entity/Q15952031> .
 
@@ -30323,8 +30367,8 @@
         <http://dbpedia.org/resource/Operating_temperature>,
         <http://www.wikidata.org/entity/Q899670> .
 
-<https://experts.udl.cat/individual/UDL-AR026613> core:hasResearchArea <http://www.wikidata.org/entity/Q27897327>,
-        <http://www.wikidata.org/entity/Q3523867> .
+<https://experts.udl.cat/individual/UDL-AR026613> core:hasResearchArea <http://www.wikidata.org/entity/Q3523867>,
+        <http://www.wikidata.org/entity/Q9257630> .
 
 <https://experts.udl.cat/individual/UDL-AR026614> core:hasResearchArea <http://dbpedia.org/resource/Bird>,
         <http://www.wikidata.org/entity/Q372561> .
@@ -30448,7 +30492,7 @@
         <http://www.wikidata.org/entity/Q8277> .
 
 <https://experts.udl.cat/individual/UDL-AR026725> core:hasResearchArea <http://www.wikidata.org/entity/Q66119246>,
-        <http://www.wikidata.org/entity/Q776060> .
+        <http://www.wikidata.org/entity/Q9259> .
 
 <https://experts.udl.cat/individual/UDL-AR026731> core:hasResearchArea <http://www.wikidata.org/entity/Q2748697> .
 
@@ -30678,7 +30722,6 @@
         <http://www.wikidata.org/entity/Q3931615> .
 
 <https://experts.udl.cat/individual/UDL-AR027006> core:hasResearchArea <http://dbpedia.org/resource/Hue>,
-        <http://www.wikidata.org/entity/Q105989683>,
         <http://www.wikidata.org/entity/Q151313>,
         <http://www.wikidata.org/entity/Q355263>,
         <http://www.wikidata.org/entity/Q718113>,
@@ -30960,7 +31003,8 @@
         <http://www.wikidata.org/entity/Q1851434>,
         <http://www.wikidata.org/entity/Q21030977> .
 
-<https://experts.udl.cat/individual/UDL-AR027220> core:hasResearchArea <http://dbpedia.org/resource/Physiology> .
+<https://experts.udl.cat/individual/UDL-AR027220> core:hasResearchArea <http://dbpedia.org/resource/Physiology>,
+        <http://www.wikidata.org/entity/Q245204> .
 
 <https://experts.udl.cat/individual/UDL-AR027221> core:hasResearchArea <http://dbpedia.org/resource/Club_Libertad>,
         <http://www.wikidata.org/entity/Q1583807> .
@@ -31355,11 +31399,11 @@
         <http://www.wikidata.org/entity/Q6163243> .
 
 <https://experts.udl.cat/individual/UDL-AR027631> core:hasResearchArea <http://dbpedia.org/resource/Club_Universitario_de_Deportes>,
+        <http://www.wikidata.org/entity/Q134267>,
         <http://www.wikidata.org/entity/Q1347355>,
-        <http://www.wikidata.org/entity/Q17103642>,
         <http://www.wikidata.org/entity/Q177603> .
 
-<https://experts.udl.cat/individual/UDL-AR027632> core:hasResearchArea <http://www.wikidata.org/entity/Q17103642>,
+<https://experts.udl.cat/individual/UDL-AR027632> core:hasResearchArea <http://www.wikidata.org/entity/Q134267>,
         <http://www.wikidata.org/entity/Q373752> .
 
 <https://experts.udl.cat/individual/UDL-AR027638> core:hasResearchArea <http://dbpedia.org/resource/Pig>,
@@ -31534,7 +31578,7 @@
 <https://experts.udl.cat/individual/UDL-AR027899> core:hasResearchArea <http://dbpedia.org/resource/Weed>,
         <http://www.wikidata.org/entity/Q396338> .
 
-<https://experts.udl.cat/individual/UDL-AR027901> core:hasResearchArea <http://www.wikidata.org/entity/Q17103642>,
+<https://experts.udl.cat/individual/UDL-AR027901> core:hasResearchArea <http://www.wikidata.org/entity/Q134267>,
         <http://www.wikidata.org/entity/Q6163243> .
 
 <https://experts.udl.cat/individual/UDL-AR027902> core:hasResearchArea <http://www.wikidata.org/entity/Q131877>,
@@ -32059,8 +32103,8 @@
         <http://www.wikidata.org/entity/Q174165> .
 
 <https://experts.udl.cat/individual/UDL-AR028444> core:hasResearchArea <http://dbpedia.org/resource/Gene>,
-        <http://www.wikidata.org/entity/Q12825018>,
-        <http://www.wikidata.org/entity/Q5277342> .
+        <http://www.wikidata.org/entity/Q5277342>,
+        <http://www.wikidata.org/entity/Q5982337> .
 
 <https://experts.udl.cat/individual/UDL-AR028445> core:hasResearchArea <http://dbpedia.org/resource/Boston_Consulting_Group> .
 
@@ -32276,9 +32320,9 @@
         <http://www.wikidata.org/entity/Q6927>,
         <http://www.wikidata.org/entity/Q6955> .
 
-<https://experts.udl.cat/individual/UDL-AR028606> core:hasResearchArea <http://www.wikidata.org/entity/Q14623204>,
+<https://experts.udl.cat/individual/UDL-AR028606> core:hasResearchArea <http://www.wikidata.org/entity/Q106161654>,
+        <http://www.wikidata.org/entity/Q14623204>,
         <http://www.wikidata.org/entity/Q15545584>,
-        <http://www.wikidata.org/entity/Q16511806>,
         <http://www.wikidata.org/entity/Q48282>,
         <http://www.wikidata.org/entity/Q797769> .
 
@@ -32431,7 +32475,8 @@
         <http://www.wikidata.org/entity/Q15090>,
         <http://www.wikidata.org/entity/Q5705> .
 
-<https://experts.udl.cat/individual/UDL-AR028691> core:hasResearchArea <http://www.wikidata.org/entity/Q1350715>,
+<https://experts.udl.cat/individual/UDL-AR028691> core:hasResearchArea <http://www.wikidata.org/entity/Q11290858>,
+        <http://www.wikidata.org/entity/Q1350715>,
         <http://www.wikidata.org/entity/Q1395324>,
         <http://www.wikidata.org/entity/Q15942266>,
         <http://www.wikidata.org/entity/Q1770847>,
@@ -32946,7 +32991,7 @@
 <https://experts.udl.cat/individual/UDL-AR029081> core:hasResearchArea <http://www.wikidata.org/entity/Q1851760>,
         <http://www.wikidata.org/entity/Q231632> .
 
-<https://experts.udl.cat/individual/UDL-AR029082> core:hasResearchArea <http://www.wikidata.org/entity/Q17103642> .
+<https://experts.udl.cat/individual/UDL-AR029082> core:hasResearchArea <http://www.wikidata.org/entity/Q134267> .
 
 <https://experts.udl.cat/individual/UDL-AR029083> core:hasResearchArea <http://dbpedia.org/resource/National_Reorganization_Process>,
         <http://www.wikidata.org/entity/Q1851760> .
@@ -32979,7 +33024,7 @@
 
 <https://experts.udl.cat/individual/UDL-AR029102> core:hasResearchArea <http://www.wikidata.org/entity/Q1395324> .
 
-<https://experts.udl.cat/individual/UDL-AR029103> core:hasResearchArea <http://www.wikidata.org/entity/Q17103642> .
+<https://experts.udl.cat/individual/UDL-AR029103> core:hasResearchArea <http://www.wikidata.org/entity/Q134267> .
 
 <https://experts.udl.cat/individual/UDL-AR029104> core:hasResearchArea <http://dbpedia.org/resource/Transducer>,
         <http://www.wikidata.org/entity/Q1635352>,
@@ -33027,7 +33072,8 @@
 
 <https://experts.udl.cat/individual/UDL-AR029127> core:hasResearchArea <http://www.wikidata.org/entity/Q1475848>,
         <http://www.wikidata.org/entity/Q150839>,
-        <http://www.wikidata.org/entity/Q170758> .
+        <http://www.wikidata.org/entity/Q170758>,
+        <http://www.wikidata.org/entity/Q63391344> .
 
 <https://experts.udl.cat/individual/UDL-AR029129> core:hasResearchArea <http://dbpedia.org/resource/Neoliberalism>,
         <http://www.wikidata.org/entity/Q136822> .
@@ -33082,8 +33128,7 @@
 
 <https://experts.udl.cat/individual/UDL-AR029174> core:hasResearchArea <http://www.wikidata.org/entity/Q2297111> .
 
-<https://experts.udl.cat/individual/UDL-AR029175> core:hasResearchArea <http://dbpedia.org/resource/Germination>,
-        <http://www.wikidata.org/entity/Q2453589> .
+<https://experts.udl.cat/individual/UDL-AR029175> core:hasResearchArea <http://www.wikidata.org/entity/Q2453589> .
 
 <https://experts.udl.cat/individual/UDL-AR029176> core:hasResearchArea <http://dbpedia.org/resource/Embryo>,
         <http://dbpedia.org/resource/Immune_response>,
@@ -33107,9 +33152,9 @@
         <http://www.wikidata.org/entity/Q16606552>,
         <http://www.wikidata.org/entity/Q5165502> .
 
-<https://experts.udl.cat/individual/UDL-AR029198> core:hasResearchArea <http://www.wikidata.org/entity/Q10411246>,
-        <http://www.wikidata.org/entity/Q160637>,
-        <http://www.wikidata.org/entity/Q180490> .
+<https://experts.udl.cat/individual/UDL-AR029198> core:hasResearchArea <http://www.wikidata.org/entity/Q160637>,
+        <http://www.wikidata.org/entity/Q180490>,
+        <http://www.wikidata.org/entity/Q5456> .
 
 <https://experts.udl.cat/individual/UDL-AR029202> core:hasResearchArea <http://dbpedia.org/resource/Olive_oil>,
         <http://dbpedia.org/resource/Thyme> .
@@ -33120,9 +33165,9 @@
         <http://www.wikidata.org/entity/Q171141>,
         <http://www.wikidata.org/entity/Q4134126> .
 
-<https://experts.udl.cat/individual/UDL-AR029213> core:hasResearchArea <http://www.wikidata.org/entity/Q10411246>,
-        <http://www.wikidata.org/entity/Q132151>,
-        <http://www.wikidata.org/entity/Q27841> .
+<https://experts.udl.cat/individual/UDL-AR029213> core:hasResearchArea <http://www.wikidata.org/entity/Q132151>,
+        <http://www.wikidata.org/entity/Q27841>,
+        <http://www.wikidata.org/entity/Q5456> .
 
 <https://experts.udl.cat/individual/UDL-AR029216> core:hasResearchArea <http://dbpedia.org/resource/Cereal>,
         <http://dbpedia.org/resource/Molar_concentration>,
@@ -33691,7 +33736,6 @@
         <http://www.wikidata.org/entity/Q36380>,
         <http://www.wikidata.org/entity/Q397>,
         <http://www.wikidata.org/entity/Q482>,
-        <http://www.wikidata.org/entity/Q63173086>,
         <http://www.wikidata.org/entity/Q7015> .
 
 <https://experts.udl.cat/individual/UDL-AR029728> core:hasResearchArea <http://www.wikidata.org/entity/Q1425491>,
@@ -33710,7 +33754,6 @@
         <http://www.wikidata.org/entity/Q36380>,
         <http://www.wikidata.org/entity/Q397>,
         <http://www.wikidata.org/entity/Q482>,
-        <http://www.wikidata.org/entity/Q63173086>,
         <http://www.wikidata.org/entity/Q7015> .
 
 <https://experts.udl.cat/individual/UDL-AR029731> core:hasResearchArea <http://www.wikidata.org/entity/Q11635>,
@@ -33722,7 +33765,6 @@
         <http://www.wikidata.org/entity/Q238499>,
         <http://www.wikidata.org/entity/Q36380>,
         <http://www.wikidata.org/entity/Q482>,
-        <http://www.wikidata.org/entity/Q63173086>,
         <http://www.wikidata.org/entity/Q7015> .
 
 <https://experts.udl.cat/individual/UDL-AR029735> core:hasResearchArea <http://www.wikidata.org/entity/Q1379243> .
@@ -34161,9 +34203,9 @@
         <http://www.wikidata.org/entity/Q6501447>,
         <http://www.wikidata.org/entity/Q94944> .
 
-<https://experts.udl.cat/individual/UDL-AR030215> core:hasResearchArea <http://www.wikidata.org/entity/Q10411246>,
-        <http://www.wikidata.org/entity/Q14081>,
-        <http://www.wikidata.org/entity/Q5404323> .
+<https://experts.udl.cat/individual/UDL-AR030215> core:hasResearchArea <http://www.wikidata.org/entity/Q14081>,
+        <http://www.wikidata.org/entity/Q5404323>,
+        <http://www.wikidata.org/entity/Q5456> .
 
 <https://experts.udl.cat/individual/UDL-AR030224> core:hasResearchArea <http://dbpedia.org/resource/Lithium_nitrate>,
         <http://www.wikidata.org/entity/Q2142963>,
@@ -34215,11 +34257,11 @@
         <http://www.wikidata.org/entity/Q845921> .
 
 <https://experts.udl.cat/individual/UDL-TD010295> core:hasResearchArea <http://www.wikidata.org/entity/Q1039642>,
-        <http://www.wikidata.org/entity/Q1065241>,
         <http://www.wikidata.org/entity/Q11575>,
         <http://www.wikidata.org/entity/Q1913755>,
         <http://www.wikidata.org/entity/Q191907>,
-        <http://www.wikidata.org/entity/Q780> .
+        <http://www.wikidata.org/entity/Q780>,
+        <http://www.wikidata.org/entity/Q864693> .
 
 <https://experts.udl.cat/individual/UDL-TD011496> core:hasResearchArea <http://dbpedia.org/resource/Resistencia_S.C.>,
         <http://www.wikidata.org/entity/Q3008355>,
@@ -34227,11 +34269,11 @@
         <http://www.wikidata.org/entity/Q58038442> .
 
 <https://experts.udl.cat/individual/UDL-d64c8fce69a715b2c0b2238346cbae82> core:hasResearchArea <http://www.wikidata.org/entity/Q1039642>,
-        <http://www.wikidata.org/entity/Q1065241>,
         <http://www.wikidata.org/entity/Q11575>,
         <http://www.wikidata.org/entity/Q1913755>,
         <http://www.wikidata.org/entity/Q191907>,
-        <http://www.wikidata.org/entity/Q780> .
+        <http://www.wikidata.org/entity/Q780>,
+        <http://www.wikidata.org/entity/Q864693> .
 
 <http://dbpedia.org/resource/American_literature> a skos:Concept ;
     rdfs:label "literatura dels estats units d'amèrica"@ca,
@@ -35779,11 +35821,6 @@
     rdfs:label "cinesiologia"@ca,
         "kinesiology"@en,
         "kinesiología"@es .
-
-<http://www.wikidata.org/entity/Q65921492> a skos:Concept ;
-    rdfs:label "flexibilitat"@ca,
-        "flexibility"@en,
-        "variability"@en .
 
 <http://www.wikidata.org/entity/Q6631525> a skos:Concept ;
     rdfs:label "enginyeria d'aliments"@ca,
@@ -38524,6 +38561,11 @@
         "grassland"@en,
         "herbazal"@es .
 
+<http://www.wikidata.org/entity/Q101040966> a skos:Concept ;
+    rdfs:label "mercari"@en,
+        "mercados"@es,
+        "mercari"@es .
+
 <http://www.wikidata.org/entity/Q101072> a skos:Concept ;
     rdfs:label "definició"@ca,
         "definition"@en,
@@ -38775,6 +38817,10 @@
         "support"@en,
         "elemento estructural vertical"@es .
 
+<http://www.wikidata.org/entity/Q106087617> a skos:Concept ;
+    rdfs:label "parallel and distributed computing"@en,
+        "parallel and distributed computing: applications and technologies, 5th international conference, pdcat 2004, singapore, december 8-10, 2004"@en .
+
 <http://www.wikidata.org/entity/Q1060990> a skos:Concept ;
     rdfs:label "aprenentatge basat en problemes"@ca,
         "problem-based learning"@en,
@@ -38790,10 +38836,18 @@
         "technology transfer"@en,
         "transferencia tecnológica"@es .
 
+<http://www.wikidata.org/entity/Q106245667> a skos:Concept ;
+    rdfs:label "peer-to-peer systems"@en,
+        "peer-to-peer systems, first international workshop, iptps 2002, cambridge, ma, usa, march 7-8, 2002"@en .
+
 <http://www.wikidata.org/entity/Q1062677> a skos:Concept ;
     rdfs:label "web 3.0"@ca,
         "web 3.0"@en,
         "la recortada yensi"@es .
+
+<http://www.wikidata.org/entity/Q10666891> a skos:Concept ;
+    rdfs:label "sexual and reproductive health and rights"@en,
+        "sexual health"@en .
 
 <http://www.wikidata.org/entity/Q1068553> a skos:Concept ;
     rdfs:label "ossos de la cara"@ca,
@@ -41030,11 +41084,6 @@
     rdfs:label "landrace"@en,
         "landraces"@en .
 
-<http://www.wikidata.org/entity/Q1740919> a skos:Concept ;
-    rdfs:label "pineda"@ca,
-        "pine forest"@en,
-        "pine forests"@en .
-
 <http://www.wikidata.org/entity/Q174193> a skos:Concept ;
     rdfs:label "regne unit de la gran bretanya i irlanda"@ca,
         "the united kingdom"@en,
@@ -41593,6 +41642,12 @@
         "actin"@en,
         "actina"@es .
 
+<http://www.wikidata.org/entity/Q185317> a skos:Concept ;
+    rdfs:label "cec"@ca,
+        "caecum"@en,
+        "cecum"@en,
+        "ciego"@es .
+
 <http://www.wikidata.org/entity/Q18535> a skos:Concept ;
     rdfs:label "al·legoria"@ca,
         "allegory"@en,
@@ -41979,6 +42034,12 @@
         "trigonometric polynomial"@en,
         "polinomio trigonométrico"@es .
 
+<http://www.wikidata.org/entity/Q19705949> a skos:Concept ;
+    rdfs:label "krisko"@ca,
+        "krisko"@en,
+        "trampas"@en,
+        "krisko"@es .
+
 <http://www.wikidata.org/entity/Q1971849> a skos:Concept ;
     rdfs:label "escola religiosa"@ca,
         "religious school"@en,
@@ -42066,6 +42127,12 @@
         "plant fiber"@en,
         "fibra vegetal"@es,
         "fibras vegetales"@es .
+
+<http://www.wikidata.org/entity/Q200464> a skos:Concept ;
+    rdfs:label "imperi portuguès"@ca,
+        "colonización"@en,
+        "portuguese empire"@en,
+        "imperio portugués"@es .
 
 <http://www.wikidata.org/entity/Q200700> a skos:Concept ;
     rdfs:label "amphioxus"@en,
@@ -43372,6 +43439,12 @@
         "quirópteros"@en,
         "chiroptera"@es .
 
+<http://www.wikidata.org/entity/Q28474> a skos:Concept ;
+    rdfs:label "perímetre"@ca,
+        "circumference"@en,
+        "perimeter"@en,
+        "perímetro"@es .
+
 <http://www.wikidata.org/entity/Q2852035> a skos:Concept ;
     rdfs:label "anys potencials de vida perduts"@ca,
         "years of potential life lost"@en,
@@ -43430,11 +43503,6 @@
 <http://www.wikidata.org/entity/Q2882685> a skos:Concept ;
     rdfs:label "lysiphlebus testaceipes"@en,
         "lysiphlebus testaceipes"@es .
-
-<http://www.wikidata.org/entity/Q2885646> a skos:Concept ;
-    rdfs:label "mistletoe"@en,
-        "muérdago"@en,
-        "muérdago"@es .
 
 <http://www.wikidata.org/entity/Q2885958> a skos:Concept ;
     rdfs:label "lingüística interna"@en,
@@ -44430,12 +44498,6 @@
         "proto-indo-european"@en,
         "protoindoeuropeo"@es .
 
-<http://www.wikidata.org/entity/Q37206633> a skos:Concept ;
-    rdfs:label "mercardo"@ca,
-        "mercardo"@en,
-        "mercados"@es,
-        "mercardo"@es .
-
 <http://www.wikidata.org/entity/Q37225481> a skos:Concept ;
     rdfs:label "forbs"@ca,
         "forbs"@en,
@@ -44464,7 +44526,7 @@
     rdfs:label "percepció del color"@ca,
         "color vision"@en,
         "percepción del color"@en,
-        "percepción del color"@es .
+        "visión del color"@es .
 
 <http://www.wikidata.org/entity/Q37430617> a skos:Concept ;
     rdfs:label "leyes"@ca,
@@ -44769,11 +44831,6 @@
     rdfs:label "xarop d'auró"@ca,
         "maple syrup"@en,
         "jarabe de arce"@es .
-
-<http://www.wikidata.org/entity/Q4045217> a skos:Concept ;
-    rdfs:label "amblyseius californicus"@en,
-        "neoseiulus californicus"@en,
-        "neoseiulus californicus"@es .
 
 <http://www.wikidata.org/entity/Q4051790> a skos:Concept ;
     rdfs:label "neurotrophic receptor tyrosine kinase 1"@en,
@@ -45466,10 +45523,6 @@
         "hemolymph"@en,
         "hemolinfa"@es .
 
-<http://www.wikidata.org/entity/Q4878190> a skos:Concept ;
-    rdfs:label "caecum"@en,
-        "caecum"@es .
-
 <http://www.wikidata.org/entity/Q4886> a skos:Concept ;
     rdfs:label "cultivar"@ca,
         "cultivar"@en,
@@ -45644,6 +45697,10 @@
     rdfs:label "cognitive flexibility"@en,
         "flexibilidad cognitiva"@en,
         "flexibilidad cognitiva"@es .
+
+<http://www.wikidata.org/entity/Q5148429> a skos:Concept ;
+    rdfs:label "colonialidad"@en,
+        "coloniality of power"@en .
 
 <http://www.wikidata.org/entity/Q5148994> a skos:Concept ;
     rdfs:label "colorado drainage basins"@en,
@@ -46005,6 +46062,10 @@
         "aerosols"@ca,
         "aerosol"@es .
 
+<http://www.wikidata.org/entity/Q5672141> a skos:Concept ;
+    rdfs:label "amblyseius californicus"@en,
+        "amblyseius californicus"@es .
+
 <http://www.wikidata.org/entity/Q56758734> a skos:Concept ;
     rdfs:label "building energy efficiency"@en,
         "building energy efficiency disclosure act 2010"@en .
@@ -46139,6 +46200,12 @@
 <http://www.wikidata.org/entity/Q57982442> a skos:Concept ;
     rdfs:label "entornos personales de aprendizaje"@en,
         "entornos personales de aprendizaje: claves para el ecosistema educativo en red"@es .
+
+<http://www.wikidata.org/entity/Q5798609> a skos:Concept ;
+    rdfs:label "daniel quevedo"@ca,
+        "martin \"myg\" beloni"@en,
+        "muérdago"@en,
+        "daniel quevedo"@es .
 
 <http://www.wikidata.org/entity/Q57986466> a skos:Concept ;
     rdfs:label "realidad aumentada"@en,
@@ -47062,7 +47129,7 @@
 <http://www.wikidata.org/entity/Q6904> a skos:Concept ;
     rdfs:label "alt empordà"@ca,
         "alt empordà"@en,
-        "alt empordà"@es .
+        "alto ampurdán"@es .
 
 <http://www.wikidata.org/entity/Q692> a skos:Concept ;
     rdfs:label "william shakespeare"@ca,
@@ -47937,11 +48004,6 @@
         "municipal ordinances"@en,
         "ordenanza local"@es .
 
-<http://www.wikidata.org/entity/Q843905> a skos:Concept ;
-    rdfs:label "longitud d'una circumferència"@ca,
-        "circumference"@en,
-        "circunferencia"@es .
-
 <http://www.wikidata.org/entity/Q8440> a skos:Concept ;
     rdfs:label "hugo chávez"@ca,
         "hugo chávez"@en,
@@ -48304,11 +48366,6 @@
         "light"@en,
         "luz"@es .
 
-<http://www.wikidata.org/entity/Q913870> a skos:Concept ;
-    rdfs:label "canoness"@en,
-        "cánones"@en,
-        "canonesa"@es .
-
 <http://www.wikidata.org/entity/Q914138> a skos:Concept ;
     rdfs:label "taxa d'absorció específica"@ca,
         "specific absorption rate"@en,
@@ -48335,6 +48392,12 @@
         "comportament social"@en,
         "social organism behavior"@en,
         "comportamiento social"@es .
+
+<http://www.wikidata.org/entity/Q9259> a skos:Concept ;
+    rdfs:label "patrimoni de la humanitat"@ca,
+        "patrimoni"@en,
+        "unesco world heritage site"@en,
+        "patrimonio de la humanidad"@es .
 
 <http://www.wikidata.org/entity/Q92760> a skos:Concept ;
     rdfs:label "claude elwood shannon"@ca,
@@ -48461,6 +48524,11 @@
     rdfs:label "ferrate"@en,
         "ferraté"@en .
 
+<http://www.wikidata.org/entity/Q958738> a skos:Concept ;
+    rdfs:label "75 mm cannon model 1897"@en,
+        "cánones"@en,
+        "canon de 75 mm modèle 1897"@es .
+
 <http://www.wikidata.org/entity/Q96> a skos:Concept ;
     rdfs:label "mèxic"@ca,
         "mexico"@en,
@@ -48506,9 +48574,10 @@
         "real e benemérita associação portuguesa de beneficência"@en .
 
 <http://www.wikidata.org/entity/Q96583757> a skos:Concept ;
-    rdfs:label "ciclismo"@en,
-        "ciclismo mundial"@en,
-        "ciclismo mundial"@es .
+    rdfs:label "plantur-pura"@ca,
+        "ciclismo"@en,
+        "plantur-pura cycling team"@en,
+        "plantur-pura cycling team"@es .
 
 <http://www.wikidata.org/entity/Q96775126> a skos:Concept ;
     rdfs:label "communication strategies"@en,
@@ -48566,6 +48635,11 @@
 <http://www.wikidata.org/entity/Q98033936> a skos:Concept ;
     rdfs:label "secondary student"@en,
         "secondary students"@en .
+
+<http://www.wikidata.org/entity/Q982239> a skos:Concept ;
+    rdfs:label "pine forest"@en,
+        "pine forests"@en,
+        "pine forest"@es .
 
 <http://www.wikidata.org/entity/Q9836820> a skos:Concept ;
     rdfs:label "comercio"@en,
@@ -49086,12 +49160,6 @@
         "genetically modified organism"@en,
         "genetically modified organism regulations"@en,
         "organismo genéticamente modificado"@es .
-
-<http://dbpedia.org/resource/Germination> a skos:Concept ;
-    rdfs:label "germinació"@ca,
-        "germination"@en,
-        "germination response"@en,
-        "germinación"@es .
 
 <http://dbpedia.org/resource/Graus> a skos:Concept ;
     rdfs:label "graus"@ca,
@@ -49878,7 +49946,7 @@
 <http://www.wikidata.org/entity/Q10859> a skos:Concept ;
     rdfs:label "guerra civil espanyola"@ca,
         "spanish civil war"@en,
-        "guerra civil española"@es .
+        "guerra civil de españa"@es .
 
 <http://www.wikidata.org/entity/Q1091971> a skos:Concept ;
     rdfs:label "suburbanisation"@en,
@@ -50440,10 +50508,6 @@
         "pik3ca"@en,
         "pik3ca"@es .
 
-<http://www.wikidata.org/entity/Q14897873> a skos:Concept ;
-    rdfs:label "neurotrophin receptor"@en,
-        "neurotrophin receptor activity"@en .
-
 <http://www.wikidata.org/entity/Q1498213> a skos:Concept ;
     rdfs:label "microstructure"@en,
         "microestructura"@es .
@@ -50478,6 +50542,12 @@
     rdfs:label "etilè"@ca,
         "ethylene"@en,
         "etileno"@es .
+
+<http://www.wikidata.org/entity/Q1514415> a skos:Concept ;
+    rdfs:label "tendència"@ca,
+        "progression"@en,
+        "trend"@en,
+        "tendencia"@es .
 
 <http://www.wikidata.org/entity/Q1514510> a skos:Concept ;
     rdfs:label "comtat d'urgell"@ca,
@@ -51286,7 +51356,7 @@
 <http://www.wikidata.org/entity/Q217941> a skos:Concept ;
     rdfs:label "panell fotovoltaic"@ca,
         "photovoltaic panels"@en,
-        "solar cell panel"@en,
+        "solar panel"@en,
         "panel fotovoltaico"@es .
 
 <http://www.wikidata.org/entity/Q21809615> a skos:Concept ;
@@ -51367,6 +51437,10 @@
     rdfs:label "composición orgánica"@en,
         "organic composition of capital"@en,
         "composición orgánica del capital"@es .
+
+<http://www.wikidata.org/entity/Q2308599> a skos:Concept ;
+    rdfs:label "storage capacity"@en,
+        "capacidad de memoria"@es .
 
 <http://www.wikidata.org/entity/Q23145> a skos:Concept ;
     rdfs:label "segre"@ca,
@@ -51656,6 +51730,12 @@
     rdfs:label "evaluación de competencias"@es,
         "evaluación de competencias digitales"@es .
 
+<http://www.wikidata.org/entity/Q2852249> a skos:Concept ;
+    rdfs:label "malformació congènita"@ca,
+        "abnormality"@en,
+        "congenital abnormality"@en,
+        "malformación congénita"@es .
+
 <http://www.wikidata.org/entity/Q2853144> a skos:Concept ;
     rdfs:label "antineoplàstic"@ca,
         "anticancer drugs"@en,
@@ -51811,7 +51891,8 @@
         "fine roots"@en .
 
 <http://www.wikidata.org/entity/Q3115841> a skos:Concept ;
-    rdfs:label "iron-sulfur protein"@en,
+    rdfs:label "proteïna ferro-sofre"@ca,
+        "iron-sulfur protein"@en,
         "iron-sulphur protein"@en,
         "proteína hierro-azufre"@es .
 
@@ -52663,12 +52744,6 @@
     rdfs:label "grain legumes"@en,
         "grain legumes levy act 1985"@en .
 
-<http://www.wikidata.org/entity/Q567555> a skos:Concept ;
-    rdfs:label "anomalia"@ca,
-        "abnormality"@en,
-        "anomaly"@en,
-        "anomalía"@es .
-
 <http://www.wikidata.org/entity/Q567759> a skos:Concept ;
     rdfs:label "mapreduce"@ca,
         "mapreduce"@en,
@@ -52885,6 +52960,11 @@
 <http://www.wikidata.org/entity/Q63363745> a skos:Concept ;
     rdfs:label "archimedes screw"@en,
         "archimedes screw tidal generator"@en .
+
+<http://www.wikidata.org/entity/Q63391344> a skos:Concept ;
+    rdfs:label "resistència microbiana"@ca,
+        "antimicrobial resistance"@en,
+        "resistencia a los antimicrobianos"@es .
 
 <http://www.wikidata.org/entity/Q63393742> a skos:Concept ;
     rdfs:label "intense pulse light treatment with meibomian gland expression of the upper eyelids in dry eye disease"@en,
@@ -54679,10 +54759,6 @@
         "moore"@en,
         "moore"@es .
 
-<http://www.wikidata.org/entity/Q105989683> a skos:Concept ;
-    rdfs:label "firmness"@en,
-        "stability"@en .
-
 <http://www.wikidata.org/entity/Q10676> a skos:Concept ;
     rdfs:label "sega mega drive"@ca,
         "genesis"@en,
@@ -54738,6 +54814,10 @@
         "circumflex"@en,
         "control"@en,
         "acento circunflejo"@es .
+
+<http://www.wikidata.org/entity/Q11290858> a skos:Concept ;
+    rdfs:label "emocion"@en,
+        "emocions"@en .
 
 <http://www.wikidata.org/entity/Q11344> a skos:Concept ;
     rdfs:label "element químic"@ca,
@@ -55449,7 +55529,7 @@
         "crédito"@es .
 
 <http://www.wikidata.org/entity/Q183205> a skos:Concept ;
-    rdfs:label "new technology file system"@ca,
+    rdfs:label "ntfs"@ca,
         "new technologies"@en,
         "ntfs"@en,
         "ntfs"@es .
@@ -55682,12 +55762,6 @@
         "jesuítas"@en,
         "jesuítas"@es .
 
-<http://www.wikidata.org/entity/Q207199> a skos:Concept ;
-    rdfs:label "districte de lisboa"@ca,
-        "lisboa"@en,
-        "lisbon"@en,
-        "distrito de lisboa"@es .
-
 <http://www.wikidata.org/entity/Q207653> a skos:Concept ;
     rdfs:label "saponina"@ca,
         "saponin"@en,
@@ -55738,10 +55812,6 @@
         "electron transport chain"@en,
         "cadena de transporte de electrones"@es .
 
-<http://www.wikidata.org/entity/Q21119023> a skos:Concept ;
-    rdfs:label "ascorbate"@en,
-        "l-ascorbic acid biosynthetic process"@en .
-
 <http://www.wikidata.org/entity/Q21132881> a skos:Concept ;
     rdfs:label "herpes virus"@en,
         "nectin cell adhesion molecule 2"@en .
@@ -55762,6 +55832,12 @@
         "renovation"@en,
         "rehabilitación"@es,
         "renovación"@es .
+
+<http://www.wikidata.org/entity/Q214609> a skos:Concept ;
+    rdfs:label "material"@ca,
+        "material"@en,
+        "materials"@en,
+        "material"@es .
 
 <http://www.wikidata.org/entity/Q214693> a skos:Concept ;
     rdfs:label "capital social"@ca,
@@ -55799,11 +55875,6 @@
         "anatomia animal"@en,
         "zootomy"@en,
         "zootomía"@es .
-
-<http://www.wikidata.org/entity/Q22103935> a skos:Concept ;
-    rdfs:label "pigeonpea"@en,
-        "pigeonpea sterility mosaic virus"@en,
-        "pigeonpea sterility mosaic virus"@es .
 
 <http://www.wikidata.org/entity/Q221681> a skos:Concept ;
     rdfs:label "in vitro"@ca,
@@ -55903,7 +55974,8 @@
         "online grooming"@en .
 
 <http://www.wikidata.org/entity/Q236371> a skos:Concept ;
-    rdfs:label "orchard"@en,
+    rdfs:label "camp d'arbres fruiters"@ca,
+        "orchard"@en,
         "orchards"@en,
         "huerto frutal"@es .
 
@@ -55924,7 +55996,7 @@
         "interfaz"@es .
 
 <http://www.wikidata.org/entity/Q238499> a skos:Concept ;
-    rdfs:label "literatura espanyola"@ca,
+    rdfs:label "literatura d'espanya"@ca,
         "spanish literature"@en,
         "literatura española"@es,
         "lliteratura española"@es .
@@ -56053,10 +56125,6 @@
         "museu"@ca,
         "musar literature"@en,
         "literatura del musar"@es .
-
-<http://www.wikidata.org/entity/Q27897327> a skos:Concept ;
-    rdfs:label "façades"@ca,
-        "facades"@en .
 
 <http://www.wikidata.org/entity/Q28230511> a skos:Concept ;
     rdfs:label "latin american youth"@en,
@@ -56525,7 +56593,8 @@
         "pioglitazona"@es .
 
 <http://www.wikidata.org/entity/Q4182287> a skos:Concept ;
-    rdfs:label "web search engine"@en,
+    rdfs:label "motor de cerca web"@ca,
+        "web search engine"@en,
         "web search engines"@en,
         "motor de búsqueda web"@es .
 
@@ -56964,12 +57033,6 @@
     rdfs:label "material testing"@en,
         "standard for material testing"@en .
 
-<http://www.wikidata.org/entity/Q5849500> a skos:Concept ;
-    rdfs:label "tela"@ca,
-        "cloth"@en,
-        "materials"@en,
-        "tela"@es .
-
 <http://www.wikidata.org/entity/Q5864439> a skos:Concept ;
     rdfs:label "fotoperiodo"@en,
         "fotoperiodo"@es .
@@ -57003,6 +57066,12 @@
     rdfs:label "municipal waste collection"@en,
         "municipal waste management"@en,
         "gestión municipal de residuos"@es .
+
+<http://www.wikidata.org/entity/Q597> a skos:Concept ;
+    rdfs:label "lisboa"@ca,
+        "lisboa"@en,
+        "lisbon"@en,
+        "lisboa"@es .
 
 <http://www.wikidata.org/entity/Q6003455> a skos:Concept ;
     rdfs:label "caquèxia"@ca,
@@ -57075,15 +57144,15 @@
         "oxygen"@en,
         "oxígeno"@es .
 
-<http://www.wikidata.org/entity/Q63173086> a skos:Concept ;
-    rdfs:label "jesuïta"@ca,
-        "jesuit"@en,
-        "jesuits"@en,
-        "jesuita"@es .
-
 <http://www.wikidata.org/entity/Q632184> a skos:Concept ;
     rdfs:label "life table"@en,
         "tablas de mortalidad"@es .
+
+<http://www.wikidata.org/entity/Q632559> a skos:Concept ;
+    rdfs:label "cajanus cajan"@ca,
+        "cajanus cajan"@en,
+        "pigeonpea"@en,
+        "cajanus cajan"@es .
 
 <http://www.wikidata.org/entity/Q63593134> a skos:Concept ;
     rdfs:label "red-fleshed apple"@en,
@@ -57359,7 +57428,7 @@
 
 <http://www.wikidata.org/entity/Q82025> a skos:Concept ;
     rdfs:label "banya"@ca,
-        "horn and hornlike growths"@en,
+        "horn"@en,
         "cuerno"@es .
 
 <http://www.wikidata.org/entity/Q8253> a skos:Concept ;
@@ -57529,6 +57598,11 @@
     rdfs:label "municipal waste"@en,
         "municipal wastes"@en,
         "municipal waste"@es .
+
+<http://www.wikidata.org/entity/Q9257630> a skos:Concept ;
+    rdfs:label "façades"@ca,
+        "facades"@en,
+        "facades"@es .
 
 <http://www.wikidata.org/entity/Q926416> a skos:Concept ;
     rdfs:label "història de l'equador"@ca,
@@ -57971,11 +58045,6 @@
         "nerve transection"@en,
         "nervio"@es .
 
-<http://dbpedia.org/resource/Neurotrophin> a skos:Concept ;
-    rdfs:label "neurotrophin"@en,
-        "neurotrophins"@en,
-        "neurotrofina"@es .
-
 <http://dbpedia.org/resource/Nuclease> a skos:Concept ;
     rdfs:label "nucleasa"@ca,
         "designer nuclease"@en,
@@ -58135,11 +58204,9 @@
     rdfs:label "molecular pathology"@en,
         "patología molecular"@es .
 
-<http://www.wikidata.org/entity/Q1065241> a skos:Concept ;
-    rdfs:label "pollastre"@ca,
-        "pollastre fregit"@ca,
-        "fried chicken"@en,
-        "pollo frito"@es .
+<http://www.wikidata.org/entity/Q106161654> a skos:Concept ;
+    rdfs:label "challenges"@en,
+        "immune challenge"@en .
 
 <http://www.wikidata.org/entity/Q1066907> a skos:Concept ;
     rdfs:label "longevity"@en,
@@ -58207,6 +58274,11 @@
         "fuentes primarias"@en,
         "primary source"@en,
         "fuente primaria"@es .
+
+<http://www.wikidata.org/entity/Q1127677> a skos:Concept ;
+    rdfs:label "black pine"@en,
+        "prumnopitys taxifolia"@en,
+        "prumnopitys taxifolia"@es .
 
 <http://www.wikidata.org/entity/Q1128255> a skos:Concept ;
     rdfs:label "subproducte"@ca,
@@ -58582,11 +58654,6 @@
         "bogie"@en,
         "humphrey bogart"@en,
         "humphrey bogart"@es .
-
-<http://www.wikidata.org/entity/Q16511806> a skos:Concept ;
-    rdfs:label "challenge"@en,
-        "challenges"@en,
-        "desafío"@es .
 
 <http://www.wikidata.org/entity/Q165687> a skos:Concept ;
     rdfs:label "capital humà"@ca,
@@ -59057,7 +59124,8 @@
 
 <http://www.wikidata.org/entity/Q2732957> a skos:Concept ;
     rdfs:label "industrial waste"@en,
-        "industrial wastes"@en .
+        "industrial wastes"@en,
+        "residuo industrial"@es .
 
 <http://www.wikidata.org/entity/Q2806588> a skos:Concept ;
     rdfs:label "1-deoxy-d-xylulose 5-phosphate synthase"@en,
@@ -59854,6 +59922,12 @@
     rdfs:label "biomasse"@en,
         "biomasseheizkraftwerk flohr neuwied"@en .
 
+<http://www.wikidata.org/entity/Q864693> a skos:Concept ;
+    rdfs:label "carn de pollastre"@ca,
+        "pollastre"@ca,
+        "chicken"@en,
+        "carne de pollo"@es .
+
 <http://www.wikidata.org/entity/Q865083> a skos:Concept ;
     rdfs:label "corpus linguistics"@en,
         "corpus lingüístics"@en,
@@ -60402,6 +60476,10 @@
         "risk assessment"@en,
         "evaluación de riesgo"@es .
 
+<http://www.wikidata.org/entity/Q105989936> a skos:Concept ;
+    rdfs:label "gene circuits"@en,
+        "gene expression program"@en .
+
 <http://www.wikidata.org/entity/Q106016> a skos:Concept ;
     rdfs:label "genotip"@ca,
         "genotype"@en,
@@ -60536,12 +60614,6 @@
         "pla d’urgell"@ca,
         "pla d'urgell"@en,
         "plana de urgel"@es .
-
-<http://www.wikidata.org/entity/Q12825018> a skos:Concept ;
-    rdfs:label "colón"@ca,
-        "colon"@en,
-        "colón"@en,
-        "ciudad de colón"@es .
 
 <http://www.wikidata.org/entity/Q128406> a skos:Concept ;
     rdfs:label "farmacologia"@ca,
@@ -61501,6 +61573,11 @@
         "prognosis"@en,
         "pronóstico"@es .
 
+<http://www.wikidata.org/entity/Q5982337> a skos:Concept ;
+    rdfs:label "còlon"@ca,
+        "colon"@en,
+        "colon"@es .
+
 <http://www.wikidata.org/entity/Q61457> a skos:Concept ;
     rdfs:label "acetaldehid"@ca,
         "acetaldehyde"@en,
@@ -61643,12 +61720,6 @@
     rdfs:label "varietat"@ca,
         "variety"@en,
         "variedad"@es .
-
-<http://www.wikidata.org/entity/Q778743> a skos:Concept ;
-    rdfs:label "forts i castells de les regions de volta, d'accra, central i occidental"@ca,
-        "fortalezas"@en,
-        "forts and castles, volta, greater accra, central and western regions"@en,
-        "fuertes y castillos de volta"@es .
 
 <http://www.wikidata.org/entity/Q783092> a skos:Concept ;
     rdfs:label "funcions executives"@ca,
@@ -62004,6 +62075,17 @@
 <http://dbpedia.org/resource/Natural_rubber> a skos:Concept ;
     rdfs:label "natural rubber"@en,
         "rubber crumbs"@en .
+
+<http://dbpedia.org/resource/Neurotrophin> a skos:Concept ;
+    rdfs:label "neurotrophin"@en,
+        "neurotrophin receptor"@en,
+        "neurotrofina"@es .
+
+<http://dbpedia.org/resource/Nuclear_magnetic_resonance_spectroscopy> a skos:Concept ;
+    rdfs:label "espectroscòpia de ressonància magnètica nuclear"@ca,
+        "1h nmr spectroscopy"@en,
+        "nuclear magnetic resonance spectroscopy"@en,
+        "espectroscopia de resonancia magnética nuclear"@es .
 
 <http://dbpedia.org/resource/Obesity> a skos:Concept ;
     rdfs:label "obesitat"@ca,
@@ -62573,6 +62655,12 @@
     rdfs:label "nf-κb"@en,
         "nf-κb"@es .
 
+<http://www.wikidata.org/entity/Q411391> a skos:Concept ;
+    rdfs:label "regulació de l'expressió gènica"@ca,
+        "gene regulation"@en,
+        "regulation of gene expression"@en,
+        "regulación de la expresión génica"@es .
+
 <http://www.wikidata.org/entity/Q41271> a skos:Concept ;
     rdfs:label "internacionalització"@ca,
         "internacionalització i localització"@ca,
@@ -62826,6 +62914,12 @@
         "abortion"@en,
         "aborto"@es .
 
+<http://www.wikidata.org/entity/Q845777> a skos:Concept ;
+    rdfs:label "dispersió"@ca,
+        "statistical dispersion"@en,
+        "variation"@en,
+        "medida de dispersión"@es .
+
 <http://www.wikidata.org/entity/Q8513> a skos:Concept ;
     rdfs:label "base de dades"@ca,
         "database"@en,
@@ -63052,10 +63146,6 @@
     rdfs:label "fenotip"@ca,
         "phenotype"@en,
         "fenotipo"@es .
-
-<http://www.wikidata.org/entity/Q10411246> a skos:Concept ;
-    rdfs:label "andes"@en,
-        "andes"@es .
 
 <http://www.wikidata.org/entity/Q104412614> a skos:Concept ;
     rdfs:label "information and communication technologies"@en,
@@ -63504,6 +63594,11 @@
     rdfs:label "circadian clock"@en,
         "ritmo biológico"@es .
 
+<http://www.wikidata.org/entity/Q5456> a skos:Concept ;
+    rdfs:label "andes"@ca,
+        "andes"@en,
+        "cordillera de los andes"@es .
+
 <http://www.wikidata.org/entity/Q58458333> a skos:Concept ;
     rdfs:label "repressor element 1 silencing transcription factor interactions with its target genes in embryonic stem cells, neural stem cells and neurons"@en,
         "repressor element 1-silencing transcription factor"@en,
@@ -63768,7 +63863,7 @@
         "función"@es .
 
 <http://www.wikidata.org/entity/Q11410> a skos:Concept ;
-    rdfs:label "joc"@ca,
+    rdfs:label "jocs"@ca,
         "game"@en,
         "juego"@es,
         "juegos"@es .
@@ -64728,6 +64823,11 @@
         "pathology"@en,
         "patología"@es .
 
+<http://www.wikidata.org/entity/Q776060> a skos:Concept ;
+    rdfs:label "patrimonio"@ca,
+        "patrimonio"@en,
+        "patrimonio"@es .
+
 <http://www.wikidata.org/entity/Q79749> a skos:Concept ;
     rdfs:label "plasma sanguini"@ca,
         "blood plasma"@en,
@@ -64923,6 +65023,12 @@
         "web 2.0"@en,
         "web 2.0"@es .
 
+<http://www.wikidata.org/entity/Q134267> a skos:Concept ;
+    rdfs:label "tija"@ca,
+        "plant stem"@en,
+        "stalking"@en,
+        "tallo"@es .
+
 <http://www.wikidata.org/entity/Q1377863> a skos:Concept ;
     rdfs:label "espai europeu d'ensenyament superior"@ca,
         "convergencia europea"@en,
@@ -64951,10 +65057,6 @@
     rdfs:label "europa"@ca,
         "europa"@en,
         "europa"@es .
-
-<http://www.wikidata.org/entity/Q17103642> a skos:Concept ;
-    rdfs:label "stalk"@en,
-        "stalking"@en .
 
 <http://www.wikidata.org/entity/Q18555222> a skos:Concept ;
     rdfs:label "endometrial carcinoma"@en,
@@ -65512,12 +65614,6 @@
         "thermal comfort"@en,
         "confort higrotérmico"@es .
 
-<http://www.wikidata.org/entity/Q776060> a skos:Concept ;
-    rdfs:label "patrimonio"@ca,
-        "patrimoni"@en,
-        "patrimonio"@en,
-        "patrimonio"@es .
-
 <http://www.wikidata.org/entity/Q8047> a skos:Concept ;
     rdfs:label "enzim"@ca,
         "enzyme"@en,
@@ -65879,6 +65975,12 @@
     rdfs:label "mutation"@en,
         "tips mutation"@en .
 
+<http://dbpedia.org/resource/Peer-to-peer> a skos:Concept ;
+    rdfs:label "d'igual a igual"@ca,
+        "p2p computing"@en,
+        "peer-to-peer"@en,
+        "peer-to-peer"@es .
+
 <http://dbpedia.org/resource/Redox> a skos:Concept ;
     rdfs:label "reacció d'oxidació-reducció"@ca,
         "redox"@en,
@@ -65989,6 +66091,11 @@
         "la comunidad"@en,
         "la comunidad"@es .
 
+<http://www.wikidata.org/entity/Q245204> a skos:Concept ;
+    rdfs:label "antagonista"@ca,
+        "antagonist"@en,
+        "antagonista"@es .
+
 <http://www.wikidata.org/entity/Q3141064> a skos:Concept ;
     rdfs:label "internationalization"@en,
         "internacionalización productiva"@es .
@@ -66068,12 +66175,6 @@
     rdfs:label "forestry"@en,
         "precision forestry"@en,
         "ingeniería de montes"@es .
-
-<http://dbpedia.org/resource/Peer-to-peer> a skos:Concept ;
-    rdfs:label "d'igual a igual"@ca,
-        "p2p computing"@en,
-        "peer-to-peer"@en,
-        "peer-to-peer"@es .
 
 <http://dbpedia.org/resource/Portland_Thorns_FC> a skos:Concept ;
     rdfs:label "portland thorns"@ca,
@@ -66478,7 +66579,7 @@
 <http://www.wikidata.org/entity/Q13474305> a skos:Concept ;
     rdfs:label "espanya franquista"@ca,
         "franquisme"@ca,
-        "nationalist spain"@en,
+        "spain"@en,
         "españa franquista"@es .
 
 <http://www.wikidata.org/entity/Q137096> a skos:Concept ;
@@ -66523,12 +66624,6 @@
     rdfs:label "gestió"@ca,
         "management"@en,
         "gestión"@es .
-
-<http://www.wikidata.org/entity/Q312> a skos:Concept ;
-    rdfs:label "apple inc"@ca,
-        "apple inc."@en,
-        "apples"@en,
-        "apple"@es .
 
 <http://www.wikidata.org/entity/Q380962> a skos:Concept ;
     rdfs:label "cooperació"@ca,
@@ -66762,6 +66857,12 @@
         "crop yield"@en,
         "yield"@en,
         "rendimiento agrícola"@es .
+
+<http://www.wikidata.org/entity/Q89> a skos:Concept ;
+    rdfs:label "poma"@ca,
+        "apple"@en,
+        "apples"@en,
+        "manzana"@es .
 
 <http://dbpedia.org/resource/Biomass> a skos:Concept ;
     rdfs:label "biomassa"@ca,
@@ -67048,8 +67149,8 @@
 <http://www.wikidata.org/entity/Q846667> a skos:Concept ;
     rdfs:label "superconductivitat d'alta temperatura"@ca,
         "high temperature"@en,
-        "high-temperature superconductivity"@en,
-        "superconductividad de alta temperatura"@es .
+        "high temperature superconductor"@en,
+        "superconductor de alta temperatura"@es .
 
 <http://dbpedia.org/resource/Maize> a skos:Concept ;
     rdfs:label "dacsa"@ca,
@@ -67261,6 +67362,12 @@
         "primary education"@en,
         "educación primaria"@es .
 
+<http://dbpedia.org/resource/Gene> a skos:Concept ;
+    rdfs:label "gen"@ca,
+        "gene"@en,
+        "gene-gene interaction"@en,
+        "gen"@es .
+
 <http://www.wikidata.org/entity/Q1379672> a skos:Concept ;
     rdfs:label "avaluació"@ca,
         "evaluation"@en,
@@ -67294,12 +67401,6 @@
         "building"@en,
         "buildings"@en,
         "edificio"@es .
-
-<http://dbpedia.org/resource/Gene> a skos:Concept ;
-    rdfs:label "gen"@ca,
-        "gene"@en,
-        "gene-gene interaction"@en,
-        "gen"@es .
 
 <http://www.wikidata.org/entity/Q136822> a skos:Concept ;
     rdfs:label "educació terciària"@ca,

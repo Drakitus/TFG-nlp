@@ -69,14 +69,14 @@ def utf8_format(clave):
     return d
 
 
-# Falta afegir el diccionari quan funcioni correctament la llibreria
+# Correct misspelled words (need to check the operation with the hunspell library)
 def spelling_corrector(corrector, keywords):
     corrected = []
     for k in keywords:
         ok = corrector.spell(k)  # check spelling
         if not ok:
             suggestions = corrector.suggest(k)
-            if len(suggestions) > 0:  # hay suggestions
+            if len(suggestions) > 0:  # suggestions
                 # take best suggestion
                 best_suggestions = suggestions[0]
                 corrected.append(best_suggestions)
@@ -87,6 +87,7 @@ def spelling_corrector(corrector, keywords):
     return corrected
 
 
+# Check hyponyms of words to put them in a same group
 def hyponyms_a(clave):
     word = wordnet.sysnet(clave)
 
@@ -184,7 +185,7 @@ def ca_lemmatizer(keyword):
     return w
 
 
-# -------------- linkers --------------
+# -------------- Linkers --------------
 
 def WikidataLinker(keyword, language):
     linker = WikidataEntityLinker()
@@ -202,7 +203,7 @@ def DBpediaLinker(keyword):
     return entity
 
 
-# -------------- group words by root --------------
+# -------------- Group words by root --------------
 def group(keyword, lang):
     kw_list = []
     kw_list.append(keyword)
@@ -354,7 +355,7 @@ def statistics_d_keys(dict_in):
     print("Contains zero uri:", none_cont)
 
 
-# -------------- modify file replace-keywords-uri.csv --------------
+# -------------- Modify file replace-keywords-uri.csv --------------
 def modify_file_keywords_to_uri(dict):
     file = "../files/file-keywords-split.csv"
     file2 = "../files/replace-keywords-uri.csv"
@@ -387,7 +388,7 @@ def modify_file_keywords_to_uri(dict):
                 csv_file_out.write('{},{}\n'.format(resourcer, key))
 
 
-# -------------- buid comp_keys information --------------
+# -------------- Buid comp_keys information --------------
 def create_comp_dict(keyword, dict_out, dict_comp):
     db = dict_comp[keyword]['DBpedia']
     wd = dict_comp[keyword]['Wikidata']
@@ -450,7 +451,7 @@ def statistics_comp_keys(dict_in):
     print("Contains more than three languages:", cont_more)
 
 
-# -------------- create compacting_keys file --------------
+# -------------- Create compacting_keys file --------------
 def create_compacting_keys_structure(dict):
     # File with compacting structure
     salida = "../files/compacting_keys.csv"
@@ -476,7 +477,7 @@ def compare_resource_keywords_uri(file1, dict):
     df_file.to_csv(file1, index=False)
 
 
-# -------------- data serialization --------------
+# -------------- Data serialization --------------
 def serialization(dict1, dict2):
     rdf = Graph()
     namespace_manager = NamespaceManager(rdf)
@@ -484,18 +485,21 @@ def serialization(dict1, dict2):
     VIVO = Namespace("http://experts.udl.cat/ontology/core#")
     namespace_manager.bind("core", VIVO)
 
+    # Delete double quotes in comp_keys keys
     for k in list(dict2):
         if '"' in k:
             k_clean = k.replace('"', "")
             dict2[k_clean] = dict2[k]
             del dict2[k]
 
+    # Build semantic triple of concepts
     for uri in dict2:
         concept = URIRef(uri)
         rdf.add((concept, RDF.type, SKOS.Concept))
         for keyword in dict2[uri]:
             rdf.add((concept, RDFS.label, Literal(keyword["keyword"], lang=keyword["language"])))
 
+    # Build semantic triple of researcher
     for researcher in dict1:
         rdf.add((URIRef(researcher["researcher"]), VIVO.hasResearchArea, URIRef(researcher["term"])))
 
@@ -512,7 +516,7 @@ def serialization(dict1, dict2):
 if __name__ == '__main__':
 
     entrada = "../files/samples_researchers_publications-keywords.csv"
-    #entrada = "../files/Researcher-06000001-keywords.csv"
+    # entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
     # Generate a new file with same data but this time without quote marks
