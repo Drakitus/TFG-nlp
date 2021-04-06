@@ -482,7 +482,7 @@ def serialization(dict1, dict2):
     rdf = Graph()
     namespace_manager = NamespaceManager(rdf)
     namespace_manager.bind("skos", SKOS)
-    VIVO = Namespace("http://experts.udl.cat/ontology/core#")
+    VIVO = Namespace("http://vivoweb.org/ontology/core#")
     namespace_manager.bind("core", VIVO)
 
     # Delete double quotes in comp_keys keys
