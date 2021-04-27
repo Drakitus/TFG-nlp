@@ -4,7 +4,7 @@ import spacy
 import pycld2 as cld2
 import re
 import multiprocessing
-import io
+
 # import hunspell
 
 from linking_entity_linking import *
@@ -88,7 +88,7 @@ def spelling_corrector(corrector, keywords):
 
 
 # Check hyponyms of words to put them in a same group
-def hyponyms_a(clave):
+def hyponyms(clave):
     word = wordnet.sysnet(clave)
 
     hyponym = word.hiponyms()
@@ -516,7 +516,7 @@ def serialization(dict1, dict2):
 if __name__ == '__main__':
 
     entrada = "../files/samples_researchers_publications-keywords.csv"
-    # entrada = "../files/Researcher-06000001-keywords.csv"
+    #entrada = "../files/Researcher-06000001-keywords.csv"
     salida = "../files/file-keywords-split.csv"
 
     # Generate a new file with same data but this time without quote marks

@@ -4,6 +4,7 @@ import traceback
 
 from SPARQLWrapper import SPARQLWrapper, JSON
 from tfg_nlp import normalize
+from requests import HTTPError, Timeout
 
 
 def wait_retry_after(response):
@@ -28,6 +29,7 @@ def Wikidata_wrapper(url):
               }}
             }}""".format(url=url))
         sparql.setReturnFormat(JSON)
+        sparql.setTimeout(20)
 
         response = sparql.query()
         wait_retry_after(response)
@@ -41,9 +43,13 @@ def Wikidata_wrapper(url):
                 ent_list.append(dict)
         return ent_list
 
-    except Exception as e:
+    except (HTTPError, ConnectionResetError, Timeout) as e:
         traceback.print_exc(file=sys.stdout)
         raise e
+
+    except Exception as ex:
+        traceback.print_exc(file=sys.stdout)
+        raise ex
 
 
 def DBpedia_wrapper(url):
@@ -64,7 +70,12 @@ def DBpedia_wrapper(url):
             }}          
         """.format(url=url))
         sparql.setReturnFormat(JSON)
-        results = sparql.query().convert()
+        sparql.setTimeout(20)
+
+        response = sparql.query()
+        wait_retry_after(response)
+        results = response.convert()
+
         ent_list = []
         for result in results["results"]["bindings"]:
             keywords = normalize(result["name"]["value"])
@@ -73,6 +84,9 @@ def DBpedia_wrapper(url):
                 ent_list.append(dict)
         return ent_list
 
-    except Exception as e:
+    except (HTTPError, ConnectionError, Timeout) as e:
         traceback.print_exc(file=sys.stdout)
         raise e
+    except Exception as ex:
+        traceback.print_exc(file=sys.stdout)
+        raise ex
